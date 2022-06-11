@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    height: 50px;
+    height: 35px;
     width: 100%;
     top: 0;
     left: 0;
@@ -11,13 +11,18 @@
 .header-bg {
     background-color: rgb(196, 248, 248);
 }
-
-.header .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1240px;
-    margin: auto;
-    height: 100%;
-    padding: 0 1rem;
+.button{
+    height: 25px;
+    margin:auto;
 }
+.img_nav{
+    margin-bottom: 40px;
+}
+.text_nav{
+    margin:auto;
+    
+    font-size: xx-small;
+}
+
+
+

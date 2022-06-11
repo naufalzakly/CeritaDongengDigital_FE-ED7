@@ -8,9 +8,7 @@ import useState from 'react-hook-use-state';
 
 const NavbarHome = ({logo,garis,profil})=>{
     
-    // const handleClick = () => setClick(!click)
 
-    // const closeMenu = () => setClick(false)
     const [color, setColor] = useState(false)
     const changeColor = () => {
         if (window.scrollY >= 20){
@@ -26,16 +24,16 @@ const NavbarHome = ({logo,garis,profil})=>{
 
             <Container>
                 <Row>
-                    <Col xs="auto" >
+                    <Col>
                         <Nav className="justify-content-start"  >
                             <Nav.Item >
-                                    <Nav.Link href="/home">
-                                        <img
+                                    <Nav.Link  href="/home">
+                                        <img className='img_nav'
                                             src = {logo}
                                             
-                                            width={30}
-                                            height={30}
-                                            margin={30}
+                                            width={20}
+                                            height = {20} 
+                                            
                                             alt = "pic"
                                                     
                                         />
@@ -48,26 +46,29 @@ const NavbarHome = ({logo,garis,profil})=>{
                     <Col >
                         <Nav className="justify-content-end"> 
                             <Nav.Item>
-                                <Nav.Link href="#features">
-                                    <Button variant ="outline-dark" >Bergabung</Button>
+                                <Nav.Link href="#features" >
+                                    <Button   variant ="outline-dark" className="button">
+                                        <h2 className='text_nav'>Bergabung</h2>
+                                        
+                                    </Button>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link href="#memes">
-                                    <ButtonGroup size="sm" >
-                                        <Button variant ="outline-dark">
-                                            <img
+                                    <ButtonGroup   >
+                                        <Button className="button" variant ="outline-dark">
+                                            <img className='img_nav'
                                                 src = {garis}
-                                                width = {30}
-                                                height = {30}
+                                                height = {15}
+                                                width = {15}
                                                 alt = "pict"
                                             />
                                         </Button>
-                                        <Button variant ="outline-dark">
-                                            <img
+                                        <Button  className="button" variant ="outline-dark">
+                                            <img  className='img_nav'
                                                 src = {profil}
-                                                width = {30}
-                                                height = {30}
+                                                width = {15}
+                                                height = {15}
                                                 alt = "pic"
                                             />
                                         </Button>

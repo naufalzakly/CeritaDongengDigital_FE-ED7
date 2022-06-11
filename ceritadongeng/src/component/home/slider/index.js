@@ -14,6 +14,7 @@ const Home = ({slider1,slider2,slider3,slider4})=>{
                 />
                 <Carousel.Caption>
                 <h3>First slide label</h3>
+                
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
