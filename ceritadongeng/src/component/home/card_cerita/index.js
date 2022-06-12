@@ -17,53 +17,40 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img src = {cerita1} width = {210} height = {240}>
+                                <img 
+                                    src = {cerita1} 
+                                    width = {350} 
+                                    height = {260}
+                                    alt = "pict"
+                                />
                                         
-                                </img>
-                                <Card.ImgOverlay>
-                                        
-                                    <br></br>
-                                    <br></br>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text  >
-                                        Sinopsi
-                                    </Card.Text>
-                                        
-                                </Card.ImgOverlay>
                             </Card>
                         </div>
                     </Col>
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img src = {cerita2} width = {210} height = {240}>
+                                <img 
+                                    src = {cerita2} 
+                                    width = {350} 
+                                    height = {260}
+                                    alt = "pict"
+                                    
+                                    />
                                         
-                                </img>
-                                <Card.ImgOverlay>
-                                        
-                                    <Card.Title>title</Card.Title>
-                                    <Card.Text  >
-                                        Sinopsi
-                                    </Card.Text>
-                                        
-                                </Card.ImgOverlay>
                             </Card>
                         </div>
                     </Col>
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img className='card__img' src = {cerita3} width = {210} height = {240}>
-                                        
-                                </img>
-                                <Card.ImgOverlay>
-                                        
-                                    <Card.Title>title</Card.Title>
-                                    <Card.Text  >
-                                        Sinopsi
-                                    </Card.Text>
-                                        
-                                </Card.ImgOverlay>
+                                <img 
+                                    
+                                    src = {cerita3} 
+                                    width = {350} 
+                                    height = {260}
+                                    alt = "pict"
+                                />
                             </Card>
                         </div>
                     </Col>

@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    height: 35px;
+    height: 45px;
     width: 100%;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     background-color: rgb(196, 248, 248);
 }
 .button{
-    height: 25px;
+    height: 30px;
     margin:auto;
 }
 .img_nav{
