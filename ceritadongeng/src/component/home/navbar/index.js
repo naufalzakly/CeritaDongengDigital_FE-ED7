@@ -92,5 +92,3 @@ const NavbarHome = ({logo,garis,profil})=>{
     )
 }
 export default NavbarHome; 
-
-

@@ -17,7 +17,7 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img src = {cerita1} width = {210} height = {240} alt ="pict">
+                                <img src = {cerita1} width = {310} height = {240} alt ="pict">
 
                                 </img>
                                 <Card.ImgOverlay>
@@ -36,7 +36,7 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img src = {cerita2} width = {210} height = {240} alt ="pict">
+                                <img src = {cerita2} width = {310} height = {240} alt ="pict">
 
                                 </img>
                                 <Card.ImgOverlay>
@@ -53,7 +53,7 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                     <Col>
                         <div className="Container_Card">
                             <Card border = "light" >
-                                <img className='card__img' src = {cerita3} width = {210} height = {240} alt ="pict">
+                                <img className='card__img' src = {cerita3} width = {310} height = {240} alt ="pict">
 
                                 </img>
                                 <Card.ImgOverlay>
