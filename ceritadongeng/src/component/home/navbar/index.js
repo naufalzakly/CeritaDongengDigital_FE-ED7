@@ -7,7 +7,7 @@ import useState from 'react-hook-use-state';
 
 
 const NavbarHome = ({logo,garis,profil})=>{
-    
+
 
     const [color, setColor] = useState(false)
     const changeColor = () => {
@@ -30,26 +30,33 @@ const NavbarHome = ({logo,garis,profil})=>{
                                     <Nav.Link  href="/home">
                                         <img className='img_nav'
                                             src = {logo}
-                                            
+
                                             width={20}
                                             height = {20} 
-                                            
+
                                             alt = "pic"
-                                                    
+
                                         />
                                     </Nav.Link>
                             </Nav.Item>
                         </Nav>
-         
+
                         <br></br>
                     </Col>
                     <Col >
-                        <Nav className="justify-content-end"> 
+                        <Nav className="justify-content-end">
+                            <Nav.Item>
+                              <Nav.Link to="/libDongeng">
+                                <Button variant="outline-dark" className="button">
+                                  <h2 className="text_nav">Library Dongeng</h2>
+                                </Button>
+                              </Nav.Link>
+                            </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link href="#features" >
                                     <Button   variant ="outline-dark" className="button">
                                         <h2 className='text_nav'>Bergabung</h2>
-                                        
+
                                     </Button>
                                 </Nav.Link>
                             </Nav.Item>
@@ -76,12 +83,14 @@ const NavbarHome = ({logo,garis,profil})=>{
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
-                            
+
                     </Col>
                 </Row>
             </Container>
         </div>
-        
+
     )
 }
-export default NavbarHome;
+export default NavbarHome; 
+
+

@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import {Carousel} from 'react-bootstrap'
-import './style.css'
+import {Carousel} from 'react-bootstrap';
+import './style.css';
 
 const Home = ({slider1,slider2,slider3,slider4})=>{
     return(

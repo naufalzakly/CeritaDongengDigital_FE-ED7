@@ -12,7 +12,7 @@
     background-color: rgb(196, 248, 248);
 }
 .button{
-    height: 30px;
+    height: 25px;
     margin:auto;
 }
 .img_nav{
@@ -20,9 +20,6 @@
 }
 .text_nav{
     margin:auto;
-    
+
     font-size: xx-small;
 }
-
-
-
