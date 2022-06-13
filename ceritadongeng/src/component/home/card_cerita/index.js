@@ -42,9 +42,7 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                                 <Card.ImgOverlay>
 
                                     <Card.Title>title</Card.Title>
-                                    <Card.Text  >
-                                        Sinopsi
-                                    </Card.Text>
+
 
                                 </Card.ImgOverlay>
                             </Card>
@@ -59,9 +57,7 @@ const Card_cerita = ({cerita1,cerita2,cerita3,title})=>{
                                 <Card.ImgOverlay>
 
                                     <Card.Title>title</Card.Title>
-                                    <Card.Text  >
-                                        Sinopsi
-                                    </Card.Text>
+
 
                                 </Card.ImgOverlay>
                             </Card>

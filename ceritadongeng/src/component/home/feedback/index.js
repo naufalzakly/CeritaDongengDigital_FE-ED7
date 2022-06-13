@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import {Card,Col, Container, Row,Button} from 'react-bootstrap'
-import './style.css'
 
 const FeedbackHome= ({img_feedback})=>{
-    
+    const button_feedback = {
+        margintop: '590px' ,
+        height: '30px'
+    };
 
     return(
         <Container>
@@ -15,7 +17,7 @@ const FeedbackHome= ({img_feedback})=>{
                         <Card border = "light" >
                             <img src = {img_feedback} width = {1090} height = {840} alt = "pict"/>
                             <Card.ImgOverlay>         
-                                <Button   variant ="dark" className="button">
+                                <Button   variant ="dark" style = {button_feedback}>
                                   Beri Ulasan      
                                 </Button>{' '}
                             </Card.ImgOverlay>
