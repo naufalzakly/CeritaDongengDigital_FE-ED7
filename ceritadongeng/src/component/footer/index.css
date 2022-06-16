@@ -1,0 +1,16 @@
+.main-footer {
+    padding-top: 50px;
+    background-color: rgb(196, 248, 248);
+}
+
+.footer-bottom {
+    margin-top: 100px;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}

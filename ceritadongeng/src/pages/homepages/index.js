@@ -6,11 +6,14 @@ import logo from '../../icon/garis.png';
 import garis from '../../icon/garis.png';
 import profil from '../../icon/profile.png';
 import CardCerita from "../../component/home/card_cerita";
+
 import db from '../../../Firebase'
 import {collection, onSnapshot} from "firebase/firestore"
 import {useEffect,useState} from "react"
 
-import img_feedbacck from '../../img/FeedBack.png'
+import Newsletter from "../../component/newsletter/index";
+
+import img_feedbacck from '../../img/feedback_compressed.png'
 
 const PageHome = ()=>{
     const [User , setUser] = useState([]);
@@ -67,7 +70,10 @@ const PageHome = ()=>{
                         img_feedback = {img_feedbacck}
                     />
                 </div>
+
                 <ReadDataCerita/>
+
+                <Newsletter />
             </div>
 
 
