@@ -10,6 +10,9 @@ import profile from "./icon/profile.png";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
+  require('dotenv').config()
+
+
   return (
     <Router> 
     <div className="Container">
