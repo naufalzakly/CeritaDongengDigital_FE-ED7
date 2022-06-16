@@ -6,6 +6,7 @@ import logo from '../../icon/garis.png';
 import garis from '../../icon/garis.png';
 import profil from '../../icon/profile.png';
 import CardCerita from "../../component/home/card_cerita";
+import Newsletter from "../../component/newsletter/index";
 // import {Table} from 'react-bootstrap';
 import slider1 from '../../img/bebek_buruk_rupa_thumbnail.png';
 import slider2 from '../../img/kancil_buaya_thumbnail.png';
@@ -22,7 +23,7 @@ import cardImg6 from '../../img/homepage_kelinci_kura.png'
 import cardImg7 from '../../img/homepage_singa_tikus.png'
 import cardImg8 from '../../img/homepage_kera_ayam.png'
 
-import img_feedbacck from '../../img/FeedBack.png'
+import img_feedbacck from '../../img/feedback_compressed.png'
 
 const PageHome = ()=>{
     return(
@@ -70,7 +71,7 @@ const PageHome = ()=>{
                         img_feedback = {img_feedbacck}
                     />
                 </div>
-
+                <Newsletter />
             </div>
 
 
