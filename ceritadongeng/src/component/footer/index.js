@@ -6,23 +6,24 @@ import {
   TiHeartFullOutline,
 } from "react-icons/ti";
 import { BiCopyright } from "react-icons/bi";
+import {Container, Row, Col, Button} from "react-bootstrap";
 import "./index.css";
 
 const Footer = () => {
   return (
     <div className="main-footer">
-      <div className="container-fluid">
-        <div className="row">
+      <Container fluid>
+        <Row>
           {/* kolom 1 */}
-          <div className="col-md-3 col-sm-6 ml-2">
+          <Col md={3} sm={6}>
             <h6>Logo</h6>
             <ul className="list-unstyled">
               <li>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</li>
-              <li><button className="btn btn-primary mx-2"> Logo YABB </button><button className="btn btn-primary "> Logo YABB </button></li>
+              <li><Button variant="primary" className="mx-2"> Logo YABB </Button><Button variant="primary"> Logo YABB </Button></li>
             </ul>
-          </div>
+          </Col>
           {/* kolom 2 */}
-          <div className="col-md-3 col-sm-6">
+          <Col md={3} sm={6}>
             <h6>Profile</h6>
             <ul className="list-unstyled">
               <li><a href="./index">About Us</a></li>
@@ -30,9 +31,9 @@ const Footer = () => {
               <li><a href="./index">Contact Us</a></li>
               <li><a href="./index">Team</a></li>
             </ul>
-          </div>
+          </Col>
           {/* kolom 3 */}
-          <div className="col-md-3 col-sm-6">
+          <Col md={3} sm={6}>
             <h6>Pusat Bantuan</h6>
             <ul className="list-unstyled">
               <li><a href="./index">Komunitas</a></li>
@@ -40,9 +41,9 @@ const Footer = () => {
               <li><a href="./index">FAQs</a></li>
               <li><a href="./index">informasi Cerita</a></li>
             </ul>
-          </div>
+          </Col>
           {/* kolom 4 */}
-          <div className="col-md-3 col-sm-6">
+          <Col md={3} sm={6}>
             <h6>Kontak</h6>
             <ul className="list-unstyled">
               <li><a href="./index">WhatsApp</a></li>
@@ -52,8 +53,8 @@ const Footer = () => {
             <TiSocialFacebook size="2em" />
             <TiSocialInstagram size="2em" />
             <TiSocialTwitter size="2em" />
-          </div>
-        </div>
+          </Col>
+        </Row>
 
         {/* footer bottom */}
         <div className="footer-bottom">
@@ -64,7 +65,7 @@ const Footer = () => {
             Created with <TiHeartFullOutline /> by Team ED_7
           </p>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
