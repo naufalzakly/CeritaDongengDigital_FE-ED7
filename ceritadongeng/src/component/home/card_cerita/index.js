@@ -2,12 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import "./style.css";
-const Card_cerita = ({ cerita1, cerita2, cerita3, title }) => {
+const Card_cerita = ({ cerita1, cerita2, cerita3}) => {
   return (
     <Container>
-      <br></br>
-      <h3>{title}</h3>
-      <hr width={90} />
       <Row className="Container_Card">
         <CardGroup className="">
           <Col>
