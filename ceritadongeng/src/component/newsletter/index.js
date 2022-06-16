@@ -1,23 +1,27 @@
 import { AiOutlineSend } from "react-icons/ai";
 import "./index.css";
+import { Row, Col, Button } from "react-bootstrap";
 
 const Newsletter = () => {
   return (
     <div className="newsletter">
-        <div className="col-2">
+      <Row>
+        <Col md="4">
           <h4>Newsletter</h4>
           <p>stay Up to Date</p>
-        </div>
-        <div className="col-6">
-          <input
-            type="text"
-            placeholder="Email Kamu..."
-            className="newsletter-input"
-          />
-          <button className="btn btn-primary rounded">
-            <AiOutlineSend />
-          </button>
-      </div>
+        </Col>
+        <Col md="10">
+          <form className="newsletter-form">
+            <input
+              type="text"
+              placeholder="Email Kamu..."
+            />
+            <Button variant="primary" className="rounded">
+              <AiOutlineSend />
+            </Button>
+          </form>
+        </Col>
+      </Row>
     </div>
   );
 };
