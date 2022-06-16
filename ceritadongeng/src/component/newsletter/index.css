@@ -15,8 +15,8 @@
     margin-left: -40px;
 }
 
-input {
-    width: 600px;
+.newsletter-form input {
+    width: 500px;
     height: 40px;
     padding-left: 10px;
     border-radius: 20px;
