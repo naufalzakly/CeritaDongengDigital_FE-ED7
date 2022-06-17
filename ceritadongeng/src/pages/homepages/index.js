@@ -1,10 +1,6 @@
 import HomeSlider from "../../component/home/slider";
 import React from "react";
-import NavbarHome from "../../component/home/navbar";
 import FeedbackHome from "../../component/home/feedback";
-import logo from "../../icon/garis.png";
-import garis from "../../icon/garis.png";
-import profil from "../../icon/profile.png";
 import CardCerita from "../../component/home/card_cerita";
 import Newsletter from "../../component/newsletter/index";
 import SectionTitle from "../../component/sectionTitle/index";
@@ -30,9 +26,6 @@ const PageHome = () => {
   return (
     <div className="Container">
       <div className="Home">
-        <div className="Navbar">
-          <NavbarHome logo={logo} garis={garis} profil={profil} />
-        </div>
         <div className="Content">
           <HomeSlider
             slider1={slider1}

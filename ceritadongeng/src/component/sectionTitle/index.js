@@ -3,7 +3,7 @@ import "./index.css";
 
 const SectionTitle = ({title}) => {
   return (
-    <div class="title-section">
+    <div className="title-section">
       <Container>
         <br />
         <h3>{title}</h3>
