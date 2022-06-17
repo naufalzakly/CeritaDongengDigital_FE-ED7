@@ -18,9 +18,7 @@ function ReadDataCerita(){
         <div>
             {User.map((user) => (
                 <div key={user.index} >
-                    {user.id === 1 &&
-                      <img src = {user.judul} alt =""/>
-                    }
+                  <img src = {user.judul} alt =""/>
                     
                 </div>
 
