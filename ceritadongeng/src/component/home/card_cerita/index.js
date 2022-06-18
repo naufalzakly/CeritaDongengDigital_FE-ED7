@@ -6,7 +6,7 @@ const Card_cerita = ({ cerita1, cerita2, cerita3}) => {
   return (
     <Container>
       <Row className="Container_Card">
-        <CardGroup className="">
+        <CardGroup >
           <Col>
             <div className="Container_Card">
               <Card border="light">

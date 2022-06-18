@@ -1,16 +1,22 @@
 import { Container } from "react-bootstrap";
-import CardCerita from "../../component/home/card_cerita/index";
+import LibDongengCard from "../../component/libDongengCard/index";
+import SectionTitle from "../../component/sectionTitle/index";
 import "./index.css";
-import slider1 from '../../img/bebek_buruk_rupa_thumbnail.png';
-import slider2 from '../../img/kancil_buaya_thumbnail.png';
-import slider3 from '../../img/Kancil_dan_harimau_thumbnail.png';
+import slider1 from '../../img/kancil_buaya_prev.png';
+import slider2 from '../../img/kelinci_kura_preview_1.png';
+import slider3 from '../../img/kelinci_kura_preview_2.png';
 
 const LibDongeng = () => {
   return (
     <Container>
       <div className="m-top">
-        <CardCerita
-          title={"Dongeng"}
+        <SectionTitle title={"Dongeng"}/>
+        <LibDongengCard
+          cerita1={slider2}
+          cerita2={slider1}
+          cerita3={slider3}
+        />
+        <LibDongengCard
           cerita1={slider2}
           cerita2={slider1}
           cerita3={slider3}

@@ -4,6 +4,7 @@ import {
   TiSocialFacebook,
   TiSocialInstagram,
   TiHeartFullOutline,
+  TiSocialLinkedin
 } from "react-icons/ti";
 import { BiCopyright } from "react-icons/bi";
 import {Container, Row, Col, Button} from "react-bootstrap";
@@ -53,6 +54,7 @@ const Footer = () => {
             <TiSocialFacebook size="2em" />
             <TiSocialInstagram size="2em" />
             <TiSocialTwitter size="2em" />
+            <TiSocialLinkedin size="2em" />
           </Col>
         </Row>
 
