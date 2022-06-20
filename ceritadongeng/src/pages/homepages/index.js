@@ -2,51 +2,52 @@ import HomeSlider from "../../component/home/slider";
 import React from 'react';
 import NavbarHome from '../../component/home/navbar';
 import FeedbackHome from "../../component/home/feedback";
-import logo from '../../icon/garis.png';
-import garis from '../../icon/garis.png';
-import profil from '../../icon/profile.png';
-import CardCerita from "../../component/home/card_cerita";
 
+import CardCeritaRilis from "../../component/home/card_cerita/cerita_rilis.js";
+import CardCeritaPopuler from "../../component/home/card_cerita/cerita_populer.js";
+import CardCeritaSegera from "../../component/home/card_cerita/cerita_segera.js";
 
-
-// import Newsletter from "../../component/newsletter/index";
-
-import img_feedbacck from '../../img/feedback_compressed.png'
+import Newsletter from "../../component/newsletter/index";
+import Footer from "../../component/home/footer";
 
 const PageHome = ()=>{
-
+    
+    
     return(
         <div className="Container">
             <div className="Home">
                 <div className="Navbar">
-                    <NavbarHome
-                        logo = {logo}
-                        garis = {garis}
-                        profil = {profil}
-                    />
+                    <NavbarHome/>
                 </div>
                 <div className="Content">
-                    <HomeSlider
-                    />
+                    <div className="Sliderr">
+                        <HomeSlider/>
+                    </div>
+
                     
-                    <CardCerita
+                    <CardCeritaRilis
                         title = {"Baru Rilis"}
                     />
 
-                    <CardCerita
+                    <CardCeritaPopuler
                         title = {"Cerita Terpopuler"}
                     />
 
-                    <CardCerita
+                    <CardCeritaSegera
                         title = {"Segera Rilis"}
                     />
                 </div>
                 <div className="feedback">
-                    <FeedbackHome
-                        img_feedback = {img_feedbacck}
-                    />
+                    <FeedbackHome/>
+                    {/* <Newsletter /> */}
                 </div>
-                {/* <Newsletter /> */}
+                <div className="news_letter">
+                    <Newsletter />
+                </div>
+                <div className="news_letter">
+                    <Footer />
+                </div>
+                
             </div>
 
 

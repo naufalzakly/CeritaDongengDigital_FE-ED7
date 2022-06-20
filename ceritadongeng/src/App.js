@@ -2,22 +2,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./pages/homepages/index";
-import Footer from "./component/footer/index";
+// import Footer from "./component/footer/index";
 import "./App.css";
 import NavbarHome from "./component/home/navbar/index";
-import logo from "./icon/garis.png";
-import garis from "./icon/garis.png";
-import profile from "./icon/profile.png";
+// import EditAkun from "./pages/editAkun/index";
+// import MyAkun from "./pages/myAkun/index";
+
 
 function App() {
-  require('dotenv').config()
-
-
   return (
     <div className="Container">
-      <NavbarHome logo={logo} garis={garis} profil={profile} />
+      <NavbarHome />
       <Homepage />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   
   );

@@ -1,61 +1,190 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel,Row,Col,Nav,Button,ButtonGroup,ButtonToolbar} from 'react-bootstrap';
 import './style.css';
+import db from '../../../Firebase'
+import {collection, onSnapshot } from "firebase/firestore"
+import {useEffect,useState} from "react"
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-const Home = ({slider1,slider2,slider3,slider4})=>{
+const Home = ()=>{
+    const [Slider , setSlider] = useState([]);
+
+    useEffect(
+      () =>
+        onSnapshot(collection(db,"thumb_landscape"), (snapshot) =>
+            setSlider(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})))
+        ),
+        []
+    );
     return(
         <Carousel variant="dark">
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={slider1}
-                alt="First slide"
-                />
+            <Carousel.Item >
+                {Slider
+                .filter((slider) => slider.index === 1)
+                .map((slider, id) => {
+                    return (
+                        <div key = {id}>
+                            <img
+                                className="d-block w-100"
+                                src={slider.img}
+                                alt="First slide"
+                            />
+                        </div>
+                    )
+                })}
                 <Carousel.Caption>
-                <h3>First slide label</h3>
+                    
+                    <Row>
+                        <Col >
+                            <Nav className="justify-content-end">
+                                <ButtonToolbar>
+                                    <ButtonGroup className="me-2">
+                                        <h5 className ="h5_slider">
+                                            BACA DONGENG
+                                        </h5>
+                                    </ButtonGroup>
+                                    <ButtonGroup>
+                                        <Button variant="secondary" className="rounded">
+                                            <BsFillArrowRightCircleFill />
+                                        </Button > 
+                                    </ButtonGroup>
+
+                                </ButtonToolbar>
+
+                      
+                            </Nav>
+                        </Col>
+                    </Row>
+
+                </Carousel.Caption>
                 
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Item>
+            <Carousel.Item >
+                {Slider
+                .filter((slider) => slider.index === 2)
+                .map((slider, id) => {
+                    return (
+                        <div key = {id}>
+                            <img
+                                className="d-block w-100"
+                                src={slider.img}
+                          
+                                alt="Second slide"
+                            />
+                        </div>
+                    )
+                })}
+                <Carousel.Caption>
+                    
+                    <Row>
+                        <Col >
+                            <Nav className="justify-content-end">
+                                <ButtonToolbar>
+                                    <ButtonGroup className="me-2">
+                                        <h5 className ="h5_slider">
+                                            BACA DONGENG
+                                        </h5>
+                                    </ButtonGroup>
+                                    <ButtonGroup>
+                                        <Button variant="secondary" className="rounded">
+                                            <BsFillArrowRightCircleFill />
+                                        </Button > 
+                                    </ButtonGroup>
+
+                                </ButtonToolbar>
+
+                      
+                            </Nav>
+                        </Col>
+                    </Row>
+
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={slider2}
-                alt="Second slide"
-                />
-
+            <Carousel.Item >
+                {Slider
+                .filter((slider) => slider.index === 3)
+                .map((slider, id) => {
+                    return (
+                        <div key = {id}>
+                            <img
+                                className="d-block w-100"
+                                src={slider.img}
+                              
+                                alt="Third slide"
+                            />
+                        </div>
+                    )
+                })}
                 <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    
+                    <Row>
+                        <Col >
+                            <Nav className="justify-content-end">
+                                <ButtonToolbar>
+                                    <ButtonGroup className="me-2">
+                                        <h5 className ="h5_slider">
+                                            BACA DONGENG
+                                        </h5>
+                                    </ButtonGroup>
+                                    <ButtonGroup>
+                                        <Button variant="secondary" className="rounded">
+                                            <BsFillArrowRightCircleFill />
+                                        </Button > 
+                                    </ButtonGroup>
+
+                                </ButtonToolbar>
+
+                      
+                            </Nav>
+                        </Col>
+                    </Row>
+
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={slider3}
-                alt="Third slide"
-                />
-
+            <Carousel.Item >
+                {Slider
+                .filter((slider) => slider.index === 4)
+                .map((slider, id) => {
+                    return (
+                        <div key = {id}>
+                            <img
+                                className="d-block w-100"
+                                src={slider.img}
+                              
+                                alt="Fourth slide"
+                            />
+                        </div>
+                    )
+                })}
                 <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={slider4}
-                alt="Third slide"
-                />
+                    
+                    <Row>
+                        <Col >
+                            <Nav className="justify-content-end">
+                                <ButtonToolbar>
+                                    <ButtonGroup className="me-2">
+                                        <h5 className ="h5_slider">
+                                            BACA DONGENG
+                                        </h5>
+                                    </ButtonGroup>
+                                    <ButtonGroup>
+                                        <Button variant="secondary" className="rounded">
+                                            <BsFillArrowRightCircleFill />
+                                        </Button > 
+                                    </ButtonGroup>
 
-                <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </ButtonToolbar>
+
+                      
+                            </Nav>
+                        </Col>
+                    </Row>
+
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        
+            
     )
 }
 export default Home;

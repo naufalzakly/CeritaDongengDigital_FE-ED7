@@ -1,11 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import { Nav, ButtonGroup, Button, Container, Row, Col } from "react-bootstrap";
+import { Nav, Container, Row, Col, Button,ButtonGroup,ButtonToolbar } from "react-bootstrap";
 import "./style.css";
-// import { FaBars, FaTimes } from 'react-icons/fa'
 import useState from "react-hook-use-state";
+import { BsList, BsFillPersonFill } from "react-icons/bs";
 
-const NavbarHome = ({ logo, garis, profil }) => {
+const NavbarHome = () => {
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 20) {
@@ -22,61 +20,27 @@ const NavbarHome = ({ logo, garis, profil }) => {
         <Row>
           <Col>
             <Nav className="justify-content-start">
-              <Nav.Item>
-                <Nav.Link href="/home">
-                  <img
-                    className="img_nav"
-                    src={logo}
-                    width={20}
-                    height={20}
-                    alt="pic"
-                  />
-                </Nav.Link>
-              </Nav.Item>
+              <h4 className = "logo">Cerita Dongeng</h4>
             </Nav>
-
-            <br></br>
+            <br />
           </Col>
+
           <Col>
             <Nav className="justify-content-end">
-              <Nav.Item>
-                <Nav.Link href="./libDongeng">
+              <ButtonToolbar>
+                <ButtonGroup className="me-2">
                   <Button variant="outline-dark" className="button">
-                    <h2 className="text_nav">Library Dongeng</h2>
+                    <h5 className="text_nav">BERGABUNG</h5>
                   </Button>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#features">
+                </ButtonGroup>
+
+                <ButtonGroup className="me-2">
                   <Button variant="outline-dark" className="button">
-                    <h2 className="text_nav">Bergabung</h2>
+                    <BsList size="1.5em" className="mx-2"/>
+                    <BsFillPersonFill size="1.5em" />
                   </Button>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#memes">
-                  <ButtonGroup>
-                    <Button className="button" variant="outline-dark">
-                      <img
-                        className="img_nav"
-                        src={garis}
-                        height={15}
-                        width={15}
-                        alt="pict"
-                      />
-                    </Button>
-                    <Button className="button" variant="outline-dark">
-                      <img
-                        className="img_nav"
-                        src={profil}
-                        width={15}
-                        height={15}
-                        alt="pic"
-                      />
-                    </Button>
-                  </ButtonGroup>
-                </Nav.Link>
-              </Nav.Item>
+                </ButtonGroup>
+              </ButtonToolbar>
             </Nav>
           </Col>
         </Row>
