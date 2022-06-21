@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
-import db from '../../../Firebase'
+import db from '../../../Firebase';
 import {collection, onSnapshot } from "firebase/firestore"
 import {useEffect,useState} from "react"
 
