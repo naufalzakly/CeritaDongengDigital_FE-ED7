@@ -26,7 +26,7 @@ const LibDongengCard = ({ cerita1, cerita2, cerita3 }) => {
             </Carousel.Item>
           </Carousel>
         </div>
-        <Card.Body clasName="d-flex">
+        <Card.Body className="d-flex">
           <Card.Title>Kancil dan Buaya <Button><FaHeart size="1.5em" /></Button></Card.Title>
          
         </Card.Body>

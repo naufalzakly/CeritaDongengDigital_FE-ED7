@@ -17,7 +17,7 @@ const Newsletter = () => {
               placeholder="Email Kamu..."
             />
             <Button variant="primary" className="rounded">
-              <AiOutlineSend />
+              <AiOutlineSend/>
             </Button>
           </form>
         </Col>
