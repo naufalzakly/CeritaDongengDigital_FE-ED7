@@ -12,10 +12,9 @@
     background-color: rgb(196, 248, 248);
 }
 .button{
-    margin-top: 15px;
-    height: 35px;
+    margin-top: 5px;
+    height: 40px;
     border: 2px solid black;
-    justify-content: center;
     border-radius: 20px;
 }
 .img_nav{
@@ -25,9 +24,4 @@
 .text_nav{
     font-size: 16px;
     font-weight: Bold;
-    justify-content: center;
-
-}
-.logo{
-    margin-top: 20px;
 }
