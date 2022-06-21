@@ -7,15 +7,15 @@ import "./App.css";
 import NavbarHome from "./component/home/navbar/index";
 // import LibDongeng from "./pages/libDongeng/index";
 // import EditAkun from "./pages/editAkun/index";
-import MyAkun from "./pages/myAkun/index";
-// import CardWishlist from "./component/cardWishlist/index";
+// import MyAkun from "./pages/myAkun/index";
+import Wishlist from "./pages/wishlist/index"
 
 
 function App() {
   return (
     <div className="Container">
       <NavbarHome />
-      <MyAkun/>
+      <Wishlist/>
       <Footer />
     </div>
   

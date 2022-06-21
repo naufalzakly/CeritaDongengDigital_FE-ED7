@@ -1,52 +1,15 @@
-.body {
-    font-family: sans-serif;
-  }
+.card-wishlist {
+  width: 367px;
+  height: 400px;
   
-  .header {
-    background-color: lightgray;
-    color:black;
-    height: 90px;
-  }
-  
-  .header-logo {
-    float: left;
-    font-size: 35px;
-    padding: 20px 40px;
-  }
-  
-  .main {
-    padding: 100px 80px;
-  }
-  
-  .copy-container h2 {
-    font-size: 50px;
-  }
-  
-  .contents {
-    height: 500px;
-    margin-top: 50px;
-  }
-  
-  .contents-item {
-    border-radius: 30%;
-  }
-  
-  .contents-item {
-    float: left;
-    margin-right: 20px;
-  }
-  
-  .contents-item p {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-  .contents-item button {
-    font-size: 20px;
-    padding: 12px 65px;
-    border-radius: 40px;
-  }
-  
-  .contents-item img {
-    border-radius: 20px;
-  }
+}
+
+.card img {
+  width: 367px;
+  height: 327px;
+  border-radius: 25px;
+}
+
+.no-outline{
+  border: none;
+}
