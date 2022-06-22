@@ -1,11 +1,10 @@
 // import logo from './logo.svg';
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Homepage from "./pages/homepages/index";
+import Homepage from "./pages/homepages/index";
 import Footer from "./component/footer/index";
 import "./App.css";
 import NavbarHome from "./component/home/navbar/index";
-<<<<<<< HEAD
 import LibDongeng from "./pages/libDongeng/index";
 // import EditAkun from "./pages/editAkun/index";
 // import MyAkun from "./pages/myAkun/index";
@@ -27,39 +26,21 @@ function App() {
                 path="/home"
                 element={
                   <ProtectedRoute>
-                    <ButtonBergabung />
+                    <NavbarHome/>
+                    <Homepage />
                     
                   </ProtectedRoute>
                 }
               />
-              <Route
-                path="/LibDongeng"
-                element={
-                  <ProtectedRoute>
-                    <NavbarHome />
-                    <LibDongeng />
-                    <Footer />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/phonesignup" element={<PhoneSignUp />} />
              
             </Routes>
           </UserAuthContextProvider>
         </Col>
       </Row>
     </Container>
-=======
-import LibBuku from "./pages/libBuku/index";
-
-function App() {
-  return (
-    <div className="Container">
-      <NavbarHome />
-      <LibBuku />
-      <Footer />
-    </div>
-  
->>>>>>> aff9cbc645086e7a59af46034c93c613340096f1
   );
 }
 
