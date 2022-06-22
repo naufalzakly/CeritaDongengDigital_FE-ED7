@@ -14,6 +14,10 @@ const NavbarHome = () => {
   };
   window.addEventListener("scroll", changeColor);
 
+  const login = () => true;
+
+  const isLogin = login;
+
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Container>
@@ -32,22 +36,7 @@ const NavbarHome = () => {
           <Col>
             <Nav className="justify-content-end">
 
-              <Nav.Item>
-                <Nav.Link href="#features">
-                  <Button variant="outline-dark" className="button">
-                    <h5 className="text_nav">BERGABUNG</h5>
-                  </Button>
-                </Nav.Link>
-              </Nav.Item>
-
-              <Nav.Item>
-                <Nav.Link href="#features">
-                  <Button variant="outline-dark" className="button">
-                    <BsList size="1.5em" className="mx-2"/>
-                    <BsFillPersonFill size="1.5em" />
-                  </Button>
-                </Nav.Link>
-              </Nav.Item>
+             
 
             </Nav>
           </Col>
