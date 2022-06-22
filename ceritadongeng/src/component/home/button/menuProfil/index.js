@@ -1,6 +1,7 @@
 import { Nav, Dropdown } from "react-bootstrap";
 import { BsList, BsFillPersonFill } from "react-icons/bs";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const ButtonMenuProfil = () => {
   return (
@@ -10,11 +11,10 @@ const ButtonMenuProfil = () => {
           <Dropdown.Toggle variant="light" id="dropdown-basic" className=" mt-3">
             <BsList /> <BsFillPersonFill/>
           </Dropdown.Toggle>
-
           <Dropdown.Menu className="dropdown-menu">
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            <Link to="/" > <Dropdown.Item>Home</Dropdown.Item></Link>
+            <Link to="/libBuku" > <Dropdown.Item>Pustakaan </Dropdown.Item></Link>
+            <Link to="/" >  <Dropdown.Item>Daftar Bacaan</Dropdown.Item></Link>
           </Dropdown.Menu>
         </Dropdown>
       </Nav.Item>

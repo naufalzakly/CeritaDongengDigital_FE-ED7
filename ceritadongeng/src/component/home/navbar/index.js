@@ -1,8 +1,8 @@
 import { Nav, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import useState from "react-hook-use-state";
-import ButtonBergabung from "../button/bergabung/index";
-// import ButtonMenuProfil from "../button/menuProfil";
+ //import ButtonBergabung from "../button/bergabung/index";
+import ButtonMenuProfil from "../button/menuProfil";
 
 
 const NavbarHome = () => {
@@ -36,12 +36,14 @@ const NavbarHome = () => {
           <Col>
             <Nav className="justify-content-end">
 
-            <ButtonBergabung />
+            {/* <ButtonBergabung /> */}
+            <ButtonMenuProfil />
 
             </Nav>
           </Col>
         </Row>
       </Container>
+
     </div>
   );
 };

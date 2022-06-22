@@ -2,9 +2,9 @@
 import React from "react";
 import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import "./style.css";
-import db from '../../../Firebase'
-import {collection, onSnapshot } from "firebase/firestore"
-import {useEffect,useState} from "react"
+import db from '../../../Firebase';
+import {collection, onSnapshot } from "firebase/firestore";
+import {useEffect,useState} from "react";
 
 const Card_cerita_Populer = ({ title}) => {
   const [Thumbnail , setThumbnail] = useState([]);
