@@ -12,14 +12,9 @@ const FeedbackHome = ({img}) => {
     () =>
       onSnapshot(collection(db,"thumb_homepage"), (snapshot) =>
         setFeedback(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})))
-      ),
-      
-
-    []
+      ), []
   );
   
-
-
   
   return (
     <Container>

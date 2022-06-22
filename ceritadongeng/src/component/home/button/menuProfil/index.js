@@ -12,9 +12,10 @@ const ButtonMenuProfil = () => {
             <BsList /> <BsFillPersonFill/>
           </Dropdown.Toggle>
           <Dropdown.Menu className="dropdown-menu">
-            <Link to="/" > <Dropdown.Item>Home</Dropdown.Item></Link>
-            <Link to="/libBuku" > <Dropdown.Item>Pustakaan </Dropdown.Item></Link>
-            <Link to="/" >  <Dropdown.Item>Daftar Bacaan</Dropdown.Item></Link>
+             <Dropdown.Item><Link to="/">Home</Link></Dropdown.Item>
+             <Dropdown.Item><Link to="/libBuku">Pustakaan </Link> </Dropdown.Item>
+              <Dropdown.Item><Link to="/wishlist">Daftar Bacaan</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/profil">Profil</Link></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Nav.Item>

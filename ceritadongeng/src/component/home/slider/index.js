@@ -82,9 +82,11 @@ const Home = () => {
                     <h5 className="h5_slider">BACA DONGENG</h5>
                   </ButtonGroup>
                   <ButtonGroup>
+                  <Link to="/libBuku">
                     <Button variant="primary" className="rounded">
                       <AiOutlineArrowRight />
                     </Button>
+                    </Link>
                   </ButtonGroup>
                 </ButtonToolbar>
               </Nav>
@@ -113,9 +115,11 @@ const Home = () => {
                     <h5 className="h5_slider">BACA DONGENG</h5>
                   </ButtonGroup>
                   <ButtonGroup>
+                  <Link to="/libBuku">
                     <Button variant="primary" className="rounded">
                       <AiOutlineArrowRight />
                     </Button>
+                    </Link>
                   </ButtonGroup>
                 </ButtonToolbar>
               </Nav>
@@ -144,9 +148,11 @@ const Home = () => {
                     <h5 className="h5_slider">BACA DONGENG</h5>
                   </ButtonGroup>
                   <ButtonGroup>
+                  <Link to="/libBuku">
                     <Button variant="primary" className="rounded">
                       <AiOutlineArrowRight />
                     </Button>
+                    </Link>
                   </ButtonGroup>
                 </ButtonToolbar>
               </Nav>
