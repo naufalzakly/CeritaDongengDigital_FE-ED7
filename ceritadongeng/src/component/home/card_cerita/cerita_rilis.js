@@ -33,7 +33,7 @@ const Card_cerita_Rilis = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img}width ={355} alt="pict"></img>
+                        <img src={thumb.img}width ={250} alt="pict"></img>
 
                       </div>
                     )
@@ -48,7 +48,7 @@ const Card_cerita_Rilis = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img} width ={355} alt="pict"></img>
+                        <img src={thumb.img} width ={250} alt="pict"></img>
 
                       </div>
                     )
@@ -63,7 +63,22 @@ const Card_cerita_Rilis = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img} width ={355} alt="pict"></img>
+                        <img src={thumb.img} width ={250} alt="pict"></img>
+
+                      </div>
+                    )
+                  })}
+              </Card>
+            </Col>
+            
+            <Col >
+              <Card border="light">
+                {Thumbnail
+                  .filter((thumb) => thumb.index === 1)
+                  .map((thumb, id) => {
+                    return (
+                      <div key={id}>
+                        <img src={thumb.img} width ={250} alt="pict"></img>
 
                       </div>
                     )

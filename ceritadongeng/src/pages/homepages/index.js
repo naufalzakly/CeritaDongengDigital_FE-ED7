@@ -1,6 +1,6 @@
 import HomeSlider from "../../component/home/slider";
 import React from "react";
-import FeedbackHome from "../../component/home/feedback";
+import AboutPlatform from "../../component/home/about_platform";
 import CardCeritaRilis from "../../component/home/card_cerita/cerita_rilis.js";
 import CardCeritaPopuler from "../../component/home/card_cerita/cerita_populer.js";
 import CardCeritaSegera from "../../component/home/card_cerita/cerita_segera.js";
@@ -31,10 +31,11 @@ const PageHome = ()=>{
                         title = {"Segera Rilis"}
                     />
                 </div>
-                <div className="feedback">
-                    <FeedbackHome/>
-                    {/* <Newsletter /> */}
+                <div className="About_platform">
+
+                    <AboutPlatform/>
                 </div>
+                
                 <div className="news_letter">
                     <Newsletter />
                 </div>

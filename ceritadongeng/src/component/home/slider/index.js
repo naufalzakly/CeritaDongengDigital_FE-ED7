@@ -5,7 +5,7 @@ import './style.css';
 import db from '../../../Firebase'
 import {collection, onSnapshot } from "firebase/firestore"
 import {useEffect,useState} from "react"
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Home = ()=>{
     const [Slider , setSlider] = useState([]);
@@ -45,8 +45,8 @@ const Home = ()=>{
                                         </h5>
                                     </ButtonGroup>
                                     <ButtonGroup>
-                                        <Button variant="secondary" className="rounded">
-                                            <BsFillArrowRightCircleFill />
+                                        <Button variant="primary" className="rounded">
+                                            <AiOutlineArrowRight />
                                         </Button > 
                                     </ButtonGroup>
 
@@ -87,8 +87,8 @@ const Home = ()=>{
                                         </h5>
                                     </ButtonGroup>
                                     <ButtonGroup>
-                                        <Button variant="secondary" className="rounded">
-                                            <BsFillArrowRightCircleFill />
+                                        <Button variant="primary" className="rounded">
+                                            <AiOutlineArrowRight />
                                         </Button > 
                                     </ButtonGroup>
 
@@ -128,8 +128,8 @@ const Home = ()=>{
                                         </h5>
                                     </ButtonGroup>
                                     <ButtonGroup>
-                                        <Button variant="secondary" className="rounded">
-                                            <BsFillArrowRightCircleFill />
+                                        <Button variant="primary" className="rounded">
+                                            <AiOutlineArrowRight />
                                         </Button > 
                                     </ButtonGroup>
 
@@ -169,8 +169,8 @@ const Home = ()=>{
                                         </h5>
                                     </ButtonGroup>
                                     <ButtonGroup>
-                                        <Button variant="secondary" className="rounded">
-                                            <BsFillArrowRightCircleFill />
+                                        <Button variant="primary" className="rounded">
+                                            <AiOutlineArrowRight />
                                         </Button > 
                                     </ButtonGroup>
 
