@@ -6,7 +6,7 @@
     left: 0;
     z-index: 1;
     transition: .3s ease-in;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .header-bg {
     background-color: rgb(196, 248, 248);

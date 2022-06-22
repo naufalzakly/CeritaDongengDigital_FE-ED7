@@ -1,7 +1,9 @@
-import { Nav, Container, Row, Col, Button } from "react-bootstrap";
+import { Nav, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import useState from "react-hook-use-state";
-import { BsList, BsFillPersonFill } from "react-icons/bs";
+import ButtonBergabung from "../button/bergabung/index";
+// import ButtonMenuProfil from "../button/menuProfil";
+
 
 const NavbarHome = () => {
   const [color, setColor] = useState(false);
@@ -14,9 +16,7 @@ const NavbarHome = () => {
   };
   window.addEventListener("scroll", changeColor);
 
-  const login = () => true;
-
-  const isLogin = login;
+  // const  [login, setLogin] = useState(false);
 
   return (
     <div className={color ? "header header-bg" : "header"}>
@@ -36,7 +36,7 @@ const NavbarHome = () => {
           <Col>
             <Nav className="justify-content-end">
 
-             
+            <ButtonBergabung />
 
             </Nav>
           </Col>
