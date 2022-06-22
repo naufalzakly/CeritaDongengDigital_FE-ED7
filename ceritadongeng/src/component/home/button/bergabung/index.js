@@ -1,13 +1,66 @@
-import { Nav, Button, Modal, FloatingLabel, Form } from "react-bootstrap";
-import { BsGoogle } from "react-icons/bs";
-import { FaFacebook, FaApple } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import useState from "react-hook-use-state";
+import { Nav, Button, Modal } from "react-bootstrap";
+
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Form, Alert } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import GoogleButton from "react-google-button";
+import { useUserAuth } from "../context/UserAuthContext";
 
 const ButtonBergabung = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [error, setError] = useState("");
+  const { logIn, googleSignIn } = useUserAuth();
+  const navigate = useNavigate();
+
+  
+  const [flag, setFlag] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [result, setResult] = useState("");
+  const { setUpRecaptha } = useUserAuth();
+  
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/home");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+  const getOtp = async (e) => {
+    e.preventDefault();
+    console.log(number);
+    setError("");
+    if (number === "" || number === undefined)
+      return setError("Please enter a valid phone number!");
+    try {
+      const response = await setUpRecaptha(number);
+      setResult(response);
+      setFlag(true);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const verifyOtp = async (e) => {
+    e.preventDefault();
+    setError("");
+    if (otp === "" || otp === null) return;
+    try {
+      await result.confirm(otp);
+      navigate("/home");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+
 
   return (
     <div>
@@ -28,48 +81,50 @@ const ButtonBergabung = () => {
           <Modal.Title>Login or Signup</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <FloatingLabel
-            controlId="floatingInput"
-            label="Nomor Telephone"
-            className="mb-3"
-          >
-            <Form.Control
-              type="number"
-              placeholder="Masukan nomor telephone anda"
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <PhoneInput
+              defaultCountry="ID"
+              value={number}
+              onChange={setNumber}
+              placeholder="Enter Phone Number"
             />
-          </FloatingLabel>
-
-          <FloatingLabel
-            controlId="floatingInput"
-            label="passoword"
-            className="mb-3"
-          >
-            <Form.Control
-              type="password"
-              placeholder="Masukan nomor telephone anda"
-            />
-          </FloatingLabel>
-
-          <Button className="mx-3">Selanjutnya</Button>
-          <Button variant="light">
-            <AiOutlineMail size="1.5em" />
-            Gunakan Email
-          </Button>
-          <div className="login-section d-flex mt-3">
-            <hr width="20px" className="mx-2" />
-            <p>atau gunakan ID</p>
-            <hr width="230px" />
+            <div id="recaptcha-container"></div>
+          </Form.Group>
+          <div className="button-right">
+            <Button type="submit" variant="primary">
+              Send Otp
+            </Button>
           </div>
-          <Button className="mx-3">
-            <FaFacebook size="1.5em" /> Facebook
-          </Button>
-          <Button className="mx-3">
-            <FaApple size="1.5em" /> Apple ID
-          </Button>
-          <Button className="mx-3">
-            <BsGoogle size="1.5em" />
-            Google
-          </Button>
+        </Form>
+        <hr />
+        <div>
+          <GoogleButton
+            className="g-btn"
+            type="dark"
+            onClick={handleGoogleSignIn}
+          />
+        </div>
+
+        <Form onSubmit={verifyOtp} style={{ display: flag ? "block" : "none" }}>
+          <Form.Group className="mb-3" controlId="formBasicOtp">
+            <Form.Control
+              type="otp"
+              placeholder="Enter OTP"
+              onChange={(e) => setOtp(e.target.value)}
+            />
+          </Form.Group>
+          <div className="button-right">
+            <Link to="/">
+              <Button variant="secondary">Cancel</Button>
+            </Link>
+            &nbsp;
+            <Button type="submit" variant="primary">
+              Verify
+            </Button>
+          </div>
+        </Form>
         </Modal.Body>
       </Modal>
     </div>
