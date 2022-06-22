@@ -1,8 +1,22 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import SectionTitle from "../../sectionTitle/index";
 import "./index.css";
+import db from '../../../Firebase'
+import {collection, onSnapshot } from "firebase/firestore"
+import {useEffect,useState} from "react"
 
-const AboutPlatform = ({cerita1}) => {
+const AboutPlatform = () => {
+  const [Platform , setPlatform] = useState([]);
+
+  useEffect(
+    () =>
+      onSnapshot(collection(db,"thumb_homepage"), (snapshot) =>
+        setPlatform(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})))
+      ),
+      
+
+    []
+  );
   return (
     <div className="about-platform">
       <Container>
@@ -18,7 +32,19 @@ const AboutPlatform = ({cerita1}) => {
             <Button variant="primary" >Hubungi Kami</Button>
           </Col>
           <Col md="4">
-            <img src={cerita1} alt="gambar" width="89%"/>
+            <div>
+            {Platform
+                  .filter((platform) => platform.index === 1)
+                  .map((platform, id) => {
+                    return (
+                      <div key={id}>
+                        <img src={platform.img}width="89%"  alt="pict"></img>
+
+                      </div>
+                    )
+                  })}
+            </div>
+
           </Col>
         </Row>
       </Container>

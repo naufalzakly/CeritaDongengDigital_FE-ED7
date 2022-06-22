@@ -33,7 +33,7 @@ const Card_cerita_Populer = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img}width ={355} alt="pict"></img>
+                        <img src={thumb.img} width = {250} alt="pict"/>
 
                       </div>
                     )
@@ -48,7 +48,7 @@ const Card_cerita_Populer = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img} width ={355} alt="pict"></img>
+                        <img src={thumb.img} width = {250} alt="pict"/>
                       </div>
                     )
                   })}
@@ -62,7 +62,20 @@ const Card_cerita_Populer = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img} width ={355}alt="pict"></img>
+                        <img src={thumb.img}  width = {250} alt="pict"/>
+                      </div>
+                    )
+                  })}
+              </Card>
+            </Col>
+            <Col >
+              <Card border="light">
+                {Thumbnail
+                  .filter((thumb) => thumb.index === 3)
+                  .map((thumb, id) => {
+                    return (
+                      <div key={id}>
+                        <img src={thumb.img}  width = {250}  alt="pict"/>
                       </div>
                     )
                   })}
