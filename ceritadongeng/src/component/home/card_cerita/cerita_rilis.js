@@ -2,9 +2,10 @@
 import React from "react";
 import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import "./style.css";
-import db from '../../../Firebase'
-import {collection, onSnapshot } from "firebase/firestore"
-import {useEffect,useState} from "react"
+import db from '../../../Firebase';
+import {collection, onSnapshot } from "firebase/firestore";
+import {useEffect,useState} from "react";
+import {Link} from "react-router-dom";
 
 const Card_cerita_Rilis = ({ title}) => {
   const [Thumbnail , setThumbnail] = useState([]);
@@ -28,7 +29,7 @@ const Card_cerita_Rilis = ({ title}) => {
 
             <Col >
               <Card border="light">
-                {Thumbnail
+               <Link to="/"> {Thumbnail
                   .filter((thumb) => thumb.index === 3)
                   .map((thumb, id) => {
                     return (
@@ -38,11 +39,13 @@ const Card_cerita_Rilis = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 4)
                   .map((thumb, id) => {
@@ -53,11 +56,13 @@ const Card_cerita_Rilis = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 2)
                   .map((thumb, id) => {
@@ -68,11 +73,13 @@ const Card_cerita_Rilis = ({ title}) => {
                       </div>
                     )
                   })}
+              </Link>
               </Card>
             </Col>
             
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 1)
                   .map((thumb, id) => {
@@ -83,6 +90,7 @@ const Card_cerita_Rilis = ({ title}) => {
                       </div>
                     )
                   })}
+              </Link>
               </Card>
             </Col>
 
