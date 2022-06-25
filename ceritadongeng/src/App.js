@@ -9,7 +9,7 @@ import LibBuku from "./pages/libBuku/index";
 import {Route} from 'react-router-dom';
 import Wishlist from "./pages/wishlist/index";
 import MyAkun from "./pages/myAkun/index";
-import KelinciKura from "./pages/bacaCerita/KelinciKura/index";
+import KelinciKura from "./pages/bacaCerita/KelinciKura";
 
 function App() {
   return (

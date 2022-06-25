@@ -1,15 +1,26 @@
 import "../SliderBacaCerita.css";
-import { useState } from "react";
-import dataSlider from "../dataSlider";
+import { useEffect, useState } from "react";
+// import dataSlider from "../dataSlider";
 import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
 } from "react-icons/io5";
-// import {GiSpeaker} from "react-icons/gi";
+import db from "../../../Firebase";
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 const KelinciKura = () => {
   const [current, setCurrent] = useState(0);
-  const length = dataSlider.length;
+  const [kelinciKura, setKelinciKura] = useState([]);
+  const length = kelinciKura.length;
+
+  useEffect(() => {
+    const q = query(collection(db, "kelinci_kura"), orderBy("index"));
+    onSnapshot(q, (snapshot) => {
+      setKelinciKura(
+        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      );
+    });
+  }, []);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -31,7 +42,7 @@ const KelinciKura = () => {
         className="right-arrow-baca-cerita"
         onClick={nextSlide}
       />
-      {dataSlider.map((slide, index) => {
+      {kelinciKura.map((slide, index) => {
         return (
           <div
             className={
@@ -43,14 +54,11 @@ const KelinciKura = () => {
           >
             {index === current && (
               <div>
-                <img src={slide.image} alt=" " className="image-baca-cerita" />
-                <p className="text-cerita"> haiiiiiiiiiii</p>
+                <img src={slide.img} alt=" " className="image-baca-cerita" />
+                <p className="text-cerita"> {slide.text}</p>
                 <div className="btn-audio">
                   <audio controls>
-                    <source
-                      src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/kancil_buaya_suara%2Fkancil_buaya_11.mp4?alt=media&token=6eb222b4-15ac-4077-aaf1-68bce6da9f98"
-                      type="audio/mpeg"
-                    />
+                    <source src={slide.suara} type="audio/mpeg" />
                   </audio>
                 </div>
               </div>
