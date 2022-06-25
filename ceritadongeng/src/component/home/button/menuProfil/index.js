@@ -8,14 +8,20 @@ const ButtonMenuProfil = () => {
     <div>
       <Nav.Item>
         <Dropdown>
-          <Dropdown.Toggle variant="light" id="dropdown-basic" className=" mt-3">
-            <BsList /> <BsFillPersonFill/>
+          <Dropdown.Toggle
+            variant="light"
+            id="dropdown-basic"
+            className=" mt-3"
+          >
+            <BsList /> <BsFillPersonFill />
           </Dropdown.Toggle>
           <Dropdown.Menu className="dropdown-menu">
-             <Dropdown.Item><Link to="/">Home</Link></Dropdown.Item>
-             <Dropdown.Item><Link to="/libBuku">Pustakaan </Link> </Dropdown.Item>
-              <Dropdown.Item><Link to="/wishlist">Daftar Bacaan</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/profil">Profil</Link></Dropdown.Item>
+            <ul className="dropdown-list">
+              <li className="dropdown-item"><Link to="/">Home</Link></li>
+              <li className="dropdown-item"> <Link to="/libBuku">Pustakaan </Link></li>
+              <li className="dropdown-item"> <Link to="/wishlist">Daftar Bacaan</Link></li>
+              <li className="dropdown-item"><Link to="/profil">Profil</Link></li>
+            </ul>
           </Dropdown.Menu>
         </Dropdown>
       </Nav.Item>

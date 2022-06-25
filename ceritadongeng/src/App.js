@@ -9,6 +9,7 @@ import LibBuku from "./pages/libBuku/index";
 import {Route} from 'react-router-dom';
 import Wishlist from "./pages/wishlist/index";
 import MyAkun from "./pages/myAkun/index";
+import KelinciKura from "./pages/bacaCerita/KelinciKura";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/libBuku" component={LibBuku}/>
       <Route path="/wishlist" component={Wishlist}/>
       <Route path="/profil" component={MyAkun}/>
+      <Route path="/bacaCerita/KelinciKura" component={KelinciKura} />
       <Footer />
     </div>
   

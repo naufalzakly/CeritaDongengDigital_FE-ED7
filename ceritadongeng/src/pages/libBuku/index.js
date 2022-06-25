@@ -16,12 +16,6 @@ const LibBuku = () => {
               cerita2= "https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
               cerita3="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
             />
-            <LibBukuCard
-            judul="Kancil dan Buaya"
-              cerita1="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-              cerita2="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-              cerita3="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-            />
           </CardGroup>
         </Row>
       </Container>

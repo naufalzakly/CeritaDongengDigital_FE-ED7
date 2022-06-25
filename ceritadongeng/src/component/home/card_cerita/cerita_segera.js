@@ -4,6 +4,7 @@ import "./style.css";
 import db from '../../../Firebase'
 import {collection, onSnapshot } from "firebase/firestore"
 import {useEffect,useState} from "react"
+import {Link} from "react-router-dom";
 
 const Card_cerita_Segera = ({ title}) => {
   const [Thumbnail , setThumbnail] = useState([]);
@@ -27,6 +28,7 @@ const Card_cerita_Segera = ({ title}) => {
 
             <Col >
               <Card border="light">
+                <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 5)
                   .map((thumb, id) => {
@@ -37,11 +39,13 @@ const Card_cerita_Segera = ({ title}) => {
                       </div>
                     )
                   })}
+                  </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 6)
                   .map((thumb, id) => {
@@ -52,11 +56,13 @@ const Card_cerita_Segera = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 7)
                   .map((thumb, id) => {
@@ -67,11 +73,13 @@ const Card_cerita_Segera = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 9)
                   .map((thumb, id) => {
@@ -82,6 +90,7 @@ const Card_cerita_Segera = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 

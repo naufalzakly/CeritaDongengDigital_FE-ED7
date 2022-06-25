@@ -5,6 +5,7 @@ import "./style.css";
 import db from '../../../Firebase';
 import {collection, onSnapshot } from "firebase/firestore";
 import {useEffect,useState} from "react";
+import {Link} from "react-router-dom";
 
 const Card_cerita_Populer = ({ title}) => {
   const [Thumbnail , setThumbnail] = useState([]);
@@ -28,6 +29,7 @@ const Card_cerita_Populer = ({ title}) => {
 
             <Col >
               <Card border="light">
+              <Link to="/bacaCerita/KelinciKura">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 1)
                   .map((thumb, id) => {
@@ -38,11 +40,13 @@ const Card_cerita_Populer = ({ title}) => {
                       </div>
                     )
                   })}
+              </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 2)
                   .map((thumb, id) => {
@@ -52,11 +56,13 @@ const Card_cerita_Populer = ({ title}) => {
                       </div>
                     )
                   })}
+              </Link>
               </Card>
             </Col>
 
             <Col >
               <Card border="light">
+                <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 4)
                   .map((thumb, id) => {
@@ -66,10 +72,12 @@ const Card_cerita_Populer = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
             <Col >
               <Card border="light">
+              <Link to="/">
                 {Thumbnail
                   .filter((thumb) => thumb.index === 3)
                   .map((thumb, id) => {
@@ -79,6 +87,7 @@ const Card_cerita_Populer = ({ title}) => {
                       </div>
                     )
                   })}
+                </Link>
               </Card>
             </Col>
 
