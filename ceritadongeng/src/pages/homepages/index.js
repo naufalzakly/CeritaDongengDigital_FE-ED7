@@ -4,7 +4,6 @@ import AboutPlatform from "../../component/home/about_platform";
 import CardCeritaRilis from "../../component/home/card_cerita/cerita_rilis.js";
 import CardCeritaPopuler from "../../component/home/card_cerita/cerita_populer.js";
 import CardCeritaSegera from "../../component/home/card_cerita/cerita_segera.js";
-import Newsletter from "../../component/newsletter/index";
 
 const PageHome = () => {
   return (
@@ -23,9 +22,6 @@ const PageHome = () => {
           <AboutPlatform />
         </div>
 
-        <div className="news_letter">
-          <Newsletter />
-        </div>
       </div>
     </div>
   );

@@ -13,18 +13,15 @@ const Card_cerita_Segera = ({ title}) => {
     () =>
       onSnapshot(collection(db,"thumb_homepage"), (snapshot) =>
           setThumbnail(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})))
-      ),
+      ), []);
       
-
-    []
-  );
   return (
     <Container>
       <br></br>
       <h3>{title}</h3>
       <hr width={90} />
         <Row  className="Container_Card">
-          <CardGroup className="">
+          <CardGroup>
 
             <Col >
               <Card border="light">

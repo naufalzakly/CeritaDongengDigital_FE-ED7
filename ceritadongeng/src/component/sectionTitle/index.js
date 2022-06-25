@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap";
-import "./index.css";
 
 const SectionTitle = ({title}) => {
   return (

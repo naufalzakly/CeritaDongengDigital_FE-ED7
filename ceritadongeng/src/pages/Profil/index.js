@@ -3,7 +3,7 @@ import WelcomeText from "../../component/akun/welcomeText/index";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./index.css";
 
-const MyAkun = () => {
+const Profil = () => {
   return (
     <div className="myAkun-section">
       <Container>
@@ -24,4 +24,4 @@ const MyAkun = () => {
   );
 };
 
-export default MyAkun;
+export default Profil;

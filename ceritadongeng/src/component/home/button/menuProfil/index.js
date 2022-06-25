@@ -18,9 +18,10 @@ const ButtonMenuProfil = () => {
           <Dropdown.Menu className="dropdown-menu">
             <ul className="dropdown-list">
               <li className="dropdown-item"><Link to="/">Home</Link></li>
-              <li className="dropdown-item"> <Link to="/libBuku">Pustakaan </Link></li>
-              <li className="dropdown-item"> <Link to="/wishlist">Daftar Bacaan</Link></li>
-              <li className="dropdown-item"><Link to="/profil">Profil</Link></li>
+              <li className="dropdown-item"> <Link to="/LibBuku">Pustakaan </Link></li>
+              <li className="dropdown-item"> <Link to="/DaftarBacaan">Daftar Bacaan</Link></li>
+              <li className="dropdown-item"><Link to="/Profil">Profil</Link></li>
+              <li className="dropdown-item"><Link to="/">Logout</Link></li>
             </ul>
           </Dropdown.Menu>
         </Dropdown>

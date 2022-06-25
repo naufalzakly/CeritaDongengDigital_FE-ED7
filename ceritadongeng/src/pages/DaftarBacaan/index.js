@@ -1,9 +1,9 @@
 import SectionTitle from "../../component/sectionTitle/index";
-import CardWishlist from "../../component/cardWishlist/index";
+import CardWishlist from "../../component/cardDaftarBacaan/index";
 import "./index.css";
 import { Container, Row, CardGroup } from "react-bootstrap";
 
-const Wishlist = () => {
+const DaftarBacaan = () => {
   return (
     <div className="wishlist">
       <Container>
@@ -18,4 +18,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default DaftarBacaan;

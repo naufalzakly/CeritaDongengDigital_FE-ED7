@@ -1,22 +1,22 @@
-import "../SliderBacaCerita.css";
+import "./SliderBacaCerita.css";
 import { useEffect, useState } from "react";
 // import dataSlider from "../dataSlider";
 import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
 } from "react-icons/io5";
-import db from "../../../Firebase";
+import db from "../../Firebase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
-const KelinciKura = () => {
+const BebekBurukRupa = () => {
   const [current, setCurrent] = useState(0);
-  const [kelinciKura, setKelinciKura] = useState([]);
-  const length = kelinciKura.length;
+  const [cerita, setCerita] = useState([]);
+  const length = cerita.length;
 
   useEffect(() => {
-    const q = query(collection(db, "kelinci_kura"), orderBy("index"));
+    const q = query(collection(db, "bebek_buruk_rupa"), orderBy("index"));
     onSnapshot(q, (snapshot) => {
-      setKelinciKura(
+      setCerita(
         snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
     });
@@ -25,8 +25,6 @@ const KelinciKura = () => {
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
-
-  console.log(current);
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
@@ -42,7 +40,7 @@ const KelinciKura = () => {
         className="right-arrow-baca-cerita"
         onClick={nextSlide}
       />
-      {kelinciKura.map((slide, index) => {
+      {cerita.map((slide, index) => {
         return (
           <div
             className={
@@ -70,4 +68,4 @@ const KelinciKura = () => {
   );
 };
 
-export default KelinciKura;
+export default BebekBurukRupa;
