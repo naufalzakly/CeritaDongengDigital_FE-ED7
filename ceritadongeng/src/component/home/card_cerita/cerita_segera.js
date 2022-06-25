@@ -62,7 +62,7 @@ const Card_cerita_Segera = ({ title}) => {
                   .map((thumb, id) => {
                     return (
                       <div key={id}>
-                        <img src={thumb.img} width ={250} alt="pict"></img>
+                        <img src={thumb.img} width ={250} alt="pict"/>
 
                       </div>
                     )

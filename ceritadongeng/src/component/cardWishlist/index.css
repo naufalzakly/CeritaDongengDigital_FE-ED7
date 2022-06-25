@@ -4,12 +4,12 @@
     
   }
   
-  .card img {
+/* .card img {
     width: 367px;
     height: 327px;
     border-radius: 25px;
-  }
+  } */
   
-  .no-outline{
+.no-outline{
     border: none;
   }

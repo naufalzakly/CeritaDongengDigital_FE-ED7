@@ -5,42 +5,22 @@ import Homepage from "./pages/homepages/index";
 import Footer from "./component/footer/index";
 import "./App.css";
 import NavbarHome from "./component/home/navbar/index";
-import LibDongeng from "./pages/libDongeng/index";
-// import EditAkun from "./pages/editAkun/index";
-// import MyAkun from "./pages/myAkun/index";
-
-import { Container, Row, Col } from "react-bootstrap";
-import { Routes, Route } from "react-router-dom";
-import ButtonBergabung from "./component/home/button/bergabung";
-import ProtectedRoute from "./route";
-import { UserAuthContextProvider } from "./auth_firabase";
+import LibBuku from "./pages/libBuku/index";
+import {Route} from 'react-router-dom';
+import Wishlist from "./pages/wishlist/index";
+import MyAkun from "./pages/myAkun/index";
 
 function App() {
   return (
-    <Container style={{ width: "400px" }}>
-      <Row>
-        <Col>
-          <UserAuthContextProvider>
-            <Routes>
-              <Route
-                path="/home"
-                element={
-                  <ProtectedRoute>
-                    <NavbarHome/>
-                    <Homepage />
-                    
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/phonesignup" element={<PhoneSignUp />} />
-             
-            </Routes>
-          </UserAuthContextProvider>
-        </Col>
-      </Row>
-    </Container>
+    <div className="Container">
+      <NavbarHome />
+      <Route exact path="/" component={Homepage}/>
+      <Route path="/libBuku" component={LibBuku}/>
+      <Route path="/wishlist" component={Wishlist}/>
+      <Route path="/profil" component={MyAkun}/>
+      <Footer />
+    </div>
+  
   );
 }
 

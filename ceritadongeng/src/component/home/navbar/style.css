@@ -1,16 +1,14 @@
 .header {
-    position: fixed;
+    /* position: fixed;
     height: 70px;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
-    transition: .3s ease-in;
+    z-index: 1; */
+    background-color: #FF7396;
     /* overflow: hidden; */
 }
-.header-bg {
-    background-color: #FF7396;
-}
+
 .button{
     margin-top: 5px;
     height: 40px;
