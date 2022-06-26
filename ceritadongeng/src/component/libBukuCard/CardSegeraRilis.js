@@ -8,7 +8,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import db from "../../Firebase";
+import db from '../../Firestore';
 
 const CardSegeraRilis = () => {
   const [cardSegeraRilis, setCardSegeraRilis] = useState([]);

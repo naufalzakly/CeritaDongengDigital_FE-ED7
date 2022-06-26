@@ -5,7 +5,7 @@ import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
 } from "react-icons/io5";
-import db from "../../Firebase";
+import db from "../../Firestore";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 const KelinciKura = () => {

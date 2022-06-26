@@ -1,10 +1,10 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
-import { useUserAuth } from "../src/auth_firabase";
+import { Link } from "react-router-dom";
+import { useUserAuth } from "./index";
 const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
   if (!user) {
-    return <Navigate to="/" />;
+    return <Link to="/" />;
   }
   return children;
 };

@@ -4,14 +4,17 @@ import SectionTitle from "../../component/sectionTitle/index";
 import CardKancilBuaya from "../../component/libBukuCard/cardKancilBuaya";
 import CardSegeraRilis from "../../component/libBukuCard/CardSegeraRilis";
 import "./index.css";
+import NavbarHome from "../../component/home/navbar";
+import Footer from "../../component/footer";
 import CardKancilHarimau from "../../component/libBukuCard/cardKancilHarimau";
 import CardKelinciKura from "../../component/libBukuCard/cardKelinciKura";
-
 const LibBuku = () => {
 
  
   return (
-    <div className="lib-buku">
+    <>
+      <NavbarHome />
+      <div className="lib-buku">
       <Container>
         <SectionTitle title={"Dongeng"} />
         <Row className="Container_Card">
@@ -26,7 +29,11 @@ const LibBuku = () => {
         <CardSegeraRilis />
        
       </Container>
-    </div>
+      
+      </div>
+      <Footer/>
+    </>
+
   );
 };
 
