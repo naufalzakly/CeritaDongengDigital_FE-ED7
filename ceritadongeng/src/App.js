@@ -39,7 +39,9 @@ function App() {
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/profil" element={<MyAkun />} />
             <Route path="/bacaCerita/KelinciKura" element={<KelinciKura />} />
-
+            <Route path="/BacaCerita/KancilHarimau" element={<KancilHarimau/>} />
+            <Route path="/BacaCerita/KancilBuaya" element={<KancilBuaya/>} />
+            <Route path="/BacaCerita/BebekBurukRupa" element={<BebekBurukRupa/>} />
           </Routes>
         </UserAuthContextProvider>
       </div>

@@ -1,11 +1,11 @@
 import SectionTitle from "../../component/sectionTitle/index";
-import CardWishlist from "../../component/cardWishlist/index";
+import CardWishlist from "../../component/cardDaftarBacaan/index";
 import "./index.css";
 import { Container, Row, CardGroup } from "react-bootstrap";
 import Footer from "../../component/footer";
 import NavbarHome from "../../component/home/navbar";
 
-const Wishlist = () => {
+const DaftarBacaan = () => {
   return (
     <>
       <NavbarHome/>
@@ -26,4 +26,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default DaftarBacaan;

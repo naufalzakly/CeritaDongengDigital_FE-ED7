@@ -1,7 +1,7 @@
 import "./index.css";
 import { Button, Card, Col} from "react-bootstrap";
 
-const CardWishlist = ({gambar1}) => {
+const CardDaftarBacaan = ({gambar1}) => {
   return (
     <div className="card-wishlist mx-2">
       <Col>
@@ -22,5 +22,5 @@ const CardWishlist = ({gambar1}) => {
   );
 };
 
-export default CardWishlist;
+export default CardDaftarBacaan ;
 

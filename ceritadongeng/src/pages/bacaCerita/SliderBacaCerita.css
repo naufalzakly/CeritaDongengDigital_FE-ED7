@@ -74,14 +74,16 @@ audio {
 
 .text-cerita {
    /* transition-duration: 1s ease;  */
+  max-width: 1000px;
   background-color: azure;
   position: absolute;
-  top: 10%;
-  left: 50px;
-  font-size: 2rem;
+  top: 5%;
+  left: 20px;
+  font-size: 1.2rem;
   color: #000;
   z-index: 10;
   border-radius: 10px;
   padding: 10px;
+  opacity: 0.9;
 
 }

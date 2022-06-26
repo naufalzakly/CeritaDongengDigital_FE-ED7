@@ -1,10 +1,16 @@
 import { Container, Row, CardGroup } from "react-bootstrap";
-import LibBukuCard from "../../component/libBukuCard/index";
+import CardBebek from "../../component/libBukuCard/cardBebek";
 import SectionTitle from "../../component/sectionTitle/index";
+import CardKancilBuaya from "../../component/libBukuCard/cardKancilBuaya";
+import CardSegeraRilis from "../../component/libBukuCard/CardSegeraRilis";
 import "./index.css";
 import NavbarHome from "../../component/home/navbar";
 import Footer from "../../component/footer";
+import CardKancilHarimau from "../../component/libBukuCard/cardKancilHarimau";
+import CardKelinciKura from "../../component/libBukuCard/cardKelinciKura";
 const LibBuku = () => {
+
+ 
   return (
     <>
       <NavbarHome />
@@ -13,14 +19,15 @@ const LibBuku = () => {
         <SectionTitle title={"Dongeng"} />
         <Row className="Container_Card">
           <CardGroup>
-            <LibBukuCard
-              judul="Kancil dan Buaya"
-              cerita1="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-              cerita2= "https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-              cerita3="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fsegera_rilis%2Fdua_anak_ayam_thumbnail.png?alt=media&token=5b77fcd2-433d-4e84-9b8e-c7ef630b5653"
-            />
+            <CardBebek />
+            <CardKancilHarimau/>
+            <CardKelinciKura/>
+            <CardKancilBuaya />
           </CardGroup>
         </Row>
+        <SectionTitle title={"Dongeng  Segera Rilis"} />
+        <CardSegeraRilis />
+       
       </Container>
       
       </div>

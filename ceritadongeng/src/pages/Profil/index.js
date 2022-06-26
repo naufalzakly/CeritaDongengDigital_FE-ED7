@@ -5,7 +5,7 @@ import "./index.css";
 import Footer from "../../component/footer";
 import NavbarHome from "../../component/home/navbar";
 
-const MyAkun = () => {
+const Profil = () => {
   return (
     <>
       <NavbarHome/>
@@ -33,4 +33,4 @@ const MyAkun = () => {
   );
 };
 
-export default MyAkun;
+export default Profil;
