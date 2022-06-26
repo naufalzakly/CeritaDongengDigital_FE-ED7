@@ -3,9 +3,8 @@ import { BsList, BsFillPersonFill } from "react-icons/bs";
 import "./index.css";
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../../../context/index";
-import { useNavigate } from "react-router";
 
 const ButtonMenuProfil = () => {
   const { logOut } = useUserAuth();
@@ -35,7 +34,7 @@ const ButtonMenuProfil = () => {
               <li className="dropdown-item"> <Link to="/DaftarBacaan">Daftar Bacaan</Link></li>
               <li className="dropdown-item"><Link to="/Profil">Profil</Link></li>
 
-              <li className="dropdown-item"><Button onClick={handleLogout}>LogOut</Button></li>
+              <li className="dropdown-item"><Button onClick={handleLogout}>keluar</Button></li>
               
             </ul>
           </Dropdown.Menu>

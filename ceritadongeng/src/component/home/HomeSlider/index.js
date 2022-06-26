@@ -1,14 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import {
-  Carousel,
-  Row,
-  Col,
-  Nav,
-  Button,
-  ButtonGroup,
-  ButtonToolbar,
-} from "react-bootstrap";
+import { Carousel, Button } from "react-bootstrap";
 import "./style.css";
 import db from "../../../Firestore";
 import { collection, onSnapshot } from "firebase/firestore";
@@ -31,7 +23,7 @@ const Home = () => {
       {Slider.map((slider, id) => {
         return (
           <Carousel.Item key={id}>
-            <div >
+            <div>
               <img
                 className="d-block w-100"
                 src={slider.img}
@@ -39,25 +31,10 @@ const Home = () => {
               />
             </div>
 
-            <Carousel.Caption>
-              <Row>
-                <Col>
-                  <Nav className="justify-content-end">
-                    <ButtonToolbar>
-                      <ButtonGroup className="me-2">
-                        <h5 className="h5_slider">BACA DONGENG</h5>
-                      </ButtonGroup>
-                      <ButtonGroup>
-                        <Link to="/libBuku">
-                          <Button variant="primary" className="rounded">
-                            <AiOutlineArrowRight />
-                          </Button>
-                        </Link>
-                      </ButtonGroup>
-                    </ButtonToolbar>
-                  </Nav>
-                </Col>
-              </Row>
+            <Carousel.Caption className="nav-dongeng">
+              <Link to="/libBuku">
+                <h2> BACA DONGENG <Button variant="success"><AiOutlineArrowRight size="2.2em"/></Button> </h2>
+              </Link>
             </Carousel.Caption>
           </Carousel.Item>
         );

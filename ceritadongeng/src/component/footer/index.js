@@ -1,12 +1,10 @@
 import React from "react";
 import {
-  TiSocialTwitter,
-  TiSocialFacebook,
-  TiSocialInstagram,
   TiHeartFullOutline,
 } from "react-icons/ti";
+import {FaFacebookSquare} from "react-icons/fa";
 import { BiCopyright } from "react-icons/bi";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import {Container, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "./index.css";
@@ -18,10 +16,10 @@ const Footer = () => {
         <Row>
           {/* kolom 1 */}
           <Col md={4} sm={6}>
-          <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-web.png?alt=media&token=e1f0218a-7fc3-446f-adc9-ad6758fc05c5" alt="logo" />
-            <h6>Supported By:</h6>
+          <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-web.png?alt=media&token=e1f0218a-7fc3-446f-adc9-ad6758fc05c5" alt="logo" className="mb-2 mx-4"/>
+            <h6 className="mb-3 mx-4">Supported By:</h6>
             <ul className="list-unstyled">
-              <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f" alt="logo-yabb" width="136" className="mx-2"/>
+              <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f" alt="logo-yabb" width="136" className="mx-4"/>
               <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-goto.png?alt=media&token=e2605662-b87e-4b1a-829d-d2d21bb49bed" alt="goto" width="136" />
             </ul>
           </Col>
@@ -49,9 +47,9 @@ const Footer = () => {
               <li className="mb-2"><a href="./index">Email: care@mail.ed7.my.id</a></li>
               <li className="mb-2">Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A, Kebon Jeruk, Kota Jakarta, DKI Jakarta</li>
             </ul>
-            <TiSocialFacebook size="2em" className="mx-2" />
-            <TiSocialTwitter size="2em" className="mx-2" />
-            <TiSocialInstagram size="2em" className="mx-2"/>
+            <FaFacebookSquare size="2em" className="mx-2" />
+            <BsTwitter size="2em" className="mx-2" />
+            <BsInstagram size="2em" className="mx-2"/>
             <BsLinkedin size="2em" className="mx-2"/>
           </Col>
         </Row>

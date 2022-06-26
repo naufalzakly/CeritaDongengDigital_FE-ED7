@@ -6,3 +6,30 @@
 .card__img{
     justify-content: center;
 }
+
+ .right {
+    margin-top: -10px;
+    margin-left: 180px;
+    background-color: transparent;
+    border: none;
+ }
+
+.cerita-thumb .card {
+    border: none;
+}
+
+.cerita-thumb .card-footer button {
+    background-color: #00AA13;
+}
+
+.card-img-overlay {
+    height: 50px;
+}
+
+.card-body {
+    height: 100px;
+}
+
+.card-footer {
+    background-color: #BFEEC5;
+}

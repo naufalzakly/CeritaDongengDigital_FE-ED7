@@ -3,13 +3,13 @@ import WelcomeText from "../../component/akun/welcomeText/index";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./index.css";
 import Footer from "../../component/footer";
-import NavbarHome from "../../component/home/navbar";
+import NavbarHome from "../../component/navbar";
 
 const Profil = () => {
   return (
     <>
       <NavbarHome/>
-      <div className="myAkun-section">
+      <div className="profil-section">
       <Container>
         <Row>
           <Col md="4">

@@ -1,4 +1,4 @@
-import { Carousel, Card, CardGroup, Row } from "react-bootstrap";
+import { Card, CardGroup, Row } from "react-bootstrap";
 import "./index.css";
 import {
   collection,
@@ -31,19 +31,15 @@ const CardSegeraRilis = () => {
       <CardGroup>
         {cardSegeraRilis.map((thumb, idx) => {
           return (
-            <div className="lib-buku-card mx-2" key={idx}>
-              <Card >
+            <div className="lib-buku-card mx-2 mb-4" key={idx}>
+              <Card className="no-outline">
                 <div className="card-img d-flex">
-                  <Carousel className="carousel-size">
-                    <Carousel.Item >
                       <img
                         className="d-block"
                         src={thumb.img}
                         width="100%"
                         alt=""
                       />
-                    </Carousel.Item>
-                  </Carousel>
                 </div>
                 <Card.Body className="d-flex">
                   <Card.Title>

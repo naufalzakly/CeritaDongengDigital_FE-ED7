@@ -3,7 +3,7 @@ import CardWishlist from "../../component/cardDaftarBacaan/index";
 import "./index.css";
 import { Container, Row, CardGroup } from "react-bootstrap";
 import Footer from "../../component/footer";
-import NavbarHome from "../../component/home/navbar";
+import NavbarHome from "../../component/navbar";
 
 const DaftarBacaan = () => {
   return (

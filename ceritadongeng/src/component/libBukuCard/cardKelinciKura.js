@@ -21,7 +21,7 @@ const CardKelinciKura = () => {
 
   return (
     <div className="lib-buku-card mx-2">
-      <Card>
+      <Card className="no-outline">
         <div className="card-img d-flex">
           <Carousel className="carousel-size">
             {cardKelinciKura.map((thumb, idx) => {

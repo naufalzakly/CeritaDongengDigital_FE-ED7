@@ -16,7 +16,7 @@ const NavbarHome = () => {
           <Col>
             <Nav className="justify-content-start">
               <Nav.Item>
-                <Link to="/">
+                <Link to="/home">
                   <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-web.png?alt=media&token=e1f0218a-7fc3-446f-adc9-ad6758fc05c5" alt="logo"/>
                 </Link>
               </Nav.Item>
