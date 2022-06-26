@@ -5,11 +5,7 @@ import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
 } from "react-icons/io5";
-<<<<<<< HEAD:ceritadongeng/src/pages/bacaCerita/KelinciKura/index.js
-import db from "../../../Firestore";
-=======
-import db from "../../Firebase";
->>>>>>> 69f7cb30e50848ee540d282748b67c5b8155850e:ceritadongeng/src/pages/bacaCerita/KelinciKura.js
+import db from "../../Firestore";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 const KelinciKura = () => {

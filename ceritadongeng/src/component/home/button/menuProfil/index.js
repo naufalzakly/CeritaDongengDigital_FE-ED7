@@ -34,8 +34,8 @@ const ButtonMenuProfil = () => {
             <ul className="dropdown-list">
               <li className="dropdown-item"><Link to="/home">Home</Link></li>
               <li className="dropdown-item"> <Link to="/libBuku">Pustakaan </Link></li>
-              <li className="dropdown-item"> <Link to="/wishlist">Daftar Bacaan</Link></li>
-              <li className="dropdown-item"><Link to="/profil">Profil</Link></li>
+              <li className="dropdown-item"> <Link to="/DaftarBacaan">Daftar Bacaan</Link></li>
+              <li className="dropdown-item"><Link to="/Profil">Profil</Link></li>
 
               <li className="dropdown-item"><Button onClick={handleLogout}>LogOut</Button></li>
               

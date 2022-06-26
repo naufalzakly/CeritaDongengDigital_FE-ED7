@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import "./index.css";
 import {collection, onSnapshot, query, where, orderBy } from "firebase/firestore";
 import {useEffect,useState} from "react";
-import db from '../../Firebase';
+import db from '../../Firestore';
 // import {Link} from "react-router-dom";
 
 const CardKelinciKura = () => {
