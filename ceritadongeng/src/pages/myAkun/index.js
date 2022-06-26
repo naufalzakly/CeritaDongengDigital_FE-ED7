@@ -2,10 +2,14 @@ import TentangAkun from "../../component/akun/tentangAkun/index";
 import WelcomeText from "../../component/akun/welcomeText/index";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./index.css";
+import Footer from "../../component/footer";
+import NavbarHome from "../../component/home/navbar";
 
 const MyAkun = () => {
   return (
-    <div className="myAkun-section">
+    <>
+      <NavbarHome/>
+      <div className="myAkun-section">
       <Container>
         <Row>
           <Col md="4">
@@ -19,8 +23,13 @@ const MyAkun = () => {
             </div>
           </Col>
         </Row>
+        
       </Container>
-    </div>
+      
+      </div>
+      <Footer/>
+    </>
+
   );
 };
 

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import SectionTitle from "../../sectionTitle/index";
 import "./index.css";
-import db from '../../../Firebase'
+import db from '../../../Firestore'
 import {collection, onSnapshot } from "firebase/firestore"
 import {useEffect,useState} from "react"
 

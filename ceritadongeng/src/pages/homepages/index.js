@@ -5,12 +5,16 @@ import CardCeritaRilis from "../../component/home/card_cerita/cerita_rilis.js";
 import CardCeritaPopuler from "../../component/home/card_cerita/cerita_populer.js";
 import CardCeritaSegera from "../../component/home/card_cerita/cerita_segera.js";
 import Newsletter from "../../component/newsletter/index";
-
+import NavbarHome from "../../component/home/navbar";
 const PageHome = () => {
   return (
     <div className="Container">
       <div className="Home">
+        <div>
+          <NavbarHome />
+        </div>
         <div className="Content">
+          
           <HomeSlider />
 
           <CardCeritaRilis title={"Baru Rilis"} />

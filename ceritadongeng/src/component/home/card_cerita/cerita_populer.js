@@ -2,7 +2,7 @@
 import React from "react";
 import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import "./style.css";
-import db from '../../../Firebase';
+import db from '../../../Firestore';
 import {collection, onSnapshot } from "firebase/firestore";
 import {useEffect,useState} from "react";
 import {Link} from "react-router-dom";

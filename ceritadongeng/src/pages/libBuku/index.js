@@ -2,10 +2,13 @@ import { Container, Row, CardGroup } from "react-bootstrap";
 import LibBukuCard from "../../component/libBukuCard/index";
 import SectionTitle from "../../component/sectionTitle/index";
 import "./index.css";
-
+import NavbarHome from "../../component/home/navbar";
+import Footer from "../../component/footer";
 const LibBuku = () => {
   return (
-    <div className="lib-buku">
+    <>
+      <NavbarHome />
+      <div className="lib-buku">
       <Container>
         <SectionTitle title={"Dongeng"} />
         <Row className="Container_Card">
@@ -19,7 +22,11 @@ const LibBuku = () => {
           </CardGroup>
         </Row>
       </Container>
-    </div>
+      
+      </div>
+      <Footer/>
+    </>
+
   );
 };
 

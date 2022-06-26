@@ -9,7 +9,7 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../Firestore";
 
 const userAuthContext = createContext();
 

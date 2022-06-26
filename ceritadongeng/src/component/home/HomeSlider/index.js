@@ -10,7 +10,7 @@ import {
   ButtonToolbar,
 } from "react-bootstrap";
 import "./style.css";
-import db from "../../../Firebase";
+import db from "../../../Firestore";
 import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
