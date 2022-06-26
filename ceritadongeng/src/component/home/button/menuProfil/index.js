@@ -9,11 +9,10 @@ const ButtonMenuProfil = () => {
       <Nav.Item>
         <Dropdown>
           <Dropdown.Toggle
-            variant="light"
+            variant="success"
             id="dropdown-basic"
-            className=" mt-3"
-          >
-            <BsList /> <BsFillPersonFill />
+            className="mt-4 menu-color">
+            <BsList color="white" size="1.5em"/> <BsFillPersonFill color="white" size="1.5em"/>
           </Dropdown.Toggle>
           <Dropdown.Menu className="dropdown-menu">
             <ul className="dropdown-list">

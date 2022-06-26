@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./pages/Homepages/index";
 import Footer from "./component/footer/index";
 import "./App.css";
-import NavbarHome from "./component/home/navbar/index";
+import NavbarHome from "./component/navbar/index";
 import LibBuku from "./pages/libBuku/index";
 import {Route} from 'react-router-dom';
 import DaftarBacaan from "./pages/DaftarBacaan/index";
