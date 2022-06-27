@@ -16,9 +16,7 @@ const KelinciKura = () => {
   useEffect(() => {
     const q = query(collection(db, "kelinci_kura"), orderBy("index"));
     onSnapshot(q, (snapshot) => {
-      setCerita(
-        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
+      setCerita(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 

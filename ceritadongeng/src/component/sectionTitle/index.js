@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import "./index.css";
 
-const SectionTitle = ({title}) => {
+const SectionTitle = ({ title }) => {
   return (
     <div className="title-section">
       <Container>

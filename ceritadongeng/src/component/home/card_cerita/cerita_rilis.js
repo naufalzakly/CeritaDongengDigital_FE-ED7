@@ -27,17 +27,17 @@ const Card_cerita_Rilis = ({ title }) => {
         <CardGroup>
           <Col>
             <Card border="light mx-2">
-            <Link to="/BacaCerita/BebekBurukRupa">
-              {Thumbnail.filter((thumb) => thumb.index === 3).map(
-                (thumb, id) => {
-                  return (
-                    <div key={id}>
-                      <img src={thumb.img} width={250} alt="pict"></img>
-                    </div>
-                  );
-                }
-              )}
-            </Link>
+              <Link to="/BacaCerita/BebekBurukRupa">
+                {Thumbnail.filter((thumb) => thumb.index === 3).map(
+                  (thumb, id) => {
+                    return (
+                      <div key={id}>
+                        <img src={thumb.img} width={250} alt="pict"></img>
+                      </div>
+                    );
+                  }
+                )}
+              </Link>
               <Card.ImgOverlay>
                 <button className="right">
                   <BsHeart size="2em" color="red" />
@@ -87,17 +87,17 @@ const Card_cerita_Rilis = ({ title }) => {
 
           <Col>
             <Card border="light mx-2">
-            <Link to="/BacaCerita/KancilHarimau">
-              {Thumbnail.filter((thumb) => thumb.index === 2).map(
-                (thumb, id) => {
-                  return (
-                    <div key={id}>
-                      <img src={thumb.img} width={250} alt="pict"></img>
-                    </div>
-                  );
-                }
-              )}
-            </Link>
+              <Link to="/BacaCerita/KancilHarimau">
+                {Thumbnail.filter((thumb) => thumb.index === 2).map(
+                  (thumb, id) => {
+                    return (
+                      <div key={id}>
+                        <img src={thumb.img} width={250} alt="pict"></img>
+                      </div>
+                    );
+                  }
+                )}
+              </Link>
               <Card.ImgOverlay>
                 <button className="right">
                   <BsHeart size="2em" color="red" />

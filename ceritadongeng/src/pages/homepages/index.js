@@ -12,11 +12,8 @@ const PageHome = () => {
   return (
     <div className="Container">
       <div className="Home">
-        <div>
-          <NavbarHome />
-        </div>
+        <NavbarHome />
         <div className="Content">
-          
           <HomeSlider />
 
           <CardCeritaRilis title={"Baru Rilis"} />
@@ -25,12 +22,8 @@ const PageHome = () => {
 
           <CardCeritaSegera title={"Segera Rilis"} />
         </div>
-        <div className="About_platform">
-          <AboutPlatform />
-        </div>
-        <div>
-          <Footer/>
-        </div>
+        <AboutPlatform />
+        <Footer />
       </div>
     </div>
   );

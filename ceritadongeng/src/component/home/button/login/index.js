@@ -1,16 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
-import { Link,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../../../../context/index";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const {logIn,googleSignIn}  = useUserAuth();
+  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,7 +78,7 @@ const Login = () => {
         </Link>
       </div>
       <div className="p-4 box mt-3 text-center">
-        Don't have an account? <Link to="/signup">Sign up</Link>
+        <p>Don't have an account?</p> <Link to="/signup">Sign up</Link>
       </div>
     </>
   );

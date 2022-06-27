@@ -9,31 +9,26 @@ import Footer from "../../component/footer";
 import CardKancilHarimau from "../../component/libBukuCard/cardKancilHarimau";
 import CardKelinciKura from "../../component/libBukuCard/cardKelinciKura";
 const LibBuku = () => {
-
- 
   return (
     <>
       <NavbarHome />
       <div className="lib-buku">
-      <Container>
-        <SectionTitle title={"Dongeng"} />
-        <Row className="Container_Card">
-          <CardGroup>
-            <CardBebek />
-            <CardKancilHarimau/>
-            <CardKelinciKura/>
-            <CardKancilBuaya />
-          </CardGroup>
-        </Row>
-        <SectionTitle title={"Dongeng  Segera Rilis"} />
-        <CardSegeraRilis />
-       
-      </Container>
-      
+        <Container>
+          <SectionTitle title={"Dongeng"} />
+          <Row className="Container_Card">
+            <CardGroup>
+              <CardBebek />
+              <CardKancilHarimau />
+              <CardKelinciKura />
+              <CardKancilBuaya />
+            </CardGroup>
+          </Row>
+          <SectionTitle title={"Dongeng  Segera Rilis"} />
+          <CardSegeraRilis />
+        </Container>
       </div>
-      <Footer/>
+      <Footer />
     </>
-
   );
 };
 

@@ -16,9 +16,7 @@ const KancilBuaya = () => {
   useEffect(() => {
     const q = query(collection(db, "kancil_buaya"), orderBy("index"));
     onSnapshot(q, (snapshot) => {
-      setCerita(
-        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
+      setCerita(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, [cerita]);
 
