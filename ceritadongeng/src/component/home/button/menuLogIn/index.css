@@ -1,3 +1,11 @@
+.menu-color{
+  background-color: #00AA13;
+  border-radius: 23px;
+  width: 98px;
+  height: 46px;
+
+}
+
 .dropdown-list ul {
   list-style-type: none;
   padding-left: -100px;

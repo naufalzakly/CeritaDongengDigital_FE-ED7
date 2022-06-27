@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  TiSocialTwitter,
-  TiSocialFacebook,
-  TiSocialInstagram,
   TiHeartFullOutline,
 } from "react-icons/ti";
+import {FaFacebookSquare} from "react-icons/fa";
 import { BiCopyright } from "react-icons/bi";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import {Container, Row, Col} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import "./index.css";
 
 const Footer = () => {
@@ -16,43 +15,42 @@ const Footer = () => {
       <Container fluid>
         <Row>
           {/* kolom 1 */}
-          <Col md={3} sm={6}>
-            <h6>Logo</h6>
-            <h6>Supported By:</h6>
+          <Col md={4} sm={6}>
+          <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-web.png?alt=media&token=e1f0218a-7fc3-446f-adc9-ad6758fc05c5" alt="logo" className="mb-2 mx-4"/>
+            <h6 className="mb-3 mx-4">Supported By:</h6>
             <ul className="list-unstyled">
-              <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f" alt="logo-yabb" width="136" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f" alt="logo-yabb" width="136" className="mx-4"/>
               <img src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-goto.png?alt=media&token=e2605662-b87e-4b1a-829d-d2d21bb49bed" alt="goto" width="136" />
             </ul>
           </Col>
           {/* kolom 2 */}
-          <Col md={3} sm={6}>
+          <Col md={2} sm={6}>
             <h6>Profile</h6>
             <ul className="list-unstyled">
-              <li><a href="./index">About Us</a></li>
-              <li><a href="./index">Legal Information</a></li>
-              <li><a href="./index">Team</a></li>
+              <li><Link to="">About Us</Link></li>
+              <li><Link to="">Team</Link></li>
             </ul>
           </Col>
           {/* kolom 3 */}
-          <Col md={3} sm={6}>
+          <Col md={2} sm={6}>
             <h6>Pusat Bantuan</h6>
             <ul className="list-unstyled">
-              <li><a href="./index">Komunitas</a></li>
-              <li><a href="./index">FAQs</a></li>
+              <li><Link to="">Komunitas</Link></li>
+              <li><Link to="">FAQs</Link></li>
             </ul>
           </Col>
           {/* kolom 4 */}
-          <Col md={3} sm={6}>
+          <Col md={4} sm={6}>
             <h6>Kontak</h6>
             <ul className="list-unstyled">
-              <li><a href="./index">WhatsApp: 089509548080</a></li>
-              <li><a href="./index">Email: synrr212@gmail.com</a></li>
-              <li><a href="./index">Lokasi:</a></li>
+              <li className="mb-2"><a href="./index">WhatsApp: +62 832-293-2932</a></li>
+              <li className="mb-2"><a href="./index">Email: care@mail.ed7.my.id</a></li>
+              <li className="mb-2">Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A, Kebon Jeruk, Kota Jakarta, DKI Jakarta</li>
             </ul>
-            <TiSocialFacebook size="2em" />
-            <TiSocialTwitter size="2em" />
-            <TiSocialInstagram size="2em" />
-            <BsLinkedin size="2em" />
+            <FaFacebookSquare size="2em" className="mx-2" />
+            <BsTwitter size="2em" className="mx-2" />
+            <BsInstagram size="2em" className="mx-2"/>
+            <BsLinkedin size="2em" className="mx-2"/>
           </Col>
         </Row>
 

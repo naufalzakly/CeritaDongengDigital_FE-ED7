@@ -1,12 +1,9 @@
-// import logo from './logo.svg';
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Homepage from "./pages/homepages/index";
-// import Footer from "./component/footer/index";
+import Homepage from "./pages/Homepages/index";
 import "./App.css";
-// import NavbarHome from "./component/home/navbar/index";
 import LibBuku from "./pages/libBuku/index";
-import {Route,Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import DaftarBacaan from "./pages/DaftarBacaan/index";
 import Profil from "./pages/Profil/index";
 import KelinciKura from "./pages/bacaCerita/KelinciKura";
@@ -18,6 +15,8 @@ import { UserAuthContextProvider } from "./context/index";
 import KancilBuaya from "./pages/bacaCerita/KancilBuaya";
 import BebekBurukRupa from "./pages/bacaCerita/Bebek";
 import KancilHarimau from "./pages/bacaCerita/KancilHarimau";
+
+
 function App() {
   return (
     <>

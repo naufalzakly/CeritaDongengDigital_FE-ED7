@@ -2,9 +2,9 @@ import { Nav, Dropdown,Button } from "react-bootstrap";
 import { BsList, BsFillPersonFill } from "react-icons/bs";
 import "./index.css";
 import React,{useState} from "react";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../../../context/index";
-import { useNavigate } from "react-router";
 
 const ButtonMenuProfil = () => {
   const { logOut,user} = useUserAuth();
@@ -38,12 +38,10 @@ const ButtonMenuProfil = () => {
       <Nav.Item>
         <Dropdown>
           <Dropdown.Toggle
-            variant="light"
+            variant="success"
             id="dropdown-basic"
-            className=" mt-3"
-          >
-            <BsList /> <BsFillPersonFill />
-            
+            className="mt-4 menu-color">
+            <BsList color="white" size="1.5em"/> <BsFillPersonFill color="white" size="1.5em"/>
           </Dropdown.Toggle>
           <Dropdown.Menu className="dropdown-menu">
             <ul className="dropdown-list">

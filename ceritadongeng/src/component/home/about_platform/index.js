@@ -1,9 +1,10 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import SectionTitle from "../../sectionTitle/index";
 import "./index.css";
-import db from '../../../Firestore'
-import {collection, onSnapshot } from "firebase/firestore"
-import {useEffect,useState} from "react"
+import db from '../../../Firestore';
+import {collection, onSnapshot } from "firebase/firestore";
+import {useEffect,useState} from "react";
+import {Link} from "react-router-dom";
 
 const AboutPlatform = () => {
   const [Platform , setPlatform] = useState([]);
@@ -20,14 +21,14 @@ const AboutPlatform = () => {
   return (
     <div className="about-platform">
       <Container>
-      <SectionTitle title="Selengkapnya mengenai platform kami"/>
+      <SectionTitle title="Selengkapnya mengenai platform kami" className="about-title"/>
         <Row>
           <Col md="8">
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar magna ut nisl molestie ullamcorper vel consectetur mauris. Nunc massa odio, pulvinar non porttitor vel, molestie ac turpis. Aliquam suscipit purus vitae est tempor, a tristique lectus vehicula. </p>
+            <p classname="mx-2">OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng digital dilengkapi dengan audio untuk memberikan rangsangan minat kesukaan anak terhadap buku dan memicu rasa ingin tahu anak...</p>
             <div className="link-pilihan">
-                <Button size="sm" className="mx-2" variant="light">Lanjutkan Baca </Button>
-                <Button size="sm" variant="light"> Pelajari Hak Cipta</Button>
+                <Link to="" > <Button size="sm" className="mx-2" variant="light">Lanjutkan Baca </Button> </Link>
+                <a target="_blank"  href="https://www.dgip.go.id/" rel="noreferrer">Pelajari Hak Cipta</a>
             </div>
             <Button variant="primary" >Hubungi Kami</Button>
           </Col>

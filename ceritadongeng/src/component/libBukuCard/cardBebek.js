@@ -4,7 +4,7 @@ import "./index.css";
 import {collection, onSnapshot, query, where, orderBy } from "firebase/firestore";
 import {useEffect,useState} from "react";
 import db from '../../Firestore';
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const CardBebek = () => {
     const [cardBebek, setCardBebek] = useState([]);
@@ -21,7 +21,7 @@ const CardBebek = () => {
 
   return (
     <div className="lib-buku-card mx-2">
-      <Card>
+      <Card className="no-outline">
         <div className="card-img d-flex">
           <Carousel className="carousel-size" data-interval="false">
             {cardBebek.map((thumb, idx) => {
@@ -44,6 +44,11 @@ const CardBebek = () => {
             <Button>
               <FaHeart size="1.5em" />
             </Button>
+            <Link to="/BacaCerita/BebekBurukRupa">
+            <Button>
+             Baca
+            </Button>
+            </Link>
           </Card.Title>
         </Card.Body>
       </Card>

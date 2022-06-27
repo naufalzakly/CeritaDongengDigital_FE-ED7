@@ -4,7 +4,7 @@ import SectionTitle from "../../component/sectionTitle/index";
 import CardKancilBuaya from "../../component/libBukuCard/cardKancilBuaya";
 import CardSegeraRilis from "../../component/libBukuCard/CardSegeraRilis";
 import "./index.css";
-import NavbarHome from "../../component/home/navbar";
+import NavbarHome from "../../component/navbar";
 import Footer from "../../component/footer";
 import CardKancilHarimau from "../../component/libBukuCard/cardKancilHarimau";
 import CardKelinciKura from "../../component/libBukuCard/cardKelinciKura";
