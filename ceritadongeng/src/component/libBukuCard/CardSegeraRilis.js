@@ -31,7 +31,7 @@ const CardSegeraRilis = () => {
       <CardGroup>
         {cardSegeraRilis.map((thumb, idx) => {
           return (
-            <div className="lib-buku-card mx-2 mb-4" key={idx}>
+            <div className="lib-buku-card mx-2 " key={idx}>
               <Card className="no-outline">
                 <div className="card-img d-flex">
                       <img
@@ -41,10 +41,13 @@ const CardSegeraRilis = () => {
                         alt=""
                       />
                 </div>
-                <Card.Body className="d-flex">
+                <Card.Body>
                   <Card.Title>
                     {thumb.cerita}
                   </Card.Title>
+                  <Card.Text className="text-muted">
+                    Pengarang: {thumb.pengarang}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </div>

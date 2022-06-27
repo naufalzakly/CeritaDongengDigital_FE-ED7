@@ -2,9 +2,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../../../../context/index";
+<<<<<<< HEAD
+=======
+import "../index.css";
+>>>>>>> 3842f0c8b8ac88d0dd79973adc78001dda6f1d28
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,12 +38,13 @@ const Login = () => {
   };
 
   return (
-    <>
+    <Container className="login-page">
       <div className="p-4 box">
-        <h2 className="mb-3">Login or Signup</h2>
+        <h2>Login or Signup</h2>
+        <hr className="mb-4"/>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Email address"
@@ -47,7 +52,7 @@ const Login = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-4" controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Password"
@@ -55,32 +60,30 @@ const Login = () => {
             />
           </Form.Group>
 
-          <div className="d-grid gap-2">
+          <div className="d-grid gap-2 mb-4">
             <Button variant="primary" type="Submit">
               Log In
             </Button>
           </div>
         </Form>
         <hr />
-        <div>
+        <div className="btn-login">
           <GoogleButton
-            className="g-btn"
+            className="g-btn mt-2"
             type="dark"
             onClick={handleGoogleSignIn}
           />
-        </div>
-        <Link to="/phonesignup">
-          <div className="d-grid gap-2 mt-3">
-            <Button variant="success" type="Submit">
+          <Link to="/phonesignup">
+            <Button variant="success" type="Submit" className="mt-2">
               Sign in with Phone
             </Button>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
       <div className="p-4 box mt-3 text-center">
         <p>Don't have an account?</p> <Link to="/signup">Sign up</Link>
       </div>
-    </>
+    </Container>
   );
 };
 

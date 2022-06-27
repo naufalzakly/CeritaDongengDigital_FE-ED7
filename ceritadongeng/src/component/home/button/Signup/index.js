@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { useUserAuth } from "../../../../context/index";
+import "../index.css";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -23,9 +24,10 @@ const Signup = () => {
   };
 
   return (
-    <>
+    <Container className="login-page">
       <div className="p-4 box">
-        <h2 className="mb-3">Signup</h2>
+        <h2 >Signup</h2>
+        <hr className="mb-4"/>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -36,7 +38,7 @@ const Signup = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-4" controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Password"
@@ -54,7 +56,7 @@ const Signup = () => {
       <div className="p-4 box mt-3 text-center">
         Already have an account? <Link to="/login">Log In</Link>
       </div>
-    </>
+    </Container>
   );
 };
 

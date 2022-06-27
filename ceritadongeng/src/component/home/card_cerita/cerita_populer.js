@@ -50,7 +50,7 @@ const Card_cerita_Populer = ({ title }) => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Link to="/BacaCerita/KanciBuaya">
+                <Link to="/BacaCerita/KancilBuaya">
                   <Button variant="success">Baca</Button>
                 </Link>
               </Card.Footer>
@@ -139,7 +139,7 @@ const Card_cerita_Populer = ({ title }) => {
               </Card.ImgOverlay>
               <Card.Body>
                 <Card.Title>Bebek Buruk Rupa</Card.Title>
-                <Card.Text>Pengarang: Hans Christian Andersen</Card.Text>
+                <Card.Text  className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Link to="/BacaCerita/BebekBurukRupa">

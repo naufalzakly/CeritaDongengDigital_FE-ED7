@@ -1,7 +1,7 @@
 .slider-baca-cerita {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +16,10 @@
 
 .right-arrow-baca-cerita {
   position: absolute;
-  top: 80%;
+  top: 85%;
   right: 150px;
-  font-size: 3rem;
-  color: #000;
+  font-size: 5rem;
+  color: #FFF;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -27,21 +27,21 @@
 
 .left-arrow-baca-cerita {
   position: absolute;
-  top: 80%;
-  right: 200px;
-  font-size: 3rem;
-  color: #000;
+  top: 85%;
+  right: 230px;
+  font-size: 5rem;
+  color: #FFF;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
 
-.left-arrow-baca-cerita:active {
-  color: red;
+.left-arrow-baca-cerita:active, .left-arrow-baca-cerita:hover  {
+  color: #BFEEC5;
 }
 
-.right-arrow-baca-cerita:active {
-  color: red;
+.right-arrow-baca-cerita:active, .right-arrow-baca-cerita:hover {
+  color: #BFEEC5;
 }
 
 .slide-baca-cerita {
@@ -52,7 +52,7 @@
 .slide-baca-cerita.active {
   opacity: 1;
   /* transition-duration: 1s; */
-   transform: scale(1.05);  
+   /* transform: scale(1);   */
 }
 
 .btn-speaker {
@@ -63,28 +63,40 @@
 }
 
 audio {
-   /* transition-duration: 1s ease;  */
   position: absolute;
   top: 85%;
   left: 30px;
-  color: #000;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
 
 .text-cerita {
-   /* transition-duration: 1s ease;  */
-  max-width: 1000px;
-  background-color: azure;
+  transition-duration: 1s ease; 
+  max-width: 90%;
+  background-color: #BFEEC5;
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 20px;
-  font-size: 1.2rem;
-  color: #000;
+  opacity: 0.9;
   z-index: 10;
   border-radius: 10px;
   padding: 10px;
-  opacity: 0.9;
 
+}
+
+.text-cerita p {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.close-cerita {
+  position: absolute;
+  top: 3%;
+  right: 20px;
+  font-size: 3rem;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }

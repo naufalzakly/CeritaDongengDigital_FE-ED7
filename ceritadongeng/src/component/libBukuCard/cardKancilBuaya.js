@@ -1,10 +1,10 @@
 import { Carousel, Card, Button } from "react-bootstrap";
-import { FaHeart } from "react-icons/fa";
+import { BsHeart } from "react-icons/bs";
 import "./index.css";
 import {collection, onSnapshot, query, where, orderBy } from "firebase/firestore";
 import {useEffect,useState} from "react";
 import db from '../../Firestore';
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const CardKancilBuaya = () => {
     const [cardKancilBuaya, setCardKancilBuaya] = useState([]);
@@ -20,7 +20,7 @@ const CardKancilBuaya = () => {
 
 
   return (
-    <div className="lib-buku-card mx-2">
+    <div className="lib-buku-card mx-2 mb-4">
       <Card className="no-outline">
         <div className="card-img d-flex">
           <Carousel className="carousel-size">
@@ -38,14 +38,19 @@ const CardKancilBuaya = () => {
             })}
           </Carousel>
         </div>
-        <Card.Body className="d-flex">
-          <Card.Title>
-            Kancil dan Buaya
-            <Button>
-              <FaHeart size="1.5em" />
-            </Button>
-          </Card.Title>
-        </Card.Body>
+        <Card.Body>
+                <Card.Title>Kancil dan Buaya <button className="btn-heart">
+              <BsHeart size="1.5em" color="red" />
+            </button></Card.Title>
+                <Card.Text className="text-muted">
+                  Pengarang: Kathy Morris, John Morris
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <Link to="/BacaCerita/KancilBuaya">
+                  <Button variant="success">Baca</Button>
+                </Link>
+              </Card.Footer>
       </Card>
     </div>
   );
