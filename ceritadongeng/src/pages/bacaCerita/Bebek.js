@@ -1,6 +1,7 @@
 import "./SliderBacaCerita.css";
 import { useEffect, useState } from "react";
-// import dataSlider from "../dataSlider";
+import {Link} from "react-router-dom";
+import {RiCloseCircleFill} from "react-icons/ri";
 import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
@@ -16,9 +17,7 @@ const BebekBurukRupa = () => {
   useEffect(() => {
     const q = query(collection(db, "bebek_buruk_rupa"), orderBy("index"));
     onSnapshot(q, (snapshot) => {
-      setCerita(
-        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
+      setCerita(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 
@@ -32,6 +31,9 @@ const BebekBurukRupa = () => {
 
   return (
     <div className="slider-baca-cerita">
+      <Link to="/LibBuku">
+      <RiCloseCircleFill color="red" className="close-cerita"/>
+      </Link>
       <IoArrowUndoCircleSharp
         className="left-arrow-baca-cerita"
         onClick={prevSlide}
@@ -53,7 +55,9 @@ const BebekBurukRupa = () => {
             {index === current && (
               <div>
                 <img src={slide.img} alt=" " className="image-baca-cerita" />
-                <p className="text-cerita"> {slide.text}</p>
+                <div className="text-cerita">
+                  <p> {slide.text}</p>
+                </div>
                 <div className="btn-audio">
                   <audio controls>
                     <source src={slide.suara} type="audio/mpeg" />

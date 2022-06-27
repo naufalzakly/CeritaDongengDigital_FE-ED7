@@ -33,3 +33,7 @@
 .card-footer {
     background-color: #BFEEC5;
 }
+
+.card img {
+    border-radius: 8px;
+}

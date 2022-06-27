@@ -43,9 +43,10 @@ const Footer = () => {
           <Col md={4} sm={6}>
             <h6>Kontak</h6>
             <ul className="list-unstyled">
-              <li className="mb-2"><a href="./index">WhatsApp: +62 832-293-2932</a></li>
-              <li className="mb-2"><a href="./index">Email: care@mail.ed7.my.id</a></li>
+              <li className="mb-2">WhatsApp: +62 832-293-2932</li>
+              <li className="mb-2">Email: care@mail.ed7.my.id</li>
               <li className="mb-2">Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A, Kebon Jeruk, Kota Jakarta, DKI Jakarta</li>
+              <li><a href="http://www.freepik.com/" target="_blank" rel="noreferrer">Vectors and images Designed by Freepik</a></li>
             </ul>
             <FaFacebookSquare size="2em" className="mx-2" />
             <BsTwitter size="2em" className="mx-2" />

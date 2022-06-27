@@ -25,7 +25,7 @@ const LibBuku = () => {
             <CardKancilBuaya />
           </CardGroup>
         </Row>
-        <SectionTitle title={"Dongeng  Segera Rilis"} />
+        <SectionTitle title={"Tunggu Cerita Lainnya Segera..."} />
         <CardSegeraRilis />
        
       </Container>

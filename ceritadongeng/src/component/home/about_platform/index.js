@@ -25,7 +25,7 @@ const AboutPlatform = () => {
         <Row>
           <Col md="8">
             
-            <p classname="mx-2">OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng digital dilengkapi dengan audio untuk memberikan rangsangan minat kesukaan anak terhadap buku dan memicu rasa ingin tahu anak...</p>
+            <p className="mx-2">OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng digital dilengkapi dengan audio untuk memberikan rangsangan minat kesukaan anak terhadap buku dan memicu rasa ingin tahu anak...</p>
             <div className="link-pilihan">
                 <Link to="" > <Button size="sm" className="mx-2" variant="light">Lanjutkan Baca </Button> </Link>
                 <a target="_blank"  href="https://www.dgip.go.id/" rel="noreferrer">Pelajari Hak Cipta</a>
