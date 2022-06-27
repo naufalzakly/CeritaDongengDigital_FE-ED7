@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../../../../context/index";
+import "../index.css";
 
 
 const PhoneSignUp = () => {
@@ -45,12 +46,13 @@ const PhoneSignUp = () => {
   };
 
   return (
-    <>
+    <Container className="login-page">
       <div className="p-4 box">
-        <h2 className="mb-3">Phone Auth</h2>
+        <h2>Phone Auth</h2>
+        <hr className="mb-4"/>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-4" controlId="formBasicEmail">
             <PhoneInput
               defaultCountry="ID"
               value={number}
@@ -60,7 +62,7 @@ const PhoneSignUp = () => {
             <div id="recaptcha-container"></div>
           </Form.Group>
           <div className="button-right">
-            <Link to="/">
+            <Link to="/login">
               <Button variant="secondary">Cancel</Button>
             </Link>
             &nbsp;
@@ -89,7 +91,7 @@ const PhoneSignUp = () => {
           </div>
         </Form>
       </div>
-    </>
+    </Container>
   );
 };
 

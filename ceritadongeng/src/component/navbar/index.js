@@ -1,7 +1,7 @@
 import { Nav, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
  //import ButtonBergabung from "../button/bergabung/index";
-import ButtonMenuProfil from "../home/button/menuProfil";
+import ButtonMenuProfil from "../home/button/menuLogIn/index";
 import {Link} from "react-router-dom";
 
 
