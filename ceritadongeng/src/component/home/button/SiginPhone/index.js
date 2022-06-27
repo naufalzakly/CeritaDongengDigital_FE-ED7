@@ -38,7 +38,7 @@ const PhoneSignUp = () => {
     if (otp === "" || otp === null) return;
     try {
       await result.confirm(otp);
-      navigate("/home");
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
@@ -47,7 +47,7 @@ const PhoneSignUp = () => {
   return (
     <>
       <div className="p-4 box">
-        <h2 className="mb-3">Firebase Phone Auth</h2>
+        <h2 className="mb-3">Phone Auth</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -79,7 +79,7 @@ const PhoneSignUp = () => {
             />
           </Form.Group>
           <div className="button-right">
-            <Link to="/">
+            <Link to="/login">
               <Button variant="secondary">Cancel</Button>
             </Link>
             &nbsp;
