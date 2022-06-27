@@ -10,7 +10,7 @@ import KelinciKura from "./pages/bacaCerita/KelinciKura";
 import Loginn from "./component/home/button/login/index"
 import PhoneSignUp from "./component/home/button/SiginPhone";
 import Signup from "./component/home/button/Signup";
-import ProtectedRoute from "./context/protectRoute";
+// import ProtectedRoute from "./context/protectRoute";
 import { UserAuthContextProvider } from "./context/index";
 import KancilBuaya from "./pages/bacaCerita/KancilBuaya";
 import BebekBurukRupa from "./pages/bacaCerita/Bebek";
@@ -24,16 +24,17 @@ function App() {
         
         <UserAuthContextProvider>
           <Routes>
-            <Route 
-              path="/home" 
+            {/* <Route 
+              path="/login" 
               element={
                 <ProtectedRoute>
-                   <Homepage />
+                   <Loginn />
                 </ProtectedRoute>
                
               } 
-            />
-            <Route path="/" element={<Loginn />} />
+            /> */}
+            <Route path="/login" element={<Loginn />} />
+            <Route path="/" element={<Homepage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/phonesignup" element={<PhoneSignUp />} />
             <Route path="/libBuku" element={<LibBuku />} />
