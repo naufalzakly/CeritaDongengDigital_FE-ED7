@@ -39,10 +39,10 @@ const Footer = () => {
             <h6>Profile</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to="">About Us</Link>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="">Team</Link>
+                <Link to="/Team">Team</Link>
               </li>
             </ul>
           </Col>
@@ -51,10 +51,7 @@ const Footer = () => {
             <h6>Pusat Bantuan</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to="">Komunitas</Link>
-              </li>
-              <li>
-                <Link to="">FAQs</Link>
+                <Link to="/Faq">FAQs</Link>
               </li>
             </ul>
           </Col>
