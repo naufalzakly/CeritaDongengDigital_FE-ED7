@@ -1,4 +1,3 @@
-import React from 'react';
 import { Nav, Container, Row, Col } from 'react-bootstrap';
 import './style.css';
 //import ButtonBergabung from "../button/bergabung/index";
@@ -6,6 +5,7 @@ import ButtonMenuProfil from '../home/button/menuLogIn';
 import { Link } from 'react-router-dom';
 
 const NavbarHome = () => {
+  // const  [login, setLogin] = useState(false);
 
   return (
     <div className="header">

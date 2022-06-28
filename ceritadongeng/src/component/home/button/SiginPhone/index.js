@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button, Container } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../../../../context/index";
 import "../index.css";
-
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -16,7 +15,6 @@ const PhoneSignUp = () => {
   const [result, setResult] = useState("");
   const { setUpRecaptha } = useUserAuth();
   const navigate = useNavigate();
-
 
   const getOtp = async (e) => {
     e.preventDefault();
@@ -49,7 +47,7 @@ const PhoneSignUp = () => {
     <Container className="login-page">
       <div className="p-4 box">
         <h2>Phone Auth</h2>
-        <hr className="mb-4"/>
+        <hr className="mb-4" />
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
           <Form.Group className="mb-4" controlId="formBasicEmail">
@@ -61,6 +59,7 @@ const PhoneSignUp = () => {
             />
             <div id="recaptcha-container"></div>
           </Form.Group>
+
           <div className="button-right">
             <Link to="/login">
               <Button variant="secondary">Cancel</Button>

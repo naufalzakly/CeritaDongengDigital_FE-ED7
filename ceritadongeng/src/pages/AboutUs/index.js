@@ -1,5 +1,5 @@
 import NavbarHome from '../../component/navbar/index';
-import { Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Footer from '../../component/footer/index';
 import React from 'react';
 import './index.css';

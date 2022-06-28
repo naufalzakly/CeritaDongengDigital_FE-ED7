@@ -7,7 +7,7 @@ import './index.css';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../Firestore';
-import "./index.css";
+import './index.css';
 
 const Team = () => {
   const [cardKelompok, setCardKelompok] = useState([]);
@@ -21,7 +21,7 @@ const Team = () => {
 
   return (
     <div>
-    <NavbarHome />
+      <NavbarHome />
       <Container className="team-section">
         <Row>
           <Col>
