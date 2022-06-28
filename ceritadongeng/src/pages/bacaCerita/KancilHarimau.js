@@ -1,7 +1,7 @@
 import "./SliderBacaCerita.css";
 import { useEffect, useState } from "react";
-import {Link} from "react-router-dom";
-import {RiCloseCircleFill} from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { RiCloseCircleFill } from "react-icons/ri";
 import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
@@ -32,7 +32,7 @@ const KancilHarimau = () => {
   return (
     <div className="slider-baca-cerita">
       <Link to="/LibBuku">
-      <RiCloseCircleFill color="red" className="close-cerita"/>
+        <RiCloseCircleFill color="red" className="close-cerita" />
       </Link>
       <IoArrowUndoCircleSharp
         className="left-arrow-baca-cerita"

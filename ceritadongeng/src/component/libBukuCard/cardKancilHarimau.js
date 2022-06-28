@@ -48,9 +48,12 @@ const CardKancilHarimau = () => {
           </Carousel>
         </div>
         <Card.Body>
-          <Card.Title>Kancil dan Harimau <button className="btn-heart">
+          <Card.Title>
+            Kancil dan Harimau{" "}
+            <button className="btn-heart">
               <BsHeart size="1.5em" color="red" />
-            </button></Card.Title>
+            </button>
+          </Card.Title>
           <Card.Text className="text-muted">Pengarang: Dhanny Larito</Card.Text>
         </Card.Body>
         <Card.Footer>

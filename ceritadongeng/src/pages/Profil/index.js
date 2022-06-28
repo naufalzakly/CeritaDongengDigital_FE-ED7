@@ -8,28 +8,25 @@ import NavbarHome from "../../component/navbar";
 const Profil = () => {
   return (
     <>
-      <NavbarHome/>
+      <NavbarHome />
       <div className="profil-section">
-      <Container>
-        <Row>
-          <Col md="4">
-            <TentangAkun />
-          </Col>
-          <Col md="8">
-            <WelcomeText />
-            <div className="edit-akun">
-                <hr/>
+        <Container>
+          <Row>
+            <Col md="4">
+              <TentangAkun />
+            </Col>
+            <Col md="8">
+              <WelcomeText />
+              <div className="edit-akun">
+                <hr />
                 <Button variant="link">Disukai oleh Anda</Button>
-            </div>
-          </Col>
-        </Row>
-        
-      </Container>
-      
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
-      <Footer/>
+      <Footer />
     </>
-
   );
 };
 

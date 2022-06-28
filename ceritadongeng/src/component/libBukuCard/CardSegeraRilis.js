@@ -8,7 +8,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import db from '../../Firestore';
+import db from "../../Firestore";
 
 const CardSegeraRilis = () => {
   const [cardSegeraRilis, setCardSegeraRilis] = useState([]);
@@ -34,17 +34,15 @@ const CardSegeraRilis = () => {
             <div className="lib-buku-card mx-2 " key={idx}>
               <Card className="no-outline">
                 <div className="card-img d-flex">
-                      <img
-                        className="d-block"
-                        src={thumb.img}
-                        width="100%"
-                        alt=""
-                      />
+                  <img
+                    className="d-block"
+                    src={thumb.img}
+                    width="100%"
+                    alt=""
+                  />
                 </div>
                 <Card.Body>
-                  <Card.Title>
-                    {thumb.cerita}
-                  </Card.Title>
+                  <Card.Title>{thumb.cerita}</Card.Title>
                   <Card.Text className="text-muted">
                     Pengarang: {thumb.pengarang}
                   </Card.Text>

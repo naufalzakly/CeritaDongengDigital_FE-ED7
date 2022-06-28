@@ -1,11 +1,12 @@
-import {initializeApp} from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfigg = {
   apiKey: "AIzaSyBUf5_CnpHfPOfAme_wNGEieECB2IW9JA4",
   authDomain: "cerita-dongeng-digital.firebaseapp.com",
-  databaseURL: "https://cerita-dongeng-digital-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL:
+    "https://cerita-dongeng-digital-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "cerita-dongeng-digital",
   storageBucket: "cerita-dongeng-digital.appspot.com",
   messagingSenderId: "485479888361",
@@ -19,10 +20,7 @@ const firebaseConfigg = {
   // messagingSenderId : process.env.REACT_APP_MESSAGINGSENDERID,
   // appId : process.env.REACT_APP_APPID,
   // measurementId : process.env.REACT_APP_MEASUREMENTID
-
-
 };
-
 
 const app = initializeApp(firebaseConfigg);
 export const auth = getAuth(app);

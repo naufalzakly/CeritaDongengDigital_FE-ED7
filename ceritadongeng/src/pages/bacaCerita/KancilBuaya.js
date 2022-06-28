@@ -1,11 +1,11 @@
 import "./SliderBacaCerita.css";
 import { useEffect, useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   IoArrowUndoCircleSharp,
   IoArrowRedoCircleSharp,
 } from "react-icons/io5";
-import {RiCloseCircleFill} from "react-icons/ri";
+import { RiCloseCircleFill } from "react-icons/ri";
 import db from "../../Firestore";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
@@ -32,7 +32,7 @@ const KancilBuaya = () => {
   return (
     <div className="slider-baca-cerita">
       <Link to="/LibBuku">
-      <RiCloseCircleFill color="red" className="close-cerita"/>
+        <RiCloseCircleFill color="red" className="close-cerita" />
       </Link>
       <IoArrowUndoCircleSharp
         className="left-arrow-baca-cerita"

@@ -13,21 +13,19 @@ const LibBuku = () => {
     <>
       <NavbarHome />
       <div className="lib-buku">
-      <Container>
-        <SectionTitle title={"Dongeng"} />
-        <Row className="Container_Card">
-          <CardGroup>
-            <CardBebek />
-            <CardKancilHarimau/>
-            <CardKelinciKura/>
-            <CardKancilBuaya />
-          </CardGroup>
-        </Row>
-        <SectionTitle title={"Tunggu Cerita Lainnya Segera..."} />
-        <CardSegeraRilis />
-       
-      </Container>
-      
+        <Container>
+          <SectionTitle title={"Dongeng"} />
+          <Row className="Container_Card">
+            <CardGroup>
+              <CardBebek />
+              <CardKancilHarimau />
+              <CardKelinciKura />
+              <CardKancilBuaya />
+            </CardGroup>
+          </Row>
+          <SectionTitle title={"Tunggu Cerita Lainnya Segera..."} />
+          <CardSegeraRilis />
+        </Container>
       </div>
       <Footer />
     </>

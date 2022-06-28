@@ -33,7 +33,13 @@ const Home = () => {
 
             <Carousel.Caption className="nav-dongeng">
               <Link to="/libBuku">
-                <h2> BACA DONGENG <Button variant="success"><AiOutlineArrowRight size="2.2em"/></Button> </h2>
+                <h2>
+                  {" "}
+                  BACA DONGENG{" "}
+                  <Button variant="success">
+                    <AiOutlineArrowRight size="2.2em" />
+                  </Button>{" "}
+                </h2>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>

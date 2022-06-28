@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
 
-const Card_cerita_Populer = ({ title }) => {
+const Card_cerita_Populer = () => {
   const [Thumbnail, setThumbnail] = useState([]);
   useEffect(
     () =>
@@ -22,7 +22,7 @@ const Card_cerita_Populer = ({ title }) => {
   );
   return (
     <Container className="cerita-thumb">
-      <SectionTitle title={title} />
+      <SectionTitle title={"Cerita Terpopuler"} />
       <Row className="Container_Card">
         <CardGroup>
           <Col>
@@ -139,7 +139,9 @@ const Card_cerita_Populer = ({ title }) => {
               </Card.ImgOverlay>
               <Card.Body>
                 <Card.Title>Bebek Buruk Rupa</Card.Title>
-                <Card.Text  className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
+                <Card.Text className="text-muted">
+                  Pengarang: Hans Christian Andersen
+                </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Link to="/BacaCerita/BebekBurukRupa">

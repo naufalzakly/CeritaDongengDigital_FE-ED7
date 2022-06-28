@@ -54,7 +54,9 @@ const CardBebek = () => {
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
-          <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
+          <Card.Text className="text-muted">
+            Pengarang: Hans Christian Andersen
+          </Card.Text>
         </Card.Body>
         <Card.Footer>
           <Link to="/BacaCerita/BebekBurukRupa">
