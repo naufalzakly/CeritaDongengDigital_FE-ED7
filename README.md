@@ -22,15 +22,13 @@ Pengguna yang belum memiliki akun dapat membuat akun terlebih dahulu dengan fitu
 Fitur login ini berfungsi untuk menyimpan data pengguna dan akses pengguna ke fitur baca nanti.
 * Fitur lihat profile
 Pengguna dapat melihat profile pengguna di menu profile.
-* Fitur edit profile
-Pengguna dapat mengubah isi profile dengan fitur edit profile.
-* Fitur baca nanti
-Fitur baca nanti untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
-* Fitur feedback
-Pengguna dapat memasukan feedback untuk pengembangan platform website dongeng cerita digital dengan fitur feedback yang disediakan.
+* Fitur daftar bacaan
+Fitur daftar bacaan untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
+* Fitur ulasan
+Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng cerita digital dengan fitur feedback yang disediakan.
 
 ## Tech Stack Used
-- HTML & CSS
+- HTML
 - Bootstrap
 - React JS
 - Firebase
