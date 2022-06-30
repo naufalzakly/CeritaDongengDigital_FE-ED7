@@ -4,9 +4,12 @@ import { MdDone } from "react-icons/md";
 import { useUserAuth } from "../../../context/index";
 import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { BsFillPeopleFill } from "react-icons/bs";
 import db from "../../../Firestore";
+
 const TentangAkun = () => {
   const [Users, setUser] = useState([]);
+  const { user } = useUserAuth();
   useEffect(
     () =>
       onSnapshot(collection(db, "user"), (snapshot) =>
@@ -15,13 +18,13 @@ const TentangAkun = () => {
 
     []
   );
-  const { user } = useUserAuth();
+
   return (
     <div className="profil">
       <Container>
         <div className="avatar">
           <div className="img-avatar">
-            <img src="user.photoURL" />
+            <BsFillPeopleFill size="10em" />
           </div>
           <p className="text-center">Upload Avatar</p>
         </div>
@@ -45,13 +48,11 @@ const TentangAkun = () => {
             ) : (
               <div>
                 {Users.filter((userss) => userss.index === 1).map(
-                  (userss, id) => {
+                  (userss, idx) => {
                     return (
-                      <>
-                        <div key={id}>
-                          <MdDone /> {userss.email}
-                        </div>
-                      </>
+                      <div key={idx}>
+                        <MdDone /> {userss.email}
+                      </div>
                     );
                   }
                 )}
@@ -66,13 +67,11 @@ const TentangAkun = () => {
             ) : (
               <div>
                 {Users.filter((userss) => userss.index === 1).map(
-                  (userss, id) => {
+                  (userss, idx) => {
                     return (
-                      <>
-                        <div key={id}>
-                          <MdDone /> {userss.PhoneNumber}
-                        </div>
-                      </>
+                      <div key={idx}>
+                        <MdDone /> {userss.PhoneNumber}
+                      </div>
                     );
                   }
                 )}

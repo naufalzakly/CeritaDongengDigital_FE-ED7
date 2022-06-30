@@ -3,12 +3,38 @@ import { Card, CardGroup, Col, Container, Row, Button } from "react-bootstrap";
 import "./style.css";
 import db from "../../../Firestore";
 import SectionTitle from "../../sectionTitle/index";
-import { collection, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
 
 const Card_cerita_Populer = () => {
+  const [WhisList, setWhisList] = useState([]);
+
+  const selectedNumber_1 = async () => {
+    const IconCollection = collection(db, "whislist");
+    const payload = { IdIcons: 1, Judul: "Kancil dan Buaya" };
+    await addDoc(IconCollection, payload);
+    alert("Berhasil ditambahkan");
+  };
+  const selectedNumber_2 = async () => {
+    const IconCollection = collection(db, "whislist");
+    const payload = { IdIcons: 2, Judul: "Kancil dan Harimau" };
+    await addDoc(IconCollection, payload);
+    alert("Berhasil ditambahkan");
+  };
+  const selectedNumber_3 = async () => {
+    const IconCollection = collection(db, "whislist");
+    const payload = { IdIcons: 3, Judul: "Bebek Buruk Rupa" };
+    await addDoc(IconCollection, payload);
+    alert("Berhasil ditambahkan");
+  };
+  const selectedNumber_4 = async () => {
+    const IconCollection = collection(db, "whislist");
+    const payload = { IdIcons: 4, Judul: "Kelinci dan Kura Kura" };
+    await addDoc(IconCollection, payload);
+    alert("Berhasil ditambahkan");
+  };
   const [Thumbnail, setThumbnail] = useState([]);
   useEffect(
     () =>
@@ -39,7 +65,7 @@ const Card_cerita_Populer = () => {
                 )}
               </Link>
               <Card.ImgOverlay>
-                <button className="right">
+                <button onClick={selectedNumber_1} className="right">
                   <BsHeart size="2em" color="red" />
                 </button>
               </Card.ImgOverlay>
@@ -71,7 +97,7 @@ const Card_cerita_Populer = () => {
                 )}
               </Link>
               <Card.ImgOverlay>
-                <button className="right">
+                <button onClick={selectedNumber_2} className="right">
                   <BsHeart size="2em" color="red" />
                 </button>
               </Card.ImgOverlay>
@@ -103,7 +129,7 @@ const Card_cerita_Populer = () => {
                 )}
               </Link>
               <Card.ImgOverlay>
-                <button className="right">
+                <button onClick={selectedNumber_4} className="right">
                   <BsHeart size="2em" color="red" />
                 </button>
               </Card.ImgOverlay>
@@ -133,7 +159,7 @@ const Card_cerita_Populer = () => {
                 )}
               </Link>
               <Card.ImgOverlay>
-                <button className="right">
+                <button onClick={selectedNumber_3} className="right">
                   <BsHeart size="2em" color="red" />
                 </button>
               </Card.ImgOverlay>

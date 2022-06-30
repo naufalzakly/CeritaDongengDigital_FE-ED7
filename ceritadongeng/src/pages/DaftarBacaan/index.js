@@ -1,5 +1,5 @@
 import SectionTitle from "../../component/sectionTitle/index";
-import CardDaftarBacaan from "../../component/cardDaftarBacaan/index";
+import card_bebek from "../../component/cardDaftarBacaan/card_bebek";
 import "./index.css";
 import { Container, Row, CardGroup } from "react-bootstrap";
 import Footer from "../../component/footer";
@@ -14,11 +14,7 @@ const DaftarBacaan = () => {
           <SectionTitle title="Daftar Bacaan" />
           <Row className="Container_Card">
             <CardGroup>
-              <CardDaftarBacaan
-                gambar1={
-                  "https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_lib_dongeng%2Fbebek_buruk_rupa%2Fbebek_buruk_rupa_thumbnail.png?alt=media&token=882c7bba-8573-40e3-8e8f-59313bc2dca3"
-                }
-              />
+              <card_bebek />
             </CardGroup>
           </Row>
         </Container>
