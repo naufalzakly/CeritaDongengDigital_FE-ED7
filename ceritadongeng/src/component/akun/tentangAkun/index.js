@@ -5,6 +5,8 @@ import { useUserAuth } from '../../../context/index';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../Firestore';
+import { IoPersonCircle } from 'react-icons/io5';
+
 const TentangAkun = () => {
   const [Users, setUser] = useState([]);
   useEffect(
@@ -21,9 +23,8 @@ const TentangAkun = () => {
       <Container>
         <div className="avatar">
           <div className="img-avatar">
-            <img src="user.photoURL" />
+            <IoPersonCircle size="10em" />
           </div>
-          <p className="text-center">Upload Avatar</p>
         </div>
         <div className="tentang-saya">
           <h5>Tentang Saya</h5>
@@ -34,47 +35,41 @@ const TentangAkun = () => {
         </div>
         <div className="terhubung">
           <h5>Terhubung</h5>
-          <p>
-            {user.email ? (
-              <>
-                <div>
-                  <MdDone />
-                  {user.email}
-                </div>
-              </>
-            ) : (
+
+          {user.email ? (
+            <>
               <div>
-                {Users.filter((userss) => userss.index === 1).map((userss, id) => {
-                  return (
-                    <>
-                      <div key={id}>
-                        <MdDone /> {userss.email}
-                      </div>
-                    </>
-                  );
-                })}
+                <MdDone />
+                {user.email}
               </div>
-            )}
-          </p>
-          <p>
-            {user.phoneNumber ? (
-              <div>
-                <MdDone /> <p>{user.phoneNumber}</p>
-              </div>
-            ) : (
-              <div>
-                {Users.filter((userss) => userss.index === 1).map((userss, id) => {
-                  return (
-                    <>
-                      <div key={id}>
-                        <MdDone /> {userss.PhoneNumber}
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
-            )}
-          </p>
+            </>
+          ) : (
+            <div>
+              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+                return (
+                  <div key={id}>
+                    <MdDone /> {userss.email}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {user.phoneNumber ? (
+            <div>
+              <MdDone /> {user.phoneNumber}
+            </div>
+          ) : (
+            <div>
+              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+                return (
+                  <div key={id}>
+                    <MdDone /> {userss.PhoneNumber}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </Container>
     </div>

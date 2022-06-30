@@ -6,6 +6,7 @@ import CardCeritaPopuler from '../../component/home/card_cerita/cerita_populer.j
 import CardCeritaSegera from '../../component/home/card_cerita/cerita_segera.js';
 import Footer from '../../component/footer';
 import NavbarHome from '../../component/navbar';
+import Feedback from '../../component/home/Ulasan/index';
 import './index.css';
 
 const PageHome = () => {
@@ -22,6 +23,7 @@ const PageHome = () => {
 
           <CardCeritaSegera title={'Segera Rilis'} />
         </div>
+        <Feedback />
         <AboutPlatform />
         <Footer />
       </div>

@@ -10,7 +10,7 @@ function CardDaftarBacaan({ gambar1 }) {
           <Card.Body>
             <Card.Title>Bebek Buruk Rupa</Card.Title>
             <Card.Text>Ditambahkan pada 23 Maret 2022</Card.Text>
-            <Button variant="primary" className="mx-2">
+            <Button variant="success" className="mx-2">
               Baca
             </Button>
             <Button variant="danger">Hapus</Button>

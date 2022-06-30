@@ -37,12 +37,10 @@ const ButtonMenuProfil = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="dropdown-item">
-                {' '}
                 <Link to="/libBuku">Pustakaan </Link>
               </li>
               {user ? (
                 <li className="dropdown-item">
-                  {' '}
                   <Link to="/DaftarBacaan">Daftar Bacaan</Link>
                 </li>
               ) : null}

@@ -28,7 +28,9 @@ const CardKancilBuaya = () => {
             {cardKancilBuaya.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <img className="d-block" src={thumb.img} width="100%" alt="" />
+                  <Link to="/BacaCerita/KancilBuaya">
+                    <img className="d-block" src={thumb.img} width="100%" alt="" />
+                  </Link>
                 </Carousel.Item>
               );
             })}
@@ -36,7 +38,7 @@ const CardKancilBuaya = () => {
         </div>
         <Card.Body>
           <Card.Title>
-            Kancil dan Buaya{' '}
+            Kancil dan Buaya
             <button className="btn-heart">
               <BsHeart size="1.5em" color="red" />
             </button>

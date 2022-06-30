@@ -3,6 +3,7 @@ import { useUserAuth } from '../../../context/index';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../Firestore';
+
 const WelcomeText = () => {
   const { user } = useUserAuth();
   const [Users, setUser] = useState([]);

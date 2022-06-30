@@ -28,7 +28,9 @@ const CardKancilHarimau = () => {
             {cardKancilHarimau.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <img className="d-block" src={thumb.img} width="100%" alt="" />
+                  <Link to="/BacaCerita/KancilHarimau">
+                    <img className="d-block" src={thumb.img} width="100%" alt="" />
+                  </Link>
                 </Carousel.Item>
               );
             })}

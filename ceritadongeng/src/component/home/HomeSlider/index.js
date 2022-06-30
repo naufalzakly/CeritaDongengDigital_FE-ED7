@@ -30,11 +30,10 @@ const Home = () => {
             <Carousel.Caption className="nav-dongeng">
               <Link to="/libBuku">
                 <h2>
-                  {' '}
-                  BACA DONGENG{' '}
+                  BACA DONGENG
                   <Button variant="success">
                     <AiOutlineArrowRight size="2.2em" />
-                  </Button>{' '}
+                  </Button>
                 </h2>
               </Link>
             </Carousel.Caption>

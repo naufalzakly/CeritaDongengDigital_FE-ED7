@@ -32,6 +32,7 @@ const Team = () => {
           </Col>
           <Col>
             <h1>Mentor</h1>
+            <h2>Dion Edo Fananie</h2>
           </Col>
         </Row>
         <Row>

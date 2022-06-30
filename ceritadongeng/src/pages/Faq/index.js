@@ -19,14 +19,27 @@ const Faq = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
+            <Accordion.Header>Bagaimana Cara menemukan daftar bacaan saya</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              Kamu bisa menemukan daftar bacaan kamu dengan login terlebih dahulu, kemudian ke menu
+              profil dan disana akan terdapat menu untuk menuju halaman daftar bacaan.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Mengapa suara bacaan tidak terdengar</Accordion.Header>
+            <Accordion.Body>
+              Terdapat beberapa faktor yang dapat menyebabkan suara dari pembaca buku tidak
+              terdengar.
+            </Accordion.Body>
+            <Accordion.Body>
+              1. Pastikan bahwa speaker perangkat anda aktif dan berfungsi
+            </Accordion.Body>
+            <Accordion.Body>
+              2. Gunakan perangkat tambahan pengeras suara untuk memastikan bawa perangkat bekerja
+              dengan baik
+            </Accordion.Body>
+            <Accordion.Body>
+              3. Pastikan akses koneksi internet anda baik sehingga situs dapat dimuat dengan baik
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

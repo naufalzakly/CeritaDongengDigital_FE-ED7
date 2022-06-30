@@ -18,6 +18,7 @@ import KancilHarimau from './pages/bacaCerita/KancilHarimau';
 import AboutUs from './pages/AboutUs/index';
 import Team from './pages/Team/index';
 import Faq from './pages/Faq/index';
+import FormUlasan from './pages/FormUlasan/index';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/About-us" element={<AboutUs />} />
             <Route path="/Team" element={<Team />} />
             <Route path="/Faq" element={<Faq />} />
+            <Route path="/Form-ulasan" element={<FormUlasan />} />
           </Routes>
         </UserAuthContextProvider>
       </div>
