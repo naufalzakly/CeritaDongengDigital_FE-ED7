@@ -1,13 +1,10 @@
-import "./SliderBacaCerita.css";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  IoArrowUndoCircleSharp,
-  IoArrowRedoCircleSharp,
-} from "react-icons/io5";
-import { RiCloseCircleFill } from "react-icons/ri";
-import db from "../../Firestore";
-import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import './SliderBacaCerita.css';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { IoArrowUndoCircleSharp, IoArrowRedoCircleSharp } from 'react-icons/io5';
+import { RiCloseCircleFill } from 'react-icons/ri';
+import db from '../../Firestore';
+import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
 
 const KancilBuaya = () => {
   const [current, setCurrent] = useState(0);
@@ -15,7 +12,7 @@ const KancilBuaya = () => {
   const length = cerita.length;
 
   useEffect(() => {
-    const q = query(collection(db, "kancil_buaya"), orderBy("index"));
+    const q = query(collection(db, 'kancil_buaya'), orderBy('index'));
     onSnapshot(q, (snapshot) => {
       setCerita(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
@@ -34,24 +31,13 @@ const KancilBuaya = () => {
       <Link to="/LibBuku">
         <RiCloseCircleFill color="red" className="close-cerita" />
       </Link>
-      <IoArrowUndoCircleSharp
-        className="left-arrow-baca-cerita"
-        onClick={prevSlide}
-      />
-      <IoArrowRedoCircleSharp
-        className="right-arrow-baca-cerita"
-        onClick={nextSlide}
-      />
+      <IoArrowUndoCircleSharp className="left-arrow-baca-cerita" onClick={prevSlide} />
+      <IoArrowRedoCircleSharp className="right-arrow-baca-cerita" onClick={nextSlide} />
       {cerita.map((slide, index) => {
         return (
           <div
-            className={
-              index === current
-                ? "slide-baca-cerita active"
-                : "slide-baca-cerita"
-            }
-            key={index}
-          >
+            className={index === current ? 'slide-baca-cerita active' : 'slide-baca-cerita'}
+            key={index}>
             {index === current && (
               <div>
                 <img src={slide.img} alt=" " className="image-baca-cerita" />

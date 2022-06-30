@@ -1,32 +1,25 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
-import SectionTitle from "../../sectionTitle/index";
-import "./index.css";
-import { Link } from "react-router-dom";
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import SectionTitle from '../../sectionTitle/index';
+import './index.css';
+import { Link } from 'react-router-dom';
 
 const AboutPlatform = () => {
   return (
     <div className="about-platform">
       <Container>
-        <SectionTitle
-          title="Selengkapnya mengenai platform kami"
-          className="about-title"
-        />
+        <SectionTitle title="Selengkapnya mengenai platform kami" className="about-title" />
         <Row>
           <Col md="8">
             <p className="mx-2">
-              OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng
-              digital dengan fitur audio untuk memberikan rangsangan minat
-              kesukaan anak terhadap buku dan memicu rasa ingin tahu anak...
+              OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng digital dengan fitur audio
+              untuk memberikan rangsangan minat kesukaan anak terhadap buku dan memicu rasa ingin
+              tahu anak...
             </p>
             <div className="link-pilihan">
               <Link to="/About-us" className="mx-4">
                 Lanjutkan Baca
               </Link>
-              <a
-                target="_blank"
-                href="https://www.dgip.go.id/"
-                rel="noreferrer"
-              >
+              <a target="_blank" href="https://www.dgip.go.id/" rel="noreferrer">
                 Pelajari Hak Cipta
               </a>
             </div>
