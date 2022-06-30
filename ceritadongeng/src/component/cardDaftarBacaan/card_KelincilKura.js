@@ -1,25 +1,23 @@
-import "./index.css";
-import { Button, Card, Col } from "react-bootstrap";
-import db from "../../Firestore";
-import { useEffect, useState } from "react";
-import { collection, onSnapshot } from "firebase/firestore";
+import './index.css';
+import { Button, Card, Col } from 'react-bootstrap';
+import db from '../../Firestore';
+import { useEffect, useState } from 'react';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 function CardDaftarBacaan({ gambar1 }) {
   const [Thumbnail, setThumbnail] = useState([]);
   const [WhisList, setWhisList] = useState([]);
   useEffect(
     () =>
-      onSnapshot(collection(db, "thumb_homepage"), (snapshot) =>
-        setThumbnail(
-          snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-        )
+      onSnapshot(collection(db, 'thumb_homepage'), (snapshot) =>
+        setThumbnail(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 
     []
   );
   useEffect(
     () =>
-      onSnapshot(collection(db, "whislist"), (snapshot) =>
+      onSnapshot(collection(db, 'whislist'), (snapshot) =>
         setWhisList(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 
