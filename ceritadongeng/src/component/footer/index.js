@@ -1,11 +1,11 @@
-import React from "react";
-import { TiHeartFullOutline } from "react-icons/ti";
-import { FaFacebookSquare } from "react-icons/fa";
-import { BiCopyright } from "react-icons/bi";
-import { BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import { TiHeartFullOutline } from 'react-icons/ti';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { BiCopyright } from 'react-icons/bi';
+import { BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './index.css';
 
 const Footer = () => {
   return (
@@ -39,10 +39,13 @@ const Footer = () => {
             <h6>Profile</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to="">About Us</Link>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="">Team</Link>
+                <Link to="">Legal Information</Link>
+              </li>
+              <li>
+                <Link to="/Team">Team</Link>
               </li>
             </ul>
           </Col>
@@ -51,10 +54,7 @@ const Footer = () => {
             <h6>Pusat Bantuan</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to="">Komunitas</Link>
-              </li>
-              <li>
-                <Link to="">FAQs</Link>
+                <Link to="/Faq">FAQs</Link>
               </li>
             </ul>
           </Col>
@@ -69,8 +69,8 @@ const Footer = () => {
                 <a href="./index">Email: care@mail.ed7.my.id</a>
               </li>
               <li className="mb-2">
-                Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A,
-                Kebon Jeruk, Kota Jakarta, DKI Jakarta
+                Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A, Kebon Jeruk, Kota
+                Jakarta, DKI Jakarta
               </li>
             </ul>
             <FaFacebookSquare size="2em" className="mx-2" />

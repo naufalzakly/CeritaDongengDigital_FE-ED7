@@ -1,30 +1,22 @@
-import { Carousel, Card, Button } from "react-bootstrap";
-import { BsHeart } from "react-icons/bs";
-import "./index.css";
-import {
-  collection,
-  onSnapshot,
-  query,
-  where,
-  orderBy,
-} from "firebase/firestore";
-import { useEffect, useState } from "react";
-import db from "../../Firestore";
-import { Link } from "react-router-dom";
+import { Carousel, Card, Button } from 'react-bootstrap';
+import { BsHeart } from 'react-icons/bs';
+import './index.css';
+import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import db from '../../Firestore';
+import { Link } from 'react-router-dom';
 
 const CardKancilBuaya = () => {
   const [cardKancilBuaya, setCardKancilBuaya] = useState([]);
 
   useEffect(() => {
     const q = query(
-      collection(db, "thumb_lib_dongeng"),
-      where("cerita", "==", "Kancil dan Buaya"),
-      orderBy("index")
+      collection(db, 'thumb_lib_dongeng'),
+      where('cerita', '==', 'Kancil dan Buaya'),
+      orderBy('index')
     );
     onSnapshot(q, (snapshot) => {
-      setCardKancilBuaya(
-        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
+      setCardKancilBuaya(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 
@@ -36,12 +28,9 @@ const CardKancilBuaya = () => {
             {cardKancilBuaya.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <img
-                    className="d-block"
-                    src={thumb.img}
-                    width="100%"
-                    alt=""
-                  />
+                  <Link to="/BacaCerita/KancilBuaya">
+                    <img className="d-block" src={thumb.img} width="100%" alt="" />
+                  </Link>
                 </Carousel.Item>
               );
             })}
@@ -49,14 +38,12 @@ const CardKancilBuaya = () => {
         </div>
         <Card.Body>
           <Card.Title>
-            Kancil dan Buaya{" "}
+            Kancil dan Buaya
             <button className="btn-heart">
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
-          <Card.Text className="text-muted">
-            Pengarang: Kathy Morris, John Morris
-          </Card.Text>
+          <Card.Text className="text-muted">Pengarang: Kathy Morris, John Morris</Card.Text>
         </Card.Body>
         <Card.Footer>
           <Link to="/BacaCerita/KancilBuaya">

@@ -1,9 +1,10 @@
-import TentangAkun from "../../component/akun/tentangAkun/index";
-import WelcomeText from "../../component/akun/welcomeText/index";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import "./index.css";
-import Footer from "../../component/footer";
-import NavbarHome from "../../component/navbar";
+import TentangAkun from '../../component/akun/tentangAkun/index';
+import WelcomeText from '../../component/akun/welcomeText/index';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import './index.css';
+import Footer from '../../component/footer';
+import NavbarHome from '../../component/navbar';
+import { Link } from 'react-router-dom';
 
 const Profil = () => {
   return (
@@ -19,7 +20,9 @@ const Profil = () => {
               <WelcomeText />
               <div className="edit-akun">
                 <hr />
-                <Button variant="link">Disukai oleh Anda</Button>
+                <Link to="/DaftarBacaan">
+                  <Button variant="link">Disukai oleh Anda</Button>
+                </Link>
               </div>
             </Col>
           </Row>
