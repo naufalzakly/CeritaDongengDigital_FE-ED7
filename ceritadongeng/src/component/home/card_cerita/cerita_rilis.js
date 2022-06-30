@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../../sectionTitle";
 import { BsHeart } from "react-icons/bs";
+import { useUserAuth } from "../../../context/index";
+
 const Card_cerita_Rilis = ({ title }) => {
   const [Thumbnail, setThumbnail] = useState([]);
-
+  const { user } = useUserAuth();
   const selectedNumber_1 = async () => {
     const IconCollection = collection(db, "whislist");
     const payload = { IdIcons: 1, Judul: "Kancil dan Buaya" };
@@ -65,7 +67,10 @@ const Card_cerita_Rilis = ({ title }) => {
                 )}
               </Link>
               <Card.ImgOverlay>
-                <button onClick={selectedNumber_3} className="right">
+                <button
+                  onClick={user ? selectedNumber_3 : alert("Anda Belum Login")}
+                  className="right"
+                >
                   <BsHeart size="2em" color="red" />
                 </button>
               </Card.ImgOverlay>
