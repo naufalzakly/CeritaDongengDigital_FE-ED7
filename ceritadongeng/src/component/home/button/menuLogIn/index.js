@@ -52,14 +52,14 @@ const ButtonMenuProfil = () => {
               ) : (
                 <li className="dropdown-item">
                   <Button variant="primary" onClick={handleLogIn}>
-                    LogIN
+                    Masuk
                   </Button>
                 </li>
               )}
               {user ? (
                 <li className="dropdown-item">
                   <Button variant="danger" onClick={handleLogout}>
-                    LogOut
+                    Keluar
                   </Button>
                 </li>
               ) : null}

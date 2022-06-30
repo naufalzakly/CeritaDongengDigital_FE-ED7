@@ -18,7 +18,12 @@ const FormUlasan = () => {
 
   const addUlasan = async (e) => {
     e.preventDefault();
-    await addDoc(ulasanCollectionRef, { email: ulasan.email, saran: ulasan.saran });
+    await addDoc(ulasanCollectionRef, {
+      email: ulasan.email,
+      nama: ulasan.nama,
+      saran: ulasan.saran,
+      relevan: ''
+    });
     alert('Terima kasih atas ulasan anda!');
   };
 
@@ -35,7 +40,16 @@ const FormUlasan = () => {
                 <Form.Control
                   type="text"
                   onChange={(e) => {
-                    dispatch(setUlasan({ email: e.target.value }));
+                    dispatch(setUlasan({ ...ulasan, email: e.target.value }));
+                  }}
+                />
+              </Form.Group>
+              <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Label>Nama</Form.Label>
+                <Form.Control
+                  type="text"
+                  onChange={(e) => {
+                    dispatch(setUlasan({ ...ulasan, nama: e.target.value }));
                   }}
                 />
               </Form.Group>
@@ -44,7 +58,7 @@ const FormUlasan = () => {
                 <Form.Control
                   as="textarea"
                   onChange={(e) => {
-                    dispatch(setUlasan({ saran: e.target.value }));
+                    dispatch(setUlasan({ ...ulasan, saran: e.target.value }));
                   }}
                 />
               </Form.Group>

@@ -11,3 +11,7 @@
 .about-us-col img {
     margin-top: -50px;
 }
+
+.reviews .card {
+    width: 500px;
+}

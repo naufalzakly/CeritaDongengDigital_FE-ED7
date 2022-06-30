@@ -21,17 +21,21 @@ const Footer = () => {
             />
             <h6 className="mb-3 mx-4">Supported By:</h6>
             <ul className="list-unstyled">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f"
-                alt="logo-yabb"
-                width="136"
-                className="mx-4"
-              />
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-goto.png?alt=media&token=e2605662-b87e-4b1a-829d-d2d21bb49bed"
-                alt="goto"
-                width="136"
-              />
+              <a href="https://www.anakbangsabisa.org/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-yabb.png?alt=media&token=2cb7634f-803a-4a54-81a1-91b8975a582f"
+                  alt="logo-yabb"
+                  width="136"
+                  className="mx-4"
+                />
+              </a>
+              <a href="https://www.gotocompany.com/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/logo-yabb-gojek%2Flogo-goto.png?alt=media&token=e2605662-b87e-4b1a-829d-d2d21bb49bed"
+                  alt="goto"
+                  width="136"
+                />
+              </a>
             </ul>
           </Col>
           {/* kolom 2 */}
@@ -67,10 +71,6 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <a href="./index">Email: care@mail.ed7.my.id</a>
-              </li>
-              <li className="mb-2">
-                Lokasi: Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No. 12A, Kebon Jeruk, Kota
-                Jakarta, DKI Jakarta
               </li>
             </ul>
             <FaFacebookSquare size="2em" className="mx-2" />
