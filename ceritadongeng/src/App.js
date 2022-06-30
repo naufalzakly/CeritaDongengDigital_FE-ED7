@@ -1,16 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './pages/Homepages/index';
+import Homepage from './pages/Homepages';
 import './App.css';
 import LibBuku from './pages/libBuku/index';
 import { Route, Routes } from 'react-router-dom';
 import DaftarBacaan from './pages/DaftarBacaan/index';
 import Profil from './pages/Profil/index';
 import KelinciKura from './pages/bacaCerita/KelinciKura';
-import Loginn from './component/home/button/login/index';
+import Loginn from './component/home/button/login';
 import PhoneSignUp from './component/home/button/SiginPhone';
 import Signup from './component/home/button/Signup';
-// import ProtectedRoute from "./context/protectRoute";
 import { UserAuthContextProvider } from './context/index';
 import KancilBuaya from './pages/bacaCerita/KancilBuaya';
 import BebekBurukRupa from './pages/bacaCerita/Bebek';
