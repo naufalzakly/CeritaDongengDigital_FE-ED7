@@ -1,5 +1,5 @@
-import "./index.css";
-import { Button, Card, Col } from "react-bootstrap";
+import './index.css';
+import { Button, Card, Col } from 'react-bootstrap';
 
 function CardDaftarBacaan({ gambar1 }) {
   return (
