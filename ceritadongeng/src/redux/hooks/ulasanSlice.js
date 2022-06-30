@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const ulasanSlice = createSlice({
   name: "ulasan",
   initialState: {
-    value: { email: "", saran: "" },
+    value: { email: "", nama: "", saran: "" },
   },
   reducers: {
     setUlasan: (state, action) => {
