@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './pages/homepages/index';
+import Homepage from './pages/Homepages/index';
 import './App.css';
 import LibBuku from './pages/libBuku/index';
 import { Route, Routes } from 'react-router-dom';
