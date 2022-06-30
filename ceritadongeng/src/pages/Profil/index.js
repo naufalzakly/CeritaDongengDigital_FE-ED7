@@ -1,10 +1,10 @@
-import TentangAkun from '../../component/akun/tentangAkun/index';
-import WelcomeText from '../../component/akun/welcomeText/index';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import './index.css';
-import Footer from '../../component/footer';
-import NavbarHome from '../../component/navbar';
-import { Link } from 'react-router-dom';
+import TentangAkun from "../../component/akun/tentangAkun/index";
+import WelcomeText from "../../component/akun/welcomeText/index";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import "./index.css";
+import Footer from "../../component/footer";
+import NavbarHome from "../../component/navbar";
+import { Link } from "react-router-dom";
 
 const Profil = () => {
   return (

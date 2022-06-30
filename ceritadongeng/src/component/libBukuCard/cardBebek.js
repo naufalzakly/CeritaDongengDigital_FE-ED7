@@ -1,19 +1,25 @@
-import { Carousel, Card, Button } from 'react-bootstrap';
-import { BsHeart } from 'react-icons/bs';
-import './index.css';
-import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import db from '../../Firestore';
-import { Link } from 'react-router-dom';
+import { Carousel, Card, Button } from "react-bootstrap";
+import { BsHeart } from "react-icons/bs";
+import "./index.css";
+import {
+  collection,
+  onSnapshot,
+  query,
+  where,
+  orderBy,
+} from "firebase/firestore";
+import { useEffect, useState } from "react";
+import db from "../../Firestore";
+import { Link } from "react-router-dom";
 
 const CardBebek = () => {
   const [cardBebek, setCardBebek] = useState([]);
 
   useEffect(() => {
     const q = query(
-      collection(db, 'thumb_lib_dongeng'),
-      where('cerita', '==', 'Bebek Buruk Rupa'),
-      orderBy('index')
+      collection(db, "thumb_lib_dongeng"),
+      where("cerita", "==", "Bebek Buruk Rupa"),
+      orderBy("index")
     );
     onSnapshot(q, (snapshot) => {
       setCardBebek(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -29,7 +35,12 @@ const CardBebek = () => {
               return (
                 <Carousel.Item key={idx}>
                   <Link to="/BacaCerita/BebekBurukRupa">
-                    <img className="d-block" src={thumb.img} width="100%" alt="" />
+                    <img
+                      className="d-block"
+                      src={thumb.img}
+                      width="100%"
+                      alt=""
+                    />
                   </Link>
                 </Carousel.Item>
               );
@@ -43,7 +54,9 @@ const CardBebek = () => {
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
-          <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
+          <Card.Text className="text-muted">
+            Pengarang: Hans Christian Andersen
+          </Card.Text>
         </Card.Body>
         <Card.Footer>
           <Link to="/BacaCerita/BebekBurukRupa">

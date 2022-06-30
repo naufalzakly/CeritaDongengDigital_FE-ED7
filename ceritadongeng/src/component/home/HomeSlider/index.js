@@ -1,19 +1,19 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import { Carousel, Button } from 'react-bootstrap';
-import './style.css';
-import db from '../../../Firestore';
-import { collection, onSnapshot } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import { Carousel, Button } from "react-bootstrap";
+import "./style.css";
+import db from "../../../Firestore";
+import { collection, onSnapshot } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [Slider, setSlider] = useState([]);
 
   useEffect(
     () =>
-      onSnapshot(collection(db, 'thumb_landscape'), (snapshot) =>
+      onSnapshot(collection(db, "thumb_landscape"), (snapshot) =>
         setSlider(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
     []
@@ -24,7 +24,11 @@ const Home = () => {
         return (
           <Carousel.Item key={id}>
             <div>
-              <img className="d-block w-100" src={slider.img} alt="First slide" />
+              <img
+                className="d-block w-100"
+                src={slider.img}
+                alt="First slide"
+              />
             </div>
 
             <Carousel.Caption className="nav-dongeng">

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,9 +7,9 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   RecaptchaVerifier,
-  signInWithPhoneNumber
-} from 'firebase/auth';
-import { auth } from '../Firestore';
+  signInWithPhoneNumber,
+} from "firebase/auth";
+import { auth } from "../Firestore";
 
 const userAuthContext = createContext();
 
@@ -31,14 +31,18 @@ export function UserAuthContextProvider({ children }) {
   }
 
   function setUpRecaptha(number) {
-    const recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {}, auth);
+    const recaptchaVerifier = new RecaptchaVerifier(
+      "recaptcha-container",
+      {},
+      auth
+    );
     recaptchaVerifier.render();
     return signInWithPhoneNumber(auth, number, recaptchaVerifier);
   }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-      console.log('Auth', currentuser);
+      console.log("Auth", currentuser);
       setUser(currentuser);
     });
 
@@ -55,8 +59,9 @@ export function UserAuthContextProvider({ children }) {
         signUp,
         logOut,
         googleSignIn,
-        setUpRecaptha
-      }}>
+        setUpRecaptha,
+      }}
+    >
       {children}
     </userAuthContext.Provider>
   );

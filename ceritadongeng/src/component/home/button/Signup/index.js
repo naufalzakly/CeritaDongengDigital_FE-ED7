@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Form, Alert } from 'react-bootstrap';
-import { Button, Container } from 'react-bootstrap';
-import { useUserAuth } from '../../../../context/index';
-import '../index.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Form, Alert } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+import { useUserAuth } from "../../../../context/index";
+import "../index.css";
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
   const { signUp } = useUserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     try {
       await signUp(email, password);
-      navigate('/');
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
