@@ -1,15 +1,15 @@
-import "./index.css";
-import { useUserAuth } from "../../../context/index";
-import { collection, onSnapshot } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import db from "../../../Firestore";
+import './index.css';
+import { useUserAuth } from '../../../Context/index';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import db from '../../../Firestore';
 
 const WelcomeText = () => {
   const { user } = useUserAuth();
   const [Users, setUser] = useState([]);
   useEffect(
     () =>
-      onSnapshot(collection(db, "user"), (snapshot) =>
+      onSnapshot(collection(db, 'user'), (snapshot) =>
         setUser(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 

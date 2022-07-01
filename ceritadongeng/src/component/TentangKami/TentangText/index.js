@@ -1,5 +1,5 @@
-import React from "react";
-import SectionTitle from "../../sectionTitle";
+import React from 'react';
+import SectionTitle from '../../SectionTitle';
 
 const TentangText = () => {
   return (
@@ -8,23 +8,20 @@ const TentangText = () => {
       <div className="about-us-col">
         <div>
           <p>
-            Rendahnya minat baca anak Indonesia di tengah tingginya angka melek
-            huruf merupakan latar belakang kami mengembangkan project Website
-            OEPPAK Dongeng ini. Website OEPPAK Dongeng diharapkan dapat
-            merangsang minat, kegemaran, dan rasa ingin tahu anak-anak terhadap
-            kesusastraan. Website OEPPAK Dongeng diharapkan pula dapat
-            memberikan perasaan menyenangkan kepada anak saat membaca karena
-            pada website ini cerita dongeng disajikan secara interaktif dengan
-            audio.
+            Rendahnya minat baca anak Indonesia di tengah tingginya angka melek huruf merupakan
+            latar belakang kami mengembangkan project Website OEPPAK Dongeng ini. Website OEPPAK
+            Dongeng diharapkan dapat merangsang minat, kegemaran, dan rasa ingin tahu anak-anak
+            terhadap kesusastraan. Website OEPPAK Dongeng diharapkan pula dapat memberikan perasaan
+            menyenangkan kepada anak saat membaca karena pada website ini cerita dongeng disajikan
+            secara interaktif dengan audio.
           </p>
 
           <p>
-            Pembentukan kebiasaan membaca khususnya bagi anak-anak usia dini
-            amat penting untuk diperhatikan, selain karena pada usia demikian
-            anak berada pada tahap krusial pemberian rangsangan pendidikan,
-            alasan lainnya yaitu demi persiapan menyongsong periode bonus
-            demografi 2030-2040. Hal ini tentu agar target bonus demografi
-            Indonesia yang berkualitas di masa depan dapat tercapai.
+            Pembentukan kebiasaan membaca khususnya bagi anak-anak usia dini amat penting untuk
+            diperhatikan, selain karena pada usia demikian anak berada pada tahap krusial pemberian
+            rangsangan pendidikan, alasan lainnya yaitu demi persiapan menyongsong periode bonus
+            demografi 2030-2040. Hal ini tentu agar target bonus demografi Indonesia yang
+            berkualitas di masa depan dapat tercapai.
           </p>
         </div>
         <div>

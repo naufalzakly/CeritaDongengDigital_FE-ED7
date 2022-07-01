@@ -1,10 +1,10 @@
-import NavbarHome from "../../component/navbar/index";
-import { Container } from "react-bootstrap";
-import Footer from "../../component/footer/index";
-import React from "react";
-import "./index.css";
-import TentangText from "../../component/TentangKami/TentangText";
-import Reviews from "../../component/TentangKami/Reviews";
+import NavbarHome from '../../Component/Navbar/index';
+import { Container } from 'react-bootstrap';
+import Footer from '../../Component/Footer/index';
+import React from 'react';
+import './index.css';
+import TentangText from '../../Component/TentangKami/TentangText';
+import Reviews from '../../Component/TentangKami/Reviews';
 
 const AboutUs = () => {
   return (

@@ -1,13 +1,13 @@
-import { Container, Row, CardGroup } from "react-bootstrap";
-import CardBebek from "../../component/libBukuCard/cardBebek";
-import SectionTitle from "../../component/sectionTitle/index";
-import CardKancilBuaya from "../../component/libBukuCard/cardKancilBuaya";
-import CardSegeraRilis from "../../component/libBukuCard/CardSegeraRilis";
-import "./index.css";
-import NavbarHome from "../../component/navbar";
-import Footer from "../../component/footer";
-import CardKancilHarimau from "../../component/libBukuCard/cardKancilHarimau";
-import CardKelinciKura from "../../component/libBukuCard/cardKelinciKura";
+import { Container, Row, CardGroup } from 'react-bootstrap';
+import CardBebek from '../../Component/LibBukuCard/cardBebek';
+import SectionTitle from '../../Component/SectionTitle/index';
+import CardKancilBuaya from '../../Component/LibBukuCard/cardKancilBuaya';
+import CardSegeraRilis from '../../Component/LibBukuCard/CardSegeraRilis';
+import './index.css';
+import NavbarHome from '../../Component/Navbar';
+import Footer from '../../Component/Footer';
+import CardKancilHarimau from '../../Component/LibBukuCard/cardKancilHarimau';
+import CardKelinciKura from '../../Component/LibBukuCard/cardKelinciKura';
 
 const LibBuku = () => {
   return (
@@ -15,7 +15,7 @@ const LibBuku = () => {
       <NavbarHome />
       <div className="lib-buku">
         <Container>
-          <SectionTitle title={"Dongeng"} />
+          <SectionTitle title={'Dongeng'} />
           <Row className="Container_Card">
             <CardGroup>
               <CardBebek />
@@ -24,7 +24,7 @@ const LibBuku = () => {
               <CardKancilBuaya />
             </CardGroup>
           </Row>
-          <SectionTitle title={"Tunggu Cerita Lainnya Segera..."} />
+          <SectionTitle title={'Tunggu Cerita Lainnya Segera...'} />
           <CardSegeraRilis />
         </Container>
       </div>

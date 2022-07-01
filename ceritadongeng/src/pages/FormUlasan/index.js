@@ -1,20 +1,20 @@
-import React from "react";
-import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import { BsFillXCircleFill } from "react-icons/bs";
-import db from "../../Firestore";
-import { collection, addDoc } from "firebase/firestore";
-import { useSelector, useDispatch } from "react-redux";
-import { setUlasan } from "../../redux/hooks/ulasanSlice";
-import { Link } from "react-router-dom";
-import NavbarHome from "../../component/navbar/index";
-import SectionTitle from "../../component/sectionTitle";
-import Footer from "../../component/footer/index";
-import "./index.css";
+import React from 'react';
+import { Form, Button, Row, Col, Container } from 'react-bootstrap';
+import { BsFillXCircleFill } from 'react-icons/bs';
+import db from '../../Firestore';
+import { collection, addDoc } from 'firebase/firestore';
+import { useSelector, useDispatch } from 'react-redux';
+import { setUlasan } from '../../Redux/hooks/ulasanSlice';
+import { Link } from 'react-router-dom';
+import NavbarHome from '../../Component/Navbar/index';
+import SectionTitle from '../../Component/SectionTitle';
+import Footer from '../../Component/Footer/index';
+import './index.css';
 
 const FormUlasan = () => {
   const ulasan = useSelector((state) => state.ulasan.value);
   const dispatch = useDispatch();
-  const ulasanCollectionRef = collection(db, "ulasan");
+  const ulasanCollectionRef = collection(db, 'ulasan');
 
   const addUlasan = async (e) => {
     e.preventDefault();
@@ -22,9 +22,9 @@ const FormUlasan = () => {
       email: ulasan.email,
       nama: ulasan.nama,
       saran: ulasan.saran,
-      relevan: "",
+      relevan: ''
     });
-    alert("Terima kasih atas ulasan anda!");
+    alert('Terima kasih atas ulasan anda!');
   };
 
   return (

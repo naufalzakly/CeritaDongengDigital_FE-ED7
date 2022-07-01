@@ -3,7 +3,7 @@
 }
 
 .ulasan button {
-    position: absolute;
+    
     width: 300px;
     z-index: 10;
     cursor: pointer;

@@ -1,22 +1,34 @@
-import SectionTitle from "../../component/sectionTitle/index";
-import card_bebek from "../../component/cardDaftarBacaan/card_bebek";
-import "./index.css";
-import { Container, Row, CardGroup } from "react-bootstrap";
-import Footer from "../../component/footer";
-import NavbarHome from "../../component/navbar";
-
+import './index.css';
+import { Container, CardGroup, Col, Row } from 'react-bootstrap';
+import Footer from '../../Component/Footer';
+import SectionTitle from '../../Component/SectionTitle/index';
+import CardBacaaan from '../../Component/CardDaftarBacaan/daftarbacaan';
+import NavbarHome from '../../Component/Navbar';
+import db from '../../Firestore';
+import { useEffect, useState } from 'react';
+import { collection, onSnapshot } from 'firebase/firestore';
 const DaftarBacaan = () => {
+  const [Whislist, setWhislist] = useState([]);
+  useEffect(
+    () =>
+      onSnapshot(collection(db, 'whislist'), (snapshot) =>
+        setWhislist(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      ),
+
+    []
+  );
   return (
     <>
       <NavbarHome />
-      <div className="wishlist">
+
+      <div>
         <Container>
-          <SectionTitle title="Daftar Bacaan" />
-          <Row className="Container_Card">
-            <CardGroup>
-              <card_bebek />
-            </CardGroup>
-          </Row>
+          <SectionTitle title={'Daftar Bacaan'} />
+          <CardGroup>
+            <Col>
+              <CardBacaaan />
+            </Col>
+          </CardGroup>
         </Container>
       </div>
       <Footer />

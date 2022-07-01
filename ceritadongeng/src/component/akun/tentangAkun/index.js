@@ -1,18 +1,18 @@
-import "./index.css";
-import { Container } from "react-bootstrap";
-import { MdDone } from "react-icons/md";
-import { useUserAuth } from "../../../context/index";
-import { collection, onSnapshot } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import db from "../../../Firestore";
-import { IoPersonCircle } from "react-icons/io5";
+import './index.css';
+import { Container } from 'react-bootstrap';
+import { MdDone } from 'react-icons/md';
+import { useUserAuth } from '../../../Context/index';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import db from '../../../Firestore';
+import { IoPersonCircle } from 'react-icons/io5';
 
-const TentangAkun = () => {
+const tentangAkun = () => {
   const [Users, setUser] = useState([]);
   const { user } = useUserAuth();
   useEffect(
     () =>
-      onSnapshot(collection(db, "user"), (snapshot) =>
+      onSnapshot(collection(db, 'user'), (snapshot) =>
         setUser(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 
@@ -30,8 +30,8 @@ const TentangAkun = () => {
         <div className="tentang-saya">
           <h5>Tentang Saya</h5>
           <p>
-            Saya sangat senang dengan adanya website ini, sebab bisa mengajarkan
-            anak saya ilmu tentang cerita hewan disekitar kita
+            Saya sangat senang dengan adanya website ini, sebab bisa mengajarkan anak saya ilmu
+            tentang cerita hewan disekitar kita
           </p>
         </div>
         <div className="terhubung">
@@ -46,15 +46,13 @@ const TentangAkun = () => {
             </>
           ) : (
             <div>
-              {Users.filter((userss) => userss.index === 1).map(
-                (userss, id) => {
-                  return (
-                    <div key={id}>
-                      <MdDone /> {userss.email}
-                    </div>
-                  );
-                }
-              )}
+              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+                return (
+                  <div key={id}>
+                    <MdDone /> {userss.email}
+                  </div>
+                );
+              })}
             </div>
           )}
 
@@ -64,15 +62,13 @@ const TentangAkun = () => {
             </div>
           ) : (
             <div>
-              {Users.filter((userss) => userss.index === 1).map(
-                (userss, id) => {
-                  return (
-                    <div key={id}>
-                      <MdDone /> {userss.PhoneNumber}
-                    </div>
-                  );
-                }
-              )}
+              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+                return (
+                  <div key={id}>
+                    <MdDone /> {userss.PhoneNumber}
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>
@@ -81,4 +77,4 @@ const TentangAkun = () => {
   );
 };
 
-export default TentangAkun;
+export default tentangAkun;

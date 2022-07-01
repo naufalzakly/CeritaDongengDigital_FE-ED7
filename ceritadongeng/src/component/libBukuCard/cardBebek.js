@@ -1,25 +1,30 @@
-import { Carousel, Card, Button } from "react-bootstrap";
-import { BsHeart } from "react-icons/bs";
-import "./index.css";
-import {
-  collection,
-  onSnapshot,
-  query,
-  where,
-  orderBy,
-} from "firebase/firestore";
-import { useEffect, useState } from "react";
-import db from "../../Firestore";
-import { Link } from "react-router-dom";
+import { Carousel, Card, Button } from 'react-bootstrap';
+import { BsHeart } from 'react-icons/bs';
+import './index.css';
+import { addDoc, collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import db from '../../Firestore';
+import { Link } from 'react-router-dom';
+import { useUserAuth } from '../../Context';
 
 const CardBebek = () => {
   const [cardBebek, setCardBebek] = useState([]);
+  const { user } = useUserAuth();
+  const Alert_login = () => {
+    alert('Anda Belum Login');
+  };
+  const selectedNumber_3 = async () => {
+    const IconCollection = collection(db, 'whislist');
+    const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa' };
+    await addDoc(IconCollection, payload);
+    alert('Berhasil ditambahkan');
+  };
 
   useEffect(() => {
     const q = query(
-      collection(db, "thumb_lib_dongeng"),
-      where("cerita", "==", "Bebek Buruk Rupa"),
-      orderBy("index")
+      collection(db, 'thumb_lib_dongeng'),
+      where('cerita', '==', 'Bebek Buruk Rupa'),
+      orderBy('index')
     );
     onSnapshot(q, (snapshot) => {
       setCardBebek(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -35,12 +40,7 @@ const CardBebek = () => {
               return (
                 <Carousel.Item key={idx}>
                   <Link to="/BacaCerita/BebekBurukRupa">
-                    <img
-                      className="d-block"
-                      src={thumb.img}
-                      width="100%"
-                      alt=""
-                    />
+                    <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
               );
@@ -50,13 +50,11 @@ const CardBebek = () => {
         <Card.Body>
           <Card.Title>
             Bebek Buruk Rupa
-            <button className="btn-heart">
+            <button onClick={user ? selectedNumber_3 : Alert_login} className="btn-heart">
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
-          <Card.Text className="text-muted">
-            Pengarang: Hans Christian Andersen
-          </Card.Text>
+          <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
         </Card.Body>
         <Card.Footer>
           <Link to="/BacaCerita/BebekBurukRupa">

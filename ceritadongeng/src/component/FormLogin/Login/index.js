@@ -1,24 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Form, Alert } from "react-bootstrap";
-import { Button, Container } from "react-bootstrap";
-import GoogleButton from "react-google-button";
-import { useUserAuth } from "../../../../context/index";
-import "../index.css";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Form, Alert } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
+import GoogleButton from 'react-google-button';
+import { useUserAuth } from '../../../Context/index';
+import '../index.css';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
+    setError('');
     try {
       await logIn(email, password);
-      navigate("/");
+      navigate('/');
     } catch (err) {
       setError(err.message);
     }
@@ -28,7 +28,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("/");
+      navigate('/');
     } catch (error) {
       console.log(error.message);
     }
@@ -65,11 +65,7 @@ const Login = () => {
         </Form>
         <hr />
         <div className="btn-login">
-          <GoogleButton
-            className="g-btn mt-2"
-            type="dark"
-            onClick={handleGoogleSignIn}
-          />
+          <GoogleButton className="g-btn mt-2" type="dark" onClick={handleGoogleSignIn} />
           <Link to="/phonesignup">
             <Button variant="success" type="Submit" className="mt-2">
               Sign in with Phone
