@@ -7,9 +7,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 350px;
+    height: 400px;
 }
 
 .team-section .card {
     margin-bottom: 50px;
+}
+
+.team-section .curve {
+    border-radius: 20px;
 }

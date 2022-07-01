@@ -1,13 +1,13 @@
-# Project Website Cerita Dongeng Digital
-Website Cerita Dongeng Digital merupakan proyek edukatif yang dikembangkan kelompok ini dengan tujuan mengembangkan kebiasaan literasi anak usia dini agar gemar membaca dan menjadikan kegiatan membaca itu sendiri sebagai aktivitas menyenangkan bagi anak-anak. 
+# Project OEPPAK Dongeng
+OEPPAK Dongeng merupakan proyek edukatif yang dikembangkan kelompok ini dengan tujuan mengembangkan kebiasaan literasi anak usia dini agar gemar membaca dan menjadikan kegiatan membaca itu sendiri sebagai aktivitas menyenangkan bagi anak-anak. OEPPAK Dongeng adalah platform baca cerita dongeng digital lengkap dengan fitur audio untuk memberikan rangsangan minat baca dan rasa ingin tahu anak-anak terhadap buku.
 
-- Rendahnya minat baca anak Indonesia di tengah tingginya angka melek huruf merupakan latar belakang kami mengembangkan project Website Cerita Dongeng Digital ini. Website Cerita Dongeng Digital diharapkan dapat merangsang minat, kegemaran, dan rasa ingin tahu anak-anak terhadap kesusastraan. Website Cerita Dongeng Digital diharapkan pula dapat memberikan perasaan menyenangkan kepada anak saat membaca karena pada website ini cerita dongeng disajikan secara interaktif dengan audio. 
+- Rendahnya minat baca anak Indonesia di tengah tingginya angka melek huruf merupakan latar belakang kami mengembangkan project Website Cerita Dongeng Digital OEPPAK Dongeng ini. OEPPAK Dongeng diharapkan dapat merangsang minat, kegemaran, dan rasa ingin tahu anak-anak terhadap kesusastraan. OEPPAK Dongeng diharapkan pula dapat memberikan perasaan menyenangkan kepada anak saat membaca karena pada website ini cerita dongeng disajikan secara interaktif dengan audio. 
 - Pembentukan kebiasaan membaca khususnya bagi anak-anak usia dini amat penting untuk diperhatikan, selain karena pada usia demikian anak berada pada tahap krusial pemberian rangsangan pendidikan, alasan lainnya yaitu demi persiapan menyongsong periode bonus demografi 2030-2040. Hal ini tentu agar target bonus demografi Indonesia yang berkualitas di masa depan dapat tercapai.
 
 ## Project Goals
-Tujuan project ini diantaranya peningkatan minat baca user, penunjang dalam perkembangan literasi user ke depannya, dan kemudahan penggunaan serta ketertarikan user sendiri dalam menggunakan Website Cerita Dongeng Digital.
+Tujuan project ini diantaranya peningkatan minat baca user, penunjang dalam perkembangan literasi user ke depannya, dan kemudahan penggunaan serta ketertarikan user sendiri dalam menggunakan Website OEPPAK Dongeng.
 
-## Features
+## Feature List
 * Homepage
 Pada homepage, terdapat preview cerita dongeng yang tersedia, diantaranya cerita baru rilis, terpopuler, dan segera rilis.
 * Fitur menu library cerita
@@ -22,10 +22,12 @@ Pengguna yang belum memiliki akun dapat membuat akun terlebih dahulu dengan fitu
 Fitur login ini berfungsi untuk menyimpan data pengguna dan akses pengguna ke fitur baca nanti.
 * Fitur lihat profile
 Pengguna dapat melihat profile pengguna di menu profile.
-* Fitur daftar bacaan
-Fitur daftar bacaan untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
-* Fitur ulasan
-Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng cerita digital dengan fitur feedback yang disediakan.
+* Fitur edit profile (belum tersedia)
+Pengguna dapat mengubah isi profile dengan fitur edit profile.
+* Fitur baca nanti
+Fitur baca nanti untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
+* Fitur feedback
+Pengguna dapat memasukan feedback untuk pengembangan platform website dongeng cerita digital dengan fitur feedback yang disediakan.
 
 ## Tech Stack Used
 - HTML
