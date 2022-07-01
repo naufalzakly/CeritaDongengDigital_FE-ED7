@@ -9,7 +9,7 @@ const Faq = () => {
   return (
     <>
       <NavbarHome />
-      <Container className="faq">
+      <Container className="faq" data-testid="faq section">
         <SectionTitle title="frequently asked questions (FAQ)" />
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">

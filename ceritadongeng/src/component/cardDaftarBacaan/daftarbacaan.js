@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardGroup, Col, Container, Row, Button } from 'react-bootstrap';
 
 import db from '../../Firestore';
-import SectionTitle from '../SectionTitle/index';
 import { deleteDoc, collection, onSnapshot, doc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';

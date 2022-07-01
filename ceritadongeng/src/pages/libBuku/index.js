@@ -1,14 +1,12 @@
 import { Container, Row, CardGroup } from 'react-bootstrap';
-import CardBebek from '../../Component/LibBukuCard/cardBebek';
 import SectionTitle from '../../Component/SectionTitle/index';
-import CardKancilBuaya from '../../Component/LibBukuCard/cardKancilBuaya';
 import CardSegeraRilis from '../../Component/LibBukuCard/CardSegeraRilis';
 import './index.css';
 import NavbarHome from '../../Component/Navbar';
 import Footer from '../../Component/Footer';
-import CardKancilHarimau from '../../Component/LibBukuCard/cardKancilHarimau';
-import CardKelinciKura from '../../Component/LibBukuCard/cardKelinciKura';
 
+import { dataCard } from '../../data/card';
+import CardStory from '../../Component/LibBukuCard/CardStory';
 const LibBuku = () => {
   return (
     <>
@@ -18,10 +16,9 @@ const LibBuku = () => {
           <SectionTitle title={'Dongeng'} />
           <Row className="Container_Card">
             <CardGroup>
-              <CardBebek />
-              <CardKancilHarimau />
-              <CardKelinciKura />
-              <CardKancilBuaya />
+              {dataCard.map((item) => (
+                <CardStory item={item} key={item.id} />
+              ))}
             </CardGroup>
           </Row>
           <SectionTitle title={'Tunggu Cerita Lainnya Segera...'} />

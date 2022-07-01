@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Form, Alert } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
-import { useUserAuth } from '../../../Context/index';
+import { useUserAuth } from '../../../../Context/index';
+import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 
 const Signup = () => {
@@ -26,6 +27,9 @@ const Signup = () => {
   return (
     <Container className="login-page">
       <div className="p-4 box">
+        <Link to="/">
+          <RiCloseCircleFill color="red" size="3em" className="btn-close-login" />
+        </Link>
         <h2>Signup</h2>
         <hr className="mb-4" />
         {error && <Alert variant="danger">{error}</Alert>}

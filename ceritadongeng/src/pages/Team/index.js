@@ -24,13 +24,15 @@ const Team = () => {
       <NavbarHome />
       <Container className="team-section">
         <Row>
-          <Col>
+          <Col lg={5}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/foto_anggota_kelompok%2Fsmntr.PNG?alt=media&token=dc24dde0-4a08-4c58-917e-9e711face14a"
+              src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/foto_anggota_kelompok%2Fkak%20dion.jfif?alt=media&token=5bde811d-9306-4719-b039-385cd2e8b719"
               alt="Mentor"
+              width="400px"
+              className="curve"
             />
           </Col>
-          <Col>
+          <Col lg={7}>
             <h1>Mentor</h1>
             <h2>Dion Edo Fananie</h2>
           </Col>
@@ -41,7 +43,7 @@ const Team = () => {
             <CardGroup>
               {cardKelompok.map((anggota, idx) => {
                 return (
-                  <div className="lib-buku-card mx-2 " key={idx}>
+                  <div className="lib-buku-card mx-2 mb-5 " key={idx}>
                     <Card className="no-outline">
                       <div className="card-img d-flex">
                         <img className="d-block" src={anggota.img} width="100%" alt="" />
