@@ -5,6 +5,7 @@ import { Button, Container } from 'react-bootstrap';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import { useUserAuth } from '../../../../context/index';
+import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 
 const PhoneSignUp = () => {
@@ -46,6 +47,9 @@ const PhoneSignUp = () => {
   return (
     <Container className="login-page">
       <div className="p-4 box">
+        <Link to="/">
+          <RiCloseCircleFill color="red" size="3em" className="btn-close-login" />
+        </Link>
         <h2>Phone Auth</h2>
         <hr className="mb-4" />
         {error && <Alert variant="danger">{error}</Alert>}
