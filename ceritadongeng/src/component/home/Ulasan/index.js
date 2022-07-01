@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
-import SectionTitle from "../../sectionTitle";
-import { Link } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import { Container, Col, Row, Button } from 'react-bootstrap';
+import SectionTitle from '../../sectionTitle';
+import { Link } from 'react-router-dom';
+import './index.css';
 
 const Ulasan = () => {
   return (
