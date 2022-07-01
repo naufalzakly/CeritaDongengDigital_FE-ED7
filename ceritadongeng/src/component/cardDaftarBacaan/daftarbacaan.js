@@ -35,80 +35,66 @@ const CardBacaaan = () => {
   );
   return (
     <div>
-      {Whislist.map((whislistt) => (
-        <Container key={whislistt.id} className="cerita-thumb">
-          <Row className="Container_Card">
-            <CardGroup>
-              <Col>
-                <div>
-                  {Thumbnail.filter((thumb) => thumb.index === 1).map((thumb, id) => {
-                    return (
-                      <Card key={thumb.id} border="light mx-2">
-                        <Link to="/bacaCerita/KancilBuaya">
-                          <div key={id}>
-                            <img src={thumb.img} width={250} alt="pict" />
-                          </div>
-                        </Link>
-                        <Card.Body>
-                          <Card.Title>{thumb.judul}</Card.Title>
-                          <Card.Text className="text-muted">Pengarang: {thumb.pengarang}</Card.Text>
-                        </Card.Body>
-                        <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
-                          Hapus
-                        </Button>
-                      </Card>
-                    );
-                  })}
-                </div>
+      <Container className="cerita-thumb">
+        <Row className="Container_Card">
+          <CardGroup>
+            {Whislist.filter((whislistt) => whislistt.IdIcons === 1).map((whislistt) => (
+              <Col key={whislistt.id}>
+                <Card border="light mx-2">
+                  <Link to="/bacaCerita/KancilBuaya">
+                    <div>
+                      <img src={whislistt.img} width={250} alt="pict" />
+                    </div>
+                  </Link>
+                  <Card.Body>
+                    <Card.Title>{whislistt.judul}</Card.Title>
+                    <Card.Text className="text-muted">Pengarang: {whislistt.pengarang}</Card.Text>
+                  </Card.Body>
+                  <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
+                    Hapus
+                  </Button>
+                </Card>
               </Col>
-              <Col>
-                <div>
-                  {Thumbnail.filter((thumb) => thumb.index === 2).map((thumb, id) => {
-                    return (
-                      <Card key={thumb.id} border="light mx-2">
-                        <Link to="/bacaCerita/KancilBuaya">
-                          <div key={id}>
-                            <img src={thumb.img} width={250} alt="pict" />
-                          </div>
-                        </Link>
-                        <Card.Body>
-                          <Card.Title>{thumb.judul}</Card.Title>
-                          <Card.Text className="text-muted">Pengarang: {thumb.pengarang}</Card.Text>
-                        </Card.Body>
-                        <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
-                          Hapus
-                        </Button>
-                      </Card>
-                    );
-                  })}
-                </div>
+            ))}
+            {Whislist.filter((whislistt) => whislistt.IdIcons === 2).map((whislistt) => (
+              <Col key={whislistt.id}>
+                <Card border="light mx-2">
+                  <Link to="/bacaCerita/KancilBuaya">
+                    <div>
+                      <img src={whislistt.img} width={250} alt="pict" />
+                    </div>
+                  </Link>
+                  <Card.Body>
+                    <Card.Title>{whislistt.judul}</Card.Title>
+                    <Card.Text className="text-muted">Pengarang: {whislistt.pengarang}</Card.Text>
+                  </Card.Body>
+                  <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
+                    Hapus
+                  </Button>
+                </Card>
               </Col>
-              <Col>
-                <div>
-                  {Thumbnail.filter((thumb) => thumb.index === 3).map((thumb, id) => {
-                    return (
-                      <Card key={thumb.id} border="light mx-2">
-                        <Link to="/bacaCerita/KancilBuaya">
-                          <div key={id}>
-                            <img src={thumb.img} width={250} alt="pict" />
-                          </div>
-                        </Link>
-                        <Card.Body>
-                          <Card.Title>{thumb.judul}</Card.Title>
-                          <Card.Text className="text-muted">Pengarang: {thumb.pengarang}</Card.Text>
-                        </Card.Body>
-                        <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
-                          Hapus
-                        </Button>
-                      </Card>
-                    );
-                  })}
-                </div>
+            ))}
+            {Whislist.filter((whislistt) => whislistt.IdIcons === 3).map((whislistt) => (
+              <Col key={whislistt.id}>
+                <Card border="light mx-2">
+                  <Link to="/bacaCerita/KancilBuaya">
+                    <div>
+                      <img src={whislistt.img} width={250} alt="pict" />
+                    </div>
+                  </Link>
+                  <Card.Body>
+                    <Card.Title>{whislistt.judul}</Card.Title>
+                    <Card.Text className="text-muted">Pengarang: {whislistt.pengarang}</Card.Text>
+                  </Card.Body>
+                  <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
+                    Hapus
+                  </Button>
+                </Card>
               </Col>
-            </CardGroup>
-          </Row>
-        </Container>
-      ))}
+            ))}
+          </CardGroup>
+        </Row>
+      </Container>
     </div>
   );
 };

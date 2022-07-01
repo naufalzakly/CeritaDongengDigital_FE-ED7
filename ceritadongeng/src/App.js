@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
 import Homepage from './Pages/Homepages/index';
 import './App.css';
 import LibBuku from './Pages/LibBuku/index';
@@ -21,26 +20,6 @@ import Team from './Pages/Team/index';
 import Faq from './Pages/Faq/index';
 import FormUlasan from './Pages/FormUlasan/index';
 // import CardDaftarBacaan from '../src/Component/CardDaftarBacaan/index';
-=======
-import Homepage from './pages/Homepages';
-import './App.css';
-import LibBuku from './pages/libBuku/index';
-import { Route, Routes } from 'react-router-dom';
-import DaftarBacaan from './pages/DaftarBacaan/index';
-import Profil from './pages/Profil/index';
-import KelinciKura from './pages/bacaCerita/KelinciKura';
-import Loginn from './component/home/button/login';
-import PhoneSignUp from './component/home/button/SiginPhone';
-import Signup from './component/home/button/Signup';
-import { UserAuthContextProvider } from './context/index';
-import KancilBuaya from './pages/bacaCerita/KancilBuaya';
-import BebekBurukRupa from './pages/bacaCerita/Bebek';
-import KancilHarimau from './pages/bacaCerita/KancilHarimau';
-import AboutUs from './pages/AboutUs/index';
-import Team from './pages/Team/index';
-import Faq from './pages/Faq/index';
-import FormUlasan from './pages/FormUlasan/index';
->>>>>>> 385ae96f3491c36f427c0609f6de3ce184b5113c
 
 function App() {
   return (

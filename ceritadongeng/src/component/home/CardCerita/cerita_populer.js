@@ -18,25 +18,46 @@ const Card_cerita_Populer = () => {
   };
   const selectedNumber_1 = async () => {
     const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 1, Judul: 'Kancil dan Buaya' };
+    const payload = {
+      IdIcons: 1,
+      Judul: 'Kancil dan Buaya',
+      pengarang: 'Kathy Morris, John Morris',
+      img1: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/kancil_buaya%2F2.png?alt=media&token=45a09dab-9de3-42e2-b10b-ebeba9b6a371',
+      img2: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_buaya.png?alt=media&token=4f98435f-38a7-4ec8-9595-1b77124f00ae'
+    };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
   };
   const selectedNumber_2 = async () => {
     const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 2, Judul: 'Kancil dan Harimau' };
+    const payload = {
+      IdIcons: 2,
+      Judul: 'Kancil dan Harimau',
+      pengarang: 'Dhanny Larito',
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_harimau.png?alt=media&token=398dc282-a9e6-4252-8ee0-6ac8173549ab'
+    };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
   };
   const selectedNumber_3 = async () => {
     const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa' };
+    const payload = {
+      IdIcons: 3,
+      Judul: 'Bebek Buruk Rupa',
+      pengarang: 'Hans Christian Andersen',
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_bebek_buruk_rupa.png?alt=media&token=32868af7-b01d-4663-ac88-655aae38e0fe'
+    };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
   };
   const selectedNumber_4 = async () => {
     const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 4, Judul: 'Kelinci dan Kura Kura' };
+    const payload = {
+      IdIcons: 4,
+      Judul: 'Kelinci dan Kura Kura',
+      pengarang: ' Aesop',
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kelinci_kura.png?alt=media&token=7feb26dc-3f0b-45ae-b17b-c3b55e51c0c3'
+    };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
   };

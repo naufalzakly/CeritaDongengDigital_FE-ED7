@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Form, Alert } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
-import { useUserAuth } from '../../../../Context/index';
+import { useUserAuth } from '../../../Context/index';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 
