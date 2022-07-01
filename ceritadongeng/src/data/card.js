@@ -12,5 +12,19 @@ export const dataCard = [
     title: 'Kelinci dan Kura Kura',
     writer: 'Aesop',
     link: '/BacaCerita/KelinciKura'
+  },
+  {
+    id: 'kancil-dan-harimau',
+    dbaseId: 'Kancil dan Harimau',
+    title: 'Kancil dan Harimau',
+    writer: 'Dhanny Larito',
+    link: '/BacaCerita/KancilHarimau'
+  },
+  {
+    id: 'kancil-dan-buaya',
+    dbaseId: 'Kancil dan Buaya',
+    title: 'Kancil dan Buaya',
+    writer: 'Kathy Morris, John Morris',
+    link: '/BacaCerita/KancilBuaya'
   }
 ];

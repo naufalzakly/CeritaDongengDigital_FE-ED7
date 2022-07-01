@@ -1,4 +1,4 @@
-.ulasan img {
+.ulasan .col {
     position: relative;
 }
 
@@ -7,7 +7,7 @@
     width: 300px;
     z-index: 10;
     cursor: pointer;
-    top: 440%;
+    bottom: 30%;
     left: 20%;
     background-color: #00AA13;
     font-size: 20px;

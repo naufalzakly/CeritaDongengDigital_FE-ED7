@@ -19,7 +19,7 @@ const LibBuku = () => {
           <SectionTitle title={'Dongeng'} />
           <Row className="Container_Card">
             <CardGroup>
-              {dataCard?.map((item) => (
+              {dataCard.map((item) => (
                 <CardStory item={item} key={item.id} />
               ))}
             </CardGroup>
