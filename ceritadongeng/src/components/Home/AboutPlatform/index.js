@@ -11,9 +11,12 @@ const AboutPlatform = () => {
         <Row>
           <Col md="8">
             <p className="mx-2">
-              OEPPAK Dongeng adalah paltform untuk membaca cerita dongeng digital dengan fitur audio
-              untuk memberikan rangsangan minat kesukaan anak terhadap buku dan memicu rasa ingin
-              tahu anak...
+              Rendahnya minat baca anak Indonesia di tengah tingginya angka melek huruf merupakan
+              latar belakang kami mengembangkan project Website OEPPAK Dongeng ini. Website OEPPAK
+              Dongeng diharapkan dapat merangsang minat, kegemaran, dan rasa ingin tahu anak-anak
+              terhadap kesusastraan. Website OEPPAK Dongeng diharapkan pula dapat memberikan
+              perasaan menyenangkan kepada anak saat membaca karena pada website ini cerita dongeng
+              disajikan secara interaktif dengan audio...
             </p>
             <div className="link-pilihan">
               <Link to="/about-us" className="mx-4">
