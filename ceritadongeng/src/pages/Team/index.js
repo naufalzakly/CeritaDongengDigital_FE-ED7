@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardGroup } from 'react-bootstrap';
-import SectionTitle from '../../Component/SectionTitle';
-import NavbarHome from '../../Component/Navbar/index';
-import Footer from '../../Component/Footer/index';
+import SectionTitle from '../../components/SectionTitle';
+import NavbarHome from '../../components/Navbar/index';
+import Footer from '../../components/Footer/index';
 import './index.css';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import db from '../../Firestore';
+import db from '../../firestore';
 import './index.css';
 
 const Team = () => {
@@ -53,7 +53,6 @@ const Team = () => {
                         <Card.Text className="text-muted">Tugas: </Card.Text>
                         <Card.Text className="text-muted">{anggota.tugas1} </Card.Text>
                         <Card.Text className="text-muted">{anggota.tugas2} </Card.Text>
-                        <Card.Text className="text-muted">{anggota.tugas3} </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>

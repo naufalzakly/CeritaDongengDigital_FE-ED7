@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoArrowUndoCircleSharp, IoArrowRedoCircleSharp } from 'react-icons/io5';
 import { RiCloseCircleFill } from 'react-icons/ri';
-import db from '../../Firestore';
+import db from '../../firestore';
 import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
 
 const KancilBuaya = () => {
@@ -28,7 +28,7 @@ const KancilBuaya = () => {
 
   return (
     <div className="slider-baca-cerita">
-      <Link to="/LibBuku">
+      <Link to="/library-buku">
         <RiCloseCircleFill color="red" className="close-cerita" />
       </Link>
       <IoArrowUndoCircleSharp className="left-arrow-baca-cerita" onClick={prevSlide} />

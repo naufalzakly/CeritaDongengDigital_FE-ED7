@@ -1,14 +1,14 @@
 import React from 'react';
 import { Form, Button, Row, Col, Container } from 'react-bootstrap';
 import { BsFillXCircleFill } from 'react-icons/bs';
-import db from '../../Firestore';
+import db from '../../firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { useSelector, useDispatch } from 'react-redux';
-import { setUlasan } from '../../Redux/hooks/ulasanSlice';
+import { setUlasan } from '../../redux/hooks/ulasanSlice';
 import { Link } from 'react-router-dom';
-import NavbarHome from '../../Component/Navbar/index';
-import SectionTitle from '../../Component/SectionTitle';
-import Footer from '../../Component/Footer/index';
+import NavbarHome from '../../components/Navbar';
+import SectionTitle from '../../components/SectionTitle';
+import Footer from '../../components/Footer';
 import './index.css';
 
 const FormUlasan = () => {

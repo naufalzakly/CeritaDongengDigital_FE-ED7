@@ -1,8 +1,8 @@
 import React from 'react';
-import NavbarHome from '../../Component/Navbar/index';
-import Footer from '../../Component/Footer/index';
+import NavbarHome from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { Accordion, Container } from 'react-bootstrap';
-import SectionTitle from '../../Component/SectionTitle/index';
+import SectionTitle from '../../components/SectionTitle';
 import './index.css';
 
 const Faq = () => {
