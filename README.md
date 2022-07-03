@@ -37,7 +37,7 @@ Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng ceri
 
 
 ## How to Install and Run
-# How to install
+### How to install
 - Download code or clone dari repository ini
 - Pastikan anda memiliki code editor dan Node js
 - Extract dan buka folder repositori ini di code editor
@@ -45,7 +45,7 @@ Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng ceri
 - Tuliskan npm install di terminal
 - Jalankan website dengan command npm start
 
-# How to run
+### How to run
 - Setelah website terbuka di localhost
 - User dapat mengecek cerita dongeng lewat fitur yang mengurutkan konten dari yang terbaru hingga terpopuler. User juga dapat melihat cerita apa saja yang akan rilis ke depannya.
 - User menekan fitur menu selection berupa library cerita untuk memilih dongeng mana yang ingin dibaca. Pada fitur library, disediakan deretan cerita-cerita yang tersedia secara keseluruhan.
