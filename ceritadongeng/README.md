@@ -19,15 +19,15 @@ Ketika sedang membaca cerita dongeng, pengguna dapat memutar audio dengan mengkl
 * Fitur register
 Pengguna yang belum memiliki akun dapat membuat akun terlebih dahulu dengan fitur yang tersedia.
 * Fitur login
-Fitur login ini berfungsi untuk menyimpan data pengguna dan akses pengguna ke fitur baca nanti.
-* Fitur lihat profile
+Fitur login ini berfungsi untuk menyimpan data pengguna dan akses pengguna ke fitur daftar bacaan.
+* Fitur lihat profil
 Pengguna dapat melihat profile pengguna di menu profile.
 * Fitur edit profile (belum tersedia)
 Pengguna dapat mengubah isi profile dengan fitur edit profile.
-* Fitur baca nanti
-Fitur baca nanti untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
-* Fitur feedback
-Pengguna dapat memasukan feedback untuk pengembangan platform website dongeng cerita digital dengan fitur feedback yang disediakan.
+* Fitur daftar bacaan
+Fitur daftar bacaan untuk menyimpan cerita yang nantinya ingin dibaca oleh pengguna.
+* Fitur ulasan
+Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng cerita digital dengan fitur ulasan yang disediakan.
 
 ## Tech Stack Used
 - HTML
@@ -37,22 +37,24 @@ Pengguna dapat memasukan feedback untuk pengembangan platform website dongeng ce
 
 
 ## How to Install and Run
-* Installation in Locals
-- Install node.js dan npm
-- npm init
-- Install React
-- Install ReactDOM
-- Install webpack
-- Configure webpack
+* How to install
+- Download code or clone dari repository ini
+- Pastikan anda memiliki code editor dan Node js
+- Extract dan buka folder repositori ini di code editor
+- Buka terminal bisa dari code editor atau CMD
+- Tuliskan npm install di terminal
+- Jalankan website dengan command npm start
 
-* How to Run
-Setelah instalasi di locals selesai, langkah selanjutnya ialah menggunakan npm command-line scripts agar project yang telah diinstal benar-benar bekerja. Dalam root directory, dibuat dua file di folder CeritaDongengDigital_FE-ED7, yaitu file index.js dan index.html.
-Dalam folder app, terdapat folder components yang berisi component class yang ada dalam project. Dengan menggunakan terminal, codingan dirunning menggunakan command-line npm run build dan npm run start. Dalam browser akan terbuka tab baru berupa localhost yang berarti app telah dirunning dan dapat bekerja.
+* How to run
+- Setelah website terbuka di localhost
+- User dapat mengecek cerita dongeng lewat fitur yang mengurutkan konten dari yang terbaru hingga terpopuler. User juga dapat melihat cerita apa saja yang akan rilis ke depannya.
+- User menekan fitur menu selection berupa library cerita untuk memilih dongeng mana yang ingin dibaca. Pada fitur library, disediakan deretan cerita-cerita yang tersedia secara keseluruhan.
+- User membaca cerita bergambar dengan menggeser layar secara horizontal.
+- User melakukan register/login dalam situs dengan menggunakan nomor telepon. User dapat mengakses fitur lihat profile jika sudah melakukan login.
+- User dapat pula melakukan perubahan/mengedit profile yang telah dibuat sebelumnya (fitur belum tersedia), dan mengakses fitur daftar bacaan untuk menyimpan cerita agar dapat dibaca lain waktu.
+- Jika user berkeinginan, user juga dapat meninggalkan ulasan kepuasan penggunaan produk digital pada platform yang telah disediakan.
+Usai menggunakan produk, user keluar dari halaman website.
 
-* How to Host
-Setelah instalasi dan codingan sudah bisa dirunning di locals, langkah selanjutnya ialah hosting app menggunakan firebase
-- Instalasi Firebase CLI
-- Hubungkan file project local ke firebase menggunakan command-line firebase init hosting
-- Usai menghubungkan project firebase ke directory locals dan menentukan directory utama, selanjutnya memilih konfigurasi situs
-- Deploy website
-- App siap diluncurkan
+
+
+
