@@ -19,7 +19,7 @@ const Faq = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Bagaimana Cara menemukan daftar bacaan saya</Accordion.Header>
+            <Accordion.Header>Bagaimana cara menemukan daftar bacaan saya</Accordion.Header>
             <Accordion.Body>
               Kamu bisa menemukan daftar bacaan kamu dengan login terlebih dahulu, kemudian ke menu
               profil dan disana akan terdapat menu untuk menuju halaman daftar bacaan.

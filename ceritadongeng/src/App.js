@@ -18,6 +18,7 @@ import AboutUs from './pages/AboutUs';
 import Team from './pages/Team';
 import Faq from './pages/Faq';
 import FormUlasan from './pages/FormUlasan';
+import Legal from './pages/Legal';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/form-ulasan" element={<FormUlasan />} />
+            <Route path="/legal-information" element={<Legal />} />
           </Routes>
         </UserAuthContextProvider>
       </div>

@@ -22,9 +22,7 @@ const AboutPlatform = () => {
               <Link to="/about-us" className="mx-4">
                 Lanjutkan Baca
               </Link>
-              <a target="_blank" href="https://www.dgip.go.id/" rel="noreferrer">
-                Pelajari Hak Cipta
-              </a>
+              <Link to="/legal-information">Pelajari Hak Cipta</Link>
             </div>
           </Col>
           <Col md="4">

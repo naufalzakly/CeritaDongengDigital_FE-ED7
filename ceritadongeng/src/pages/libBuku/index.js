@@ -5,9 +5,9 @@ import CardBebek from '../../components/LibBukuCard/CardBebek';
 import CardKancilBuaya from '../../components/LibBukuCard/CardKancilBuaya';
 import CardKancilHarimau from '../../components/LibBukuCard/CardKancilHarimau';
 import CardKelinciKura from '../../components/LibBukuCard/CardKelinciKura';
-import './index.css';
 import NavbarHome from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import './index.css';
 
 const LibBuku = () => {
   return (

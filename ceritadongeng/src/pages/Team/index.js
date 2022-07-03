@@ -50,9 +50,11 @@ const Team = () => {
                       </div>
                       <Card.Body>
                         <Card.Title>{anggota.nama}</Card.Title>
-                        <Card.Text className="text-muted">Tugas: </Card.Text>
-                        <Card.Text className="text-muted">{anggota.tugas1} </Card.Text>
-                        <Card.Text className="text-muted">{anggota.tugas2} </Card.Text>
+                        Tugas:
+                        <ol type="1">
+                          <li className="text-muted">{anggota.tugas1}</li>
+                          <li className="text-muted">{anggota.tugas2}</li>
+                        </ol>
                       </Card.Body>
                     </Card>
                   </div>
