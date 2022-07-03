@@ -35,6 +35,16 @@ const Team = () => {
           <Col lg={7}>
             <h1>Mentor</h1>
             <h2>Dion Edo Fananie</h2>
+            <br />
+            <p>
+              Senang bisa bantu tim FE_ED7 untuk membangun website yang mereka rencanakan, tiap
+              anggota tim memiliki semangat yang cukup besar utk bisa menyelesaikan website ini.
+            </p>
+            <p>
+              Terlebih, saya sangat senang dengan perkembangan skill dan kerja sama tim selama
+              mentoring. Tim juga mampu menyelesaikan kesulitan yang dihadapi selama pengembangan
+              dengan cukup baik.
+            </p>
           </Col>
         </Row>
         <Row>
