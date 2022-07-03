@@ -39,10 +39,13 @@ Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng ceri
 ## How to Install and Run
 ### How to install
 - Download code or clone dari repository ini
+-- Clone dapat dengan membuka terminal dan jalankan command git clone https://github.com/naufalzakly/CeritaDongengDigital_FE-ED7.git
 - Pastikan anda memiliki code editor dan Node js
+-- Jika anda belum memiliki node js dapat mengunduh dari website https://nodejs.org/en/
 - Extract dan buka folder repositori ini di code editor
 - Buka terminal bisa dari code editor atau CMD
-- Tuliskan npm install di terminal
+- Jalankan command npm install di terminal
+-- Command ini akan menginstal dependency yang diperlukan
 - Jalankan website dengan command npm start
 
 ### How to run
@@ -54,8 +57,3 @@ Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng ceri
 - User dapat pula melakukan perubahan/mengedit profile yang telah dibuat sebelumnya (fitur belum tersedia), dan mengakses fitur daftar bacaan untuk menyimpan cerita agar dapat dibaca lain waktu.
 - Jika user berkeinginan, user juga dapat meninggalkan ulasan kepuasan penggunaan produk digital pada platform yang telah disediakan.
 Usai menggunakan produk, user keluar dari halaman website.
-
-
-
-
-
