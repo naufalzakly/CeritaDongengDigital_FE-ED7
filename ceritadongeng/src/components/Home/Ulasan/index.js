@@ -15,7 +15,7 @@ const Ulasan = () => {
               src="https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/feedback.png?alt=media&token=eeff9fe3-22c4-4301-b470-5e810a45666f"
               alt="ulasan"
             />
-            <Link to="/Form-ulasan">
+            <Link to="/form-ulasan">
               <Button variant="success">Masukan Ulasan Anda</Button>
             </Link>
           </Col>
