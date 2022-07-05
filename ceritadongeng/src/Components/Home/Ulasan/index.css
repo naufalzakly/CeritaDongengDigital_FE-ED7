@@ -1,0 +1,15 @@
+.ulasan .col {
+    position: relative;
+}
+
+.ulasan button {
+    position: absolute;
+    width: 300px;
+    z-index: 10;
+    cursor: pointer;
+    bottom: 25%;
+    left: 20%;
+    background-color: #00AA13;
+    font-size: 20px;
+    border-radius: 20px;
+}

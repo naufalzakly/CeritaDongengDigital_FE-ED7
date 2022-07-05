@@ -1,0 +1,20 @@
+.lib-buku-card {
+    margin-bottom: 10px;
+    width: 342px;
+}
+
+.lib-buku-card .btn-heart {
+    margin-left: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.lib-buku-card .btn-heart-kura {
+    margin-left: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.lib-buku-card .card-footer button {
+    background-color: #00AA13;
+}
