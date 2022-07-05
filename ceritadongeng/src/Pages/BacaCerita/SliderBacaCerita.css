@@ -1,0 +1,101 @@
+.slider-baca-cerita {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  overflow: hidden;
+}
+
+.image-baca-cerita {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.right-arrow-baca-cerita {
+  position: absolute;
+  top: 85%;
+  right: 150px;
+  font-size: 5rem;
+  color: #FFF;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow-baca-cerita {
+  position: absolute;
+  top: 85%;
+  right: 230px;
+  font-size: 5rem;
+  color: #FFF;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow-baca-cerita:active, .left-arrow-baca-cerita:hover  {
+  color: #BFEEC5;
+}
+
+.right-arrow-baca-cerita:active, .right-arrow-baca-cerita:hover {
+  color: #BFEEC5;
+}
+
+.slide-baca-cerita {
+  opacity: 0;
+  transition: opacity 0.2s 0s ease-in-out;
+}
+
+.slide-baca-cerita.active {
+  opacity: 1;
+  transition: opacity 1.2s 0s ease-in-out;
+}
+
+.btn-speaker {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+audio {
+  position: absolute;
+  top: 85%;
+  left: 30px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.text-cerita {
+  transition-duration: 1s ease; 
+  max-width: 90%;
+  background-color: #BFEEC5;
+  position: absolute;
+  top: 2%;
+  left: 20px;
+  opacity: 0.9;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+.text-cerita p {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.close-cerita {
+  position: absolute;
+  top: 3%;
+  right: 20px;
+  font-size: 3rem;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
