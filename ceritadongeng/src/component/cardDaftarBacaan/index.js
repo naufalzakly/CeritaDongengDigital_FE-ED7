@@ -20,5 +20,7 @@ function CardDaftarBacaan({ gambar1 }) {
     </div>
   );
 }
-
+// sebaiknya card daftar bacaan jg reuse seperti di LibBuku,
+// diikuti saja di lib Buku spt apa reusable cardnya.
+// jgn lupa didelete komponen yg tidak terpakai lg
 export default CardDaftarBacaan;

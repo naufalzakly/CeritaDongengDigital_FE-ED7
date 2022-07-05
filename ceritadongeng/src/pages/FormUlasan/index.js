@@ -29,6 +29,7 @@ const FormUlasan = () => {
 
   return (
     <>
+      {/* navbar home ada di setiap pages, sebaiknya dipindah di taruh di App.js, jd sekali pasang utk smua page.  */}
       <NavbarHome />
       <Container className="form-ulasan">
         <SectionTitle title="Masukan Ulasan Anda" />

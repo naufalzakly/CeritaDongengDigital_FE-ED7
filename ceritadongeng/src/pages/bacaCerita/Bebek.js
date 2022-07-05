@@ -57,5 +57,6 @@ const BebekBurukRupa = () => {
     </div>
   );
 };
+// change file name `bacaCerita` into `BacaCerita`
 
 export default BebekBurukRupa;

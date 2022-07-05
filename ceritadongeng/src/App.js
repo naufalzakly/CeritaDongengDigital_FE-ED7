@@ -10,7 +10,7 @@ import KelinciKura from './pages/bacaCerita/KelinciKura';
 import Loginn from './component/home/button/login/index';
 import PhoneSignUp from './component/home/button/SiginPhone';
 import Signup from './component/home/button/Signup';
-// import ProtectedRoute from "./context/protectRoute";
+// import ProtectedRoute from "./context/protectRoute"; // delete unused code, check all code
 import { UserAuthContextProvider } from './context/index';
 import KancilBuaya from './pages/bacaCerita/KancilBuaya';
 import BebekBurukRupa from './pages/bacaCerita/Bebek';

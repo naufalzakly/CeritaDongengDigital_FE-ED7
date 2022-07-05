@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const CardBebek = () => {
   const [cardBebek, setCardBebek] = useState([]);
-
+  // kalo file ini dan card lainnya sudah ngga dipake lagi, di delete saja
   useEffect(() => {
     const q = query(
       collection(db, 'thumb_lib_dongeng'),
@@ -54,5 +54,5 @@ const CardBebek = () => {
     </div>
   );
 };
-
+// ganti semua file name component yg berbentuk camelcase jadi PascalCase: referensi https://techterms.com/definition/pascalcase
 export default CardBebek;
