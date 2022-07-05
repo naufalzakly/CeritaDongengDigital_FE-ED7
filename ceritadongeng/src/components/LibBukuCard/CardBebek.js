@@ -16,7 +16,7 @@ const CardBebek = () => {
 
   const selectedNumber_3 = async () => {
     const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa' };
+    const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa', dbCollection: 'bebek_buruk_rupa' };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
   };
@@ -58,7 +58,7 @@ const CardBebek = () => {
           <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Link to="/baca-cerita/bebek-buruk-rupa">
+          <Link to="/baca-cerita/bebek_buruk_rupa">
             <Button variant="success">Baca</Button>
           </Link>
         </Card.Footer>

@@ -6,9 +6,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUlasan } from '../../redux/hooks/ulasanSlice';
 import { Link } from 'react-router-dom';
-import NavbarHome from '../../components/Navbar';
 import SectionTitle from '../../components/SectionTitle';
-import Footer from '../../components/Footer';
 import './index.css';
 
 const FormUlasan = () => {
@@ -29,7 +27,6 @@ const FormUlasan = () => {
 
   return (
     <>
-      <NavbarHome />
       <Container className="form-ulasan">
         <SectionTitle title="Masukan Ulasan Anda" />
         <Row>
@@ -76,7 +73,6 @@ const FormUlasan = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 };

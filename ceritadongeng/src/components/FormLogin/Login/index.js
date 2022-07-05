@@ -5,7 +5,6 @@ import { Form, Alert } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
 import GoogleButton from 'react-google-button';
 import { useUserAuth } from '../../../context';
-import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 
 const Login = () => {
@@ -38,9 +37,6 @@ const Login = () => {
   return (
     <Container className="login-page">
       <div className="p-4 box">
-        <Link to="/">
-          <RiCloseCircleFill color="red" size="3em" className="btn-close-login" />
-        </Link>
         <h2>Login or Signup</h2>
         <hr className="mb-4" />
         {error && <Alert variant="danger">{error}</Alert>}
@@ -67,7 +63,9 @@ const Login = () => {
             </Button>
           </div>
         </Form>
-        <hr />
+        <div className="garis-atau">
+          <hr /> or login with <hr />
+        </div>
         <div className="btn-login">
           <GoogleButton className="g-btn mt-2" type="dark" onClick={handleGoogleSignIn} />
           <Link to="/phone-sign-up">

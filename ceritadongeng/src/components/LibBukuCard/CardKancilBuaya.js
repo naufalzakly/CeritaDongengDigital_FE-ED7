@@ -38,7 +38,7 @@ const CardKancilBuaya = () => {
             {cardKancilBuaya.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/baca-cerita/kancil-buaya">
+                  <Link to="/baca-cerita/kancil_buaya">
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
@@ -56,7 +56,7 @@ const CardKancilBuaya = () => {
           <Card.Text className="text-muted">Pengarang: Kathy Morris, John Morris</Card.Text>
         </Card.Body>
         <Card.Footer variant="danger">
-          <Link to="/baca-cerita/kancil-buaya">
+          <Link to="/baca-cerita/kancil_buaya">
             <Button variant="primary">Baca</Button>
           </Link>
         </Card.Footer>

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardGroup } from 'react-bootstrap';
 import SectionTitle from '../../components/SectionTitle';
-import NavbarHome from '../../components/Navbar/index';
-import Footer from '../../components/Footer/index';
 import './index.css';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
@@ -21,7 +19,6 @@ const Team = () => {
 
   return (
     <div>
-      <NavbarHome />
       <Container className="team-section">
         <Row>
           <Col lg={5}>
@@ -74,7 +71,6 @@ const Team = () => {
           </Row>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 };

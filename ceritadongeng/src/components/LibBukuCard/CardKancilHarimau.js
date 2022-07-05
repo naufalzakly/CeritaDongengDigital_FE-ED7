@@ -39,7 +39,7 @@ const CardKancilHarimau = () => {
             {cardKancilHarimau.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/baca-cerita/kancil-harimau">
+                  <Link to="/baca-cerita/kancil_harimau">
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
@@ -57,7 +57,7 @@ const CardKancilHarimau = () => {
           <Card.Text className="text-muted">Pengarang: Dhanny Larito</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Link to="/baca-cerita/kancil-harimau">
+          <Link to="/baca-cerita/kancil_harimau">
             <Button variant="success">Baca</Button>
           </Link>
         </Card.Footer>

@@ -1,6 +1,4 @@
 import React from 'react';
-import NavbarHome from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { Accordion, Container } from 'react-bootstrap';
 import SectionTitle from '../../components/SectionTitle';
 import './index.css';
@@ -8,7 +6,6 @@ import './index.css';
 const Faq = () => {
   return (
     <>
-      <NavbarHome />
       <Container className="faq" data-testid="faq section">
         <SectionTitle title="frequently asked questions (FAQ)" />
         <Accordion defaultActiveKey="0">
@@ -44,7 +41,6 @@ const Faq = () => {
           </Accordion.Item>
         </Accordion>
       </Container>
-      <Footer />
     </>
   );
 };

@@ -1,15 +1,6 @@
-.card-wishlist {
-    width: 367px;
-    height: 400px;
-    margin: 0;
-  }
-  
-/* .card img {
-    width: 367px;
-    height: 327px;
-    border-radius: 25px;
-  } */
-  
-.no-outline{
-    border: none;
-  }
+.wishlist-thumb .card {
+  width: 279px;
+  border-radius: 25px;
+  border: none;
+}
+

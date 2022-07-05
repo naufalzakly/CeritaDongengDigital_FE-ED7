@@ -21,7 +21,8 @@ const Card_cerita_Rilis = ({ title }) => {
       IdIcons: 1,
       Judul: 'Kancil dan Buaya',
       pengarang: 'Kathy Morris, John Morris',
-      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_buaya.png?alt=media&token=4f98435f-38a7-4ec8-9595-1b77124f00ae'
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_buaya.png?alt=media&token=4f98435f-38a7-4ec8-9595-1b77124f00ae',
+      dbCollection: 'kancil_buaya'
     };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
@@ -32,7 +33,8 @@ const Card_cerita_Rilis = ({ title }) => {
       IdIcons: 2,
       Judul: 'Kancil dan Harimau',
       pengarang: 'Dhanny Larito',
-      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_harimau.png?alt=media&token=398dc282-a9e6-4252-8ee0-6ac8173549ab'
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kancil_harimau.png?alt=media&token=398dc282-a9e6-4252-8ee0-6ac8173549ab',
+      dbCollection: 'kancil_harimau'
     };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
@@ -43,7 +45,8 @@ const Card_cerita_Rilis = ({ title }) => {
       IdIcons: 3,
       Judul: 'Bebek Buruk Rupa',
       pengarang: 'Hans Christian Andersen',
-      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_bebek_buruk_rupa.png?alt=media&token=32868af7-b01d-4663-ac88-655aae38e0fe'
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_bebek_buruk_rupa.png?alt=media&token=32868af7-b01d-4663-ac88-655aae38e0fe',
+      dbCollection: 'bebek_buruk_rupa'
     };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
@@ -54,7 +57,8 @@ const Card_cerita_Rilis = ({ title }) => {
       IdIcons: 4,
       Judul: 'Kelinci dan Kura Kura',
       pengarang: ' Aesop',
-      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kelinci_kura.png?alt=media&token=7feb26dc-3f0b-45ae-b17b-c3b55e51c0c3'
+      img: 'https://firebasestorage.googleapis.com/v0/b/cerita-dongeng-digital.appspot.com/o/thumbnail_homepage%2Fhomepage_kelinci_kura.png?alt=media&token=7feb26dc-3f0b-45ae-b17b-c3b55e51c0c3',
+      dbCollection: 'kelinci_kura'
     };
     await addDoc(IconCollection, payload);
     alert('Berhasil ditambahkan');
@@ -69,6 +73,8 @@ const Card_cerita_Rilis = ({ title }) => {
     []
   );
 
+  console.log(Thumbnail);
+
   return (
     <Container className="cerita-thumb">
       <SectionTitle title={title} />
@@ -76,7 +82,7 @@ const Card_cerita_Rilis = ({ title }) => {
         <CardGroup>
           <Col>
             <Card border="light mx-2">
-              <Link to="/baca-cerita/bebek-buruk-rupa">
+              <Link to="/baca-cerita/bebek_buruk_rupa">
                 {Thumbnail.filter((thumb) => thumb.index === 3).map((thumb, id) => {
                   return (
                     <div key={id}>
@@ -95,7 +101,7 @@ const Card_cerita_Rilis = ({ title }) => {
                 <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Link to="baca-cerita/bebek-buruk-rupa">
+                <Link to="baca-cerita/bebek_buruk_rupa">
                   <Button variant="success">Baca</Button>
                 </Link>
               </Card.Footer>
@@ -104,7 +110,7 @@ const Card_cerita_Rilis = ({ title }) => {
 
           <Col>
             <Card border="light mx-2">
-              <Link to="/baca-cerita/kelinci-kura">
+              <Link to="/baca-cerita/kelinci_kura">
                 {Thumbnail.filter((thumb) => thumb.index === 4).map((thumb, id) => {
                   return (
                     <div key={id}>
@@ -123,7 +129,7 @@ const Card_cerita_Rilis = ({ title }) => {
                 <Card.Text className="text-muted">Pengarang: Aesop</Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Link to="/baca-cerita/kelinci-kura">
+                <Link to="/baca-cerita/kelinci_kura">
                   <Button variant="success">Baca</Button>
                 </Link>
               </Card.Footer>
@@ -132,7 +138,7 @@ const Card_cerita_Rilis = ({ title }) => {
 
           <Col>
             <Card border="light mx-2">
-              <Link to="/baca-cerita/kancil-harimau">
+              <Link to="/baca-cerita/kancil_harimau">
                 {Thumbnail.filter((thumb) => thumb.index === 2).map((thumb, id) => {
                   return (
                     <div key={id}>
@@ -151,7 +157,7 @@ const Card_cerita_Rilis = ({ title }) => {
                 <Card.Text className="text-muted">Pengarang: Dhanny Larito</Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Link to="/baca-cerita/kancil-harimau">
+                <Link to="/baca-cerita/kancil_harimau">
                   <Button variant="success">Baca</Button>
                 </Link>
               </Card.Footer>
@@ -160,7 +166,7 @@ const Card_cerita_Rilis = ({ title }) => {
 
           <Col>
             <Card border="light mx-2">
-              <Link to="/baca-cerita/kancil-buaya">
+              <Link to="/baca-cerita/kancil_buaya">
                 {Thumbnail.filter((thumb) => thumb.index === 1).map((thumb, id) => {
                   return (
                     <div key={id}>
@@ -179,7 +185,7 @@ const Card_cerita_Rilis = ({ title }) => {
                 <Card.Text className="text-muted">Pengarang: Kathy Morris John Morris</Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Link to="/baca-cerita/kancil-buaya">
+                <Link to="/baca-cerita/kancil_buaya">
                   <Button variant="success">Baca</Button>
                 </Link>
               </Card.Footer>

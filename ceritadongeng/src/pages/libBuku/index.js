@@ -7,34 +7,28 @@ import CardSegeraRilis from '../../components/LibBukuCard/CardSegeraRilis';
 // import CardKelinciKura from '../../components/LibBukuCard/CardKelinciKura';
 import CardStory from '../../components/LibBukuCard/CardStory';
 import { dataCard } from '../../data/card';
-import NavbarHome from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import './index.css';
 
 const LibBuku = () => {
   return (
-    <>
-      <NavbarHome />
-      <div className="lib-buku">
-        <Container>
-          <SectionTitle title={'Dongeng'} />
-          <Row className="Container_Card">
-            <CardGroup>
-              {/* <CardBebek />
+    <div className="lib-buku">
+      <Container>
+        <SectionTitle title={'Dongeng'} />
+        <Row className="Container_Card">
+          <CardGroup>
+            {/* <CardBebek />
               <CardKancilHarimau />
               <CardKelinciKura />
               <CardKancilBuaya /> */}
-              {dataCard.map((item) => {
-                return <CardStory item={item} key={item.id} />;
-              })}
-            </CardGroup>
-          </Row>
-          <SectionTitle title={'Tunggu Cerita Lainnya Segera...'} />
-          <CardSegeraRilis />
-        </Container>
-      </div>
-      <Footer />
-    </>
+            {dataCard.map((item) => {
+              return <CardStory item={item} key={item.id} />;
+            })}
+          </CardGroup>
+        </Row>
+        <SectionTitle title={'Tunggu Cerita Lainnya Segera...'} />
+        <CardSegeraRilis />
+      </Container>
+    </div>
   );
 };
 

@@ -38,7 +38,7 @@ const CardKelinciKura = () => {
             {cardKelinciKura.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/baca-cerita/kelinci-kura">
+                  <Link to="/baca-cerita/kelinci_kura">
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
@@ -56,7 +56,7 @@ const CardKelinciKura = () => {
           <Card.Text className="text-muted">Pengarang: Aesop</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Link to="/baca-cerita/kelinci-kura">
+          <Link to="/baca-cerita/kelinci_kura">
             <Button variant="success">Baca</Button>
           </Link>
         </Card.Footer>

@@ -16,12 +16,15 @@ import Faq from './pages/Faq';
 import FormUlasan from './pages/FormUlasan';
 import Legal from './pages/Legal';
 import BacaCerita from './pages/BacaCerita';
+import NavbarHome from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <div className="Container">
         <UserAuthContextProvider>
+          <NavbarHome />
           <Routes>
             <Route path="/login" element={<Loginn />} />
             <Route path="/" element={<Homepage />} />
@@ -37,6 +40,7 @@ function App() {
             <Route path="/form-ulasan" element={<FormUlasan />} />
             <Route path="/legal-information" element={<Legal />} />
           </Routes>
+          <Footer />
         </UserAuthContextProvider>
       </div>
     </>
