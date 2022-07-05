@@ -7,7 +7,7 @@ import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsHeart } from 'react-icons/bs';
-import { useUserAuth } from '../../../Context';
+import { useUserAuth } from '../../../context';
 
 const Card_cerita_Populer = () => {
   const [Thumbnail, setThumbnail] = useState([]);

@@ -5,7 +5,7 @@ import { addDoc, collection, onSnapshot, query, where, orderBy } from 'firebase/
 import { useEffect, useState } from 'react';
 import db from '../../Firestore';
 import { Link } from 'react-router-dom';
-import { useUserAuth } from '../../Context';
+import { useUserAuth } from '../../context';
 
 const CardKancilHarimau = () => {
   const [cardKancilHarimau, setCardKancilHarimau] = useState([]);

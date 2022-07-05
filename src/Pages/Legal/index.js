@@ -1,8 +1,8 @@
 import React from 'react';
-import NavbarHome from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import NavbarHome from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
-import SectionTitle from '../../Components/SectionTitle';
+import SectionTitle from '../../components/SectionTitle';
 import './index.css';
 
 const Legal = () => {

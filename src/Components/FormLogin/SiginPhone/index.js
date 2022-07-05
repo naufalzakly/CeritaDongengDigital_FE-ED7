@@ -4,7 +4,7 @@ import { Form, Alert } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
-import { useUserAuth } from '../../../Context/index';
+import { useUserAuth } from '../../../context/index';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 

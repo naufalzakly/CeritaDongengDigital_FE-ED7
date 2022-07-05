@@ -1,12 +1,12 @@
 import React from 'react';
-import HomeSlider from '../../Components/Home/HomeSlider';
-import AboutPlatform from '../../Components/Home/AboutPlatform';
-import CardCeritaRilis from '../../Components/Home/CardCerita/CeritaRilis';
-import CardCeritaPopuler from '../../Components/Home/CardCerita/CeritaPopuler';
-import CardCeritaSegera from '../../Components/Home/CardCerita/CeritaSegera';
-import Footer from '../../Components/Footer';
-import NavbarHome from '../../Components/Navbar';
-import Feedback from '../../Components/Home/Ulasan';
+import HomeSlider from '../../components/Home/HomeSlider';
+import AboutPlatform from '../../components/Home/AboutPlatform';
+import CardCeritaRilis from '../../components/Home/CardCerita/CeritaRilis';
+import CardCeritaPopuler from '../../components/Home/CardCerita/CeritaPopuler';
+import CardCeritaSegera from '../../components/Home/CardCerita/CeritaSegera';
+import Footer from '../../components/Footer';
+import NavbarHome from '../../components/Navbar';
+import Feedback from '../../components/Home/Ulasan';
 import './index.css';
 
 const PageHome = () => {

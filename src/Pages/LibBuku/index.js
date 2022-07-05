@@ -1,12 +1,12 @@
 import { Container, Row, CardGroup } from 'react-bootstrap';
-import SectionTitle from '../../Components/SectionTitle';
-import CardSegeraRilis from '../../Components/LibBukuCard/CardSegeraRilis';
-import CardBebek from '../../Components/LibBukuCard/CardBebek';
-import CardKancilBuaya from '../../Components/LibBukuCard/CardKancilBuaya';
-import CardKancilHarimau from '../../Components/LibBukuCard/CardKancilHarimau';
-import CardKelinciKura from '../../Components/LibBukuCard/CardKelinciKura';
-import NavbarHome from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import SectionTitle from '../../components/SectionTitle';
+import CardSegeraRilis from '../../components/LibBukuCard/CardSegeraRilis';
+import CardBebek from '../../components/LibBukuCard/CardBebek';
+import CardKancilBuaya from '../../components/LibBukuCard/CardKancilBuaya';
+import CardKancilHarimau from '../../components/LibBukuCard/CardKancilHarimau';
+import CardKelinciKura from '../../components/LibBukuCard/CardKelinciKura';
+import NavbarHome from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import './index.css';
 
 const LibBuku = () => {

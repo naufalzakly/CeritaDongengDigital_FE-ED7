@@ -1,9 +1,9 @@
-import TentangAkun from '../../Components/Akun/TentangAkun';
-import WelcomeText from '../../Components/Akun/WelcomeText';
+import TentangAkun from '../../components/Akun/TentangAkun';
+import WelcomeText from '../../components/Akun/WelcomeText';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './index.css';
-import Footer from '../../Components/Footer';
-import NavbarHome from '../../Components/Navbar';
+import Footer from '../../components/Footer';
+import NavbarHome from '../../components/Navbar';
 import { Link } from 'react-router-dom';
 
 const Profil = () => {

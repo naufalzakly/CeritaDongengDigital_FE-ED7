@@ -1,24 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './Pages/Homepages';
+import Homepage from './pages/Homepages';
 import './App.css';
-import LibBuku from './Pages/LibBuku';
+import LibBuku from './pages/LibBuku';
 import { Route, Routes } from 'react-router-dom';
-import DaftarBacaan from './Pages/DaftarBacaan';
-import Profil from './Pages/Profil';
-import KelinciKura from './Pages/BacaCerita/KelinciKura';
-import Loginn from './Components/FormLogin/Login';
-import PhoneSignUp from './Components/FormLogin/SiginPhone';
-import Signup from './Components/FormLogin/SignUp';
-import { UserAuthContextProvider } from './Context';
-import KancilBuaya from './Pages/BacaCerita/KancilBuaya';
-import BebekBurukRupa from './Pages/BacaCerita/Bebek';
-import KancilHarimau from './Pages/BacaCerita/KancilHarimau';
-import AboutUs from './Pages/AboutUs';
-import Team from './Pages/Team';
-import Faq from './Pages/Faq';
-import FormUlasan from './Pages/FormUlasan';
-import Legal from './Pages/Legal';
+import DaftarBacaan from './pages/DaftarBacaan';
+import Profil from './pages/Profil';
+import KelinciKura from './pages/BacaCerita/KelinciKura';
+import Loginn from './components/FormLogin/Login';
+import PhoneSignUp from './components/FormLogin/SiginPhone';
+import Signup from './components/FormLogin/SignUp';
+import { UserAuthContextProvider } from './context';
+import KancilBuaya from './pages/BacaCerita/KancilBuaya';
+import BebekBurukRupa from './pages/BacaCerita/Bebek';
+import KancilHarimau from './pages/BacaCerita/KancilHarimau';
+import AboutUs from './pages/AboutUs';
+import Team from './pages/Team';
+import Faq from './pages/Faq';
+import FormUlasan from './pages/FormUlasan';
+import Legal from './pages/Legal';
 
 function App() {
   return (

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../../SectionTitle';
 import { BsHeart } from 'react-icons/bs';
-import { useUserAuth } from '../../../Context';
+import { useUserAuth } from '../../../context';
 
 const Card_cerita_Rilis = ({ title }) => {
   const [Thumbnail, setThumbnail] = useState([]);

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Form, Alert } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
 import GoogleButton from 'react-google-button';
-import { useUserAuth } from '../../../Context/index';
+import { useUserAuth } from '../../../context/index';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import '../index.css';
 

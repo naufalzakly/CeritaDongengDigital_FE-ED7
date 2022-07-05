@@ -1,7 +1,7 @@
 import './index.css';
 import { Container } from 'react-bootstrap';
 import { MdDone } from 'react-icons/md';
-import { useUserAuth } from '../../../Context';
+import { useUserAuth } from '../../../context';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../Firestore';

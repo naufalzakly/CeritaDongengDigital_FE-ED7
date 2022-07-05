@@ -4,11 +4,11 @@ import { BsFillXCircleFill } from 'react-icons/bs';
 import db from '../../Firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { useSelector, useDispatch } from 'react-redux';
-import { setUlasan } from '../../Redux/Hooks/ulasanSlice';
+import { setUlasan } from '../../redux/Hooks/ulasanSlice';
 import { Link } from 'react-router-dom';
-import NavbarHome from '../../Components/Navbar';
-import SectionTitle from '../../Components/SectionTitle';
-import Footer from '../../Components/Footer';
+import NavbarHome from '../../components/Navbar';
+import SectionTitle from '../../components/SectionTitle';
+import Footer from '../../components/Footer';
 import './index.css';
 
 const FormUlasan = () => {

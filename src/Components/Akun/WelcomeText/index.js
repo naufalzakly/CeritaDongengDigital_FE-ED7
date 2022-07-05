@@ -1,5 +1,5 @@
 import './index.css';
-import { useUserAuth } from '../../../Context/index';
+import { useUserAuth } from '../../../context/index';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../Firestore';

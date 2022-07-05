@@ -1,9 +1,9 @@
 import './index.css';
 import { Container, CardGroup, Col } from 'react-bootstrap';
-import Footer from '../../Components/Footer';
-import SectionTitle from '../../Components/SectionTitle';
-import CardBacaaan from '../../Components/CardDaftarBacaan/DaftarBacaan';
-import NavbarHome from '../../Components/Navbar';
+import Footer from '../../components/Footer';
+import SectionTitle from '../../components/SectionTitle';
+import CardBacaaan from '../../components/CardDaftarBacaan/DaftarBacaan';
+import NavbarHome from '../../components/Navbar';
 
 const DaftarBacaan = () => {
   return (
