@@ -1,0 +1,17 @@
+.about-us {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.about-us-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.about-us-col img {
+    margin-top: -50px;
+}
+
+.reviews .card {
+    width: 500px;
+}

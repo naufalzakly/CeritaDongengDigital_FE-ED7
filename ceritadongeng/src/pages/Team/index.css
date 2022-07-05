@@ -1,0 +1,20 @@
+.team-section {
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.team-section .card img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+}
+
+.team-section .card {
+    margin-bottom: 50px;
+    border: none;
+}
+
+.team-section .curve {
+    border-radius: 20px;
+}

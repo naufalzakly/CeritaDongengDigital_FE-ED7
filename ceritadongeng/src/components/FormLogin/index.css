@@ -1,0 +1,21 @@
+.login-page {
+    width: 500px;
+    margin-top: 50px;
+}
+
+.btn-login {
+    display: flex;
+}
+
+.btn-login button {
+    margin-left: 8px;
+    height: 50px;
+}
+
+.dropdown-item:active {
+    background-color: #BFEEC5;
+}
+
+.btn-close-login {
+    margin-left: 400px;
+}
