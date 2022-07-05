@@ -21,29 +21,27 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
-      <div className="Container">
-        <UserAuthContextProvider>
-          <NavbarHome />
-          <Routes>
-            <Route path="/login" element={<Loginn />} />
-            <Route path="/" element={<Homepage />} />
-            <Route path="/sign-up" element={<Signup />} />
-            <Route path="/phone-sign-up" element={<PhoneSignUp />} />
-            <Route path="/library-buku" element={<LibBuku />} />
-            <Route path="/daftar-bacaan" element={<DaftarBacaan />} />
-            <Route path="/profil" element={<Profil />} />
-            <Route path="/baca-cerita/:judul" element={<BacaCerita />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/form-ulasan" element={<FormUlasan />} />
-            <Route path="/legal-information" element={<Legal />} />
-          </Routes>
-          <Footer />
-        </UserAuthContextProvider>
-      </div>
-    </>
+    <div className="Container">
+      <UserAuthContextProvider>
+        <NavbarHome />
+        <Routes>
+          <Route path="/login" element={<Loginn />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/sign-up" element={<Signup />} />
+          <Route path="/phone-sign-up" element={<PhoneSignUp />} />
+          <Route path="/library-buku" element={<LibBuku />} />
+          <Route path="/daftar-bacaan" element={<DaftarBacaan />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/baca-cerita/:judul" element={<BacaCerita />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/form-ulasan" element={<FormUlasan />} />
+          <Route path="/legal-information" element={<Legal />} />
+        </Routes>
+        <Footer />
+      </UserAuthContextProvider>
+    </div>
   );
 }
 
