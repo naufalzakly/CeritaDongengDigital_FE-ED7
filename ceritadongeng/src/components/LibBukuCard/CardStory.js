@@ -30,7 +30,7 @@ const CardStory = ({ item }) => {
             {cardBebek.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/BacaCerita/BebekBurukRupa">
+                  <Link to={link}>
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>

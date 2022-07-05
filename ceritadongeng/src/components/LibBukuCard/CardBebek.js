@@ -13,6 +13,7 @@ const CardBebek = () => {
   const Alert_login = () => {
     alert('Anda Belum Login');
   };
+
   const selectedNumber_3 = async () => {
     const IconCollection = collection(db, 'whislist');
     const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa' };
@@ -39,7 +40,7 @@ const CardBebek = () => {
             {cardBebek.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/baca-cerita/bebek-buruk-rupa">
+                  <Link to="/baca-cerita/bebek_buruk_rupa">
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>

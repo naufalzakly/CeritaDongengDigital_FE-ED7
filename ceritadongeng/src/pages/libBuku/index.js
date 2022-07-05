@@ -1,10 +1,12 @@
 import { Container, Row, CardGroup } from 'react-bootstrap';
 import SectionTitle from '../../components/SectionTitle';
 import CardSegeraRilis from '../../components/LibBukuCard/CardSegeraRilis';
-import CardBebek from '../../components/LibBukuCard/CardBebek';
-import CardKancilBuaya from '../../components/LibBukuCard/CardKancilBuaya';
-import CardKancilHarimau from '../../components/LibBukuCard/CardKancilHarimau';
-import CardKelinciKura from '../../components/LibBukuCard/CardKelinciKura';
+// import CardBebek from '../../components/LibBukuCard/CardBebek';
+// import CardKancilBuaya from '../../components/LibBukuCard/CardKancilBuaya';
+// import CardKancilHarimau from '../../components/LibBukuCard/CardKancilHarimau';
+// import CardKelinciKura from '../../components/LibBukuCard/CardKelinciKura';
+import CardStory from '../../components/LibBukuCard/CardStory';
+import { dataCard } from '../../data/card';
 import NavbarHome from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import './index.css';
@@ -18,10 +20,13 @@ const LibBuku = () => {
           <SectionTitle title={'Dongeng'} />
           <Row className="Container_Card">
             <CardGroup>
-              <CardBebek />
+              {/* <CardBebek />
               <CardKancilHarimau />
               <CardKelinciKura />
-              <CardKancilBuaya />
+              <CardKancilBuaya /> */}
+              {dataCard.map((item) => {
+                return <CardStory item={item} key={item.id} />;
+              })}
             </CardGroup>
           </Row>
           <SectionTitle title={'Tunggu Cerita Lainnya Segera...'} />
