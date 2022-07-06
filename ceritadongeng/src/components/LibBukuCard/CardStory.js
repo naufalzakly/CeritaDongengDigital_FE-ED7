@@ -8,33 +8,46 @@ import { Link } from 'react-router-dom';
 import { object } from 'prop-types';
 import { useUserAuth } from '../../context';
 import ModalComponent from '../ModalComponent';
-import { COLLECTION_DONGENG } from '../../constants';
+import { COLLECTION_DONGENG, COLLECTION_WISHLIST, CERITA, INDEX } from '../../constants';
 
 const CardStory = ({ item }) => {
-  const { id, title, writer, link, dbaseId, idIcon } = item;
-  const [cardBebek, setCardBebek] = useState([]);
+  const { id, title, writer, dbaseId, idIcon, img, dbCollection } = item;
+  const [cardStory, setCardStory] = useState([]);
   const [isShow, setIsShow] = useState(false);
+  const [pesan, setPesan] = useState('');
 
   const { user } = useUserAuth();
-  const Alert_login = () => {
-    alert('Anda Belum Login');
-  };
-
-  const selectedNumber_4 = async () => {
-    const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: idIcon, Judul: title };
-    await addDoc(IconCollection, payload);
+  const alertLogin = () => {
+    setPesan('Silahkan login terlebih dahulu');
     setIsShow(true);
   };
+
+  const selectedNumber = async () => {
+    const IconCollection = collection(db, COLLECTION_WISHLIST);
+    const payload = {
+      IdIcons: idIcon,
+      Judul: title,
+      pengarang: writer,
+      img: img,
+      dbCollection: dbCollection,
+      tanggal: date
+    };
+    await addDoc(IconCollection, payload);
+    setPesan(`Cerita ${title} ditambahkan ke daftar bacaan`);
+    setIsShow(true);
+  };
+
+  const todayDate = new Date();
+  const date = `${todayDate.getDate()}-${todayDate.getMonth() + 1}-${todayDate.getFullYear()}`;
 
   useEffect(() => {
     const q = query(
       collection(db, COLLECTION_DONGENG),
-      where('cerita', '==', dbaseId),
-      orderBy('index')
+      where(CERITA, '==', dbaseId),
+      orderBy(INDEX)
     );
     onSnapshot(q, (snapshot) => {
-      setCardBebek(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setCardStory(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 
@@ -43,10 +56,10 @@ const CardStory = ({ item }) => {
       <Card className="no-outline">
         <div className="card-img d-flex">
           <Carousel className="carousel-size" data-interval="false">
-            {cardBebek.map((thumb, idx) => {
+            {cardStory.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to={link}>
+                  <Link to={`/baca-cerita/${dbCollection}`}>
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
@@ -57,20 +70,20 @@ const CardStory = ({ item }) => {
         <Card.Body>
           <Card.Title>
             {title}
-            <button onClick={user ? selectedNumber_4 : Alert_login} className="btn-heart-kura">
+            <button onClick={user ? selectedNumber : alertLogin} className="btn-heart-kura">
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
           <Card.Text className="text-muted">Pengarang: {writer}</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Link to={link}>
+          <Link to={`/baca-cerita/${dbCollection}`}>
             <Button variant="success">Baca</Button>
           </Link>
         </Card.Footer>
       </Card>
 
-      <ModalComponent isShow={isShow} setIsShow={setIsShow} />
+      <ModalComponent isShow={isShow} setIsShow={setIsShow} pesan={pesan} />
     </div>
   );
 };

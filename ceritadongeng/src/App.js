@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './pages/Homepages';
+import Homepage from './pages/Homepage';
 import './App.css';
-import LibBuku from './pages/LibBuku';
+import LibBuku from './pages/LibraryBuku';
 import { Route, Routes } from 'react-router-dom';
 import DaftarBacaan from './pages/DaftarBacaan';
 import Profil from './pages/Profil';
@@ -15,7 +15,7 @@ import Team from './pages/Team';
 import Faq from './pages/Faq';
 import FormUlasan from './pages/FormUlasan';
 import Legal from './pages/Legal';
-import BacaCerita from './pages/BacaCerita';
+import BacaCerita from './pages/BacaCeritaKu';
 import NavbarHome from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -30,9 +30,9 @@ function App() {
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/phone-sign-up" element={<PhoneSignUp />} />
           <Route path="/library-buku" element={<LibBuku />} />
+          <Route path="/baca-cerita/:judul" element={<BacaCerita />} />
           <Route path="/daftar-bacaan" element={<DaftarBacaan />} />
           <Route path="/profil" element={<Profil />} />
-          <Route path="/baca-cerita/:judul" element={<BacaCerita />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/team" element={<Team />} />
           <Route path="/faq" element={<Faq />} />

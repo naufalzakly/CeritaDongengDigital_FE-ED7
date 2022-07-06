@@ -6,13 +6,14 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../firestore';
 import { IoPersonCircle } from 'react-icons/io5';
+import { COLLECTION_USER } from '../../../constants';
 
-const tentangAkun = () => {
+const TentangAkun = () => {
   const [Users, setUser] = useState([]);
   const { user } = useUserAuth();
   useEffect(
     () =>
-      onSnapshot(collection(db, 'user'), (snapshot) =>
+      onSnapshot(collection(db, COLLECTION_USER), (snapshot) =>
         setUser(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 
@@ -77,4 +78,4 @@ const tentangAkun = () => {
   );
 };
 
-export default tentangAkun;
+export default TentangAkun;

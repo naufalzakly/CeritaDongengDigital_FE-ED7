@@ -5,11 +5,15 @@ import db from '../../../firestore';
 import { collection, onSnapshot, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import SectionTitle from '../../SectionTitle';
+import { COLLECTION_THUMB_HOMEPAGE, KATEGORI, KATEGORI_SEGERA } from '../../../constants';
 
 const Card_cerita_Segera = ({ title }) => {
   const [Thumbnail, setThumbnail] = useState([]);
   useEffect(() => {
-    const q = query(collection(db, 'thumb_homepage'), where('category', '==', 'segera'));
+    const q = query(
+      collection(db, COLLECTION_THUMB_HOMEPAGE),
+      where(KATEGORI, '==', KATEGORI_SEGERA)
+    );
     onSnapshot(q, (snapshot) => {
       setThumbnail(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });

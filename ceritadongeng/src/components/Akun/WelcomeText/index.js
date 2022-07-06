@@ -3,13 +3,14 @@ import { useUserAuth } from '../../../context/index';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../firestore';
+import { COLLECTION_USER } from '../../../constants';
 
 const WelcomeText = () => {
   const { user } = useUserAuth();
   const [Users, setUser] = useState([]);
   useEffect(
     () =>
-      onSnapshot(collection(db, 'user'), (snapshot) =>
+      onSnapshot(collection(db, COLLECTION_USER), (snapshot) =>
         setUser(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
 

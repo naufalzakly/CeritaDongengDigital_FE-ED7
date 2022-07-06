@@ -5,13 +5,14 @@ import './index.css';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../firestore';
+import { COLLECTION_ANGGOTA } from '../../constants';
 import './index.css';
 
 const Team = () => {
   const [cardKelompok, setCardKelompok] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, 'anggota_kelompok'));
+    const q = query(collection(db, COLLECTION_ANGGOTA));
     onSnapshot(q, (snapshot) => {
       setCardKelompok(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });

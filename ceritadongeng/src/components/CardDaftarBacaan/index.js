@@ -1,28 +1,32 @@
 import React from 'react';
-import { Card, CardGroup, Col, Container, Row, Button } from 'react-bootstrap';
+import { Card, CardGroup, Col, Row, Button } from 'react-bootstrap';
 import db from '../../firestore';
-import { deleteDoc, collection, onSnapshot, doc } from 'firebase/firestore';
+import { deleteDoc, collection, onSnapshot, doc, orderBy, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ModalComponent from '../ModalComponent';
 import './index.css';
+import { COLLECTION_WISHLIST, TANGGAL, DESC } from '../../constants';
 
 const CardBacaaan = () => {
   const [wishlist, setWishlist] = useState([]);
+  const [isShow, setIsShow] = useState(false);
+  const [pesan, setPesan] = useState('');
 
   const deleteCard = async (id) => {
-    const IconDoc = doc(db, 'whislist', id);
+    const IconDoc = doc(db, COLLECTION_WISHLIST, id);
     await deleteDoc(IconDoc);
-    alert('Berhasil dihapus');
+    setPesan('Cerita berhasil dihapus');
+    setIsShow(true);
   };
 
-  useEffect(
-    () =>
-      onSnapshot(collection(db, 'whislist'), (snapshot) =>
-        setWishlist(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-      ),
+  useEffect(() => {
+    const q = query(collection(db, COLLECTION_WISHLIST), orderBy(TANGGAL, DESC));
+    onSnapshot(q, (snapshot) => {
+      setWishlist(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    });
+  }, []);
 
-    []
-  );
   return (
     <>
       <Row>
@@ -36,6 +40,7 @@ const CardBacaaan = () => {
                 <Card.Body>
                   <Card.Title>{wishlist.Judul}</Card.Title>
                   <Card.Text className="text-muted">Pengarang: {wishlist.pengarang}</Card.Text>
+                  <Card.Text className="text-muted">Ditambahkan pada {wishlist.tanggal}</Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Link to={`/baca-cerita/${wishlist.dbCollection}`}>
@@ -49,6 +54,7 @@ const CardBacaaan = () => {
             </Col>
           ))}
         </CardGroup>
+        <ModalComponent pesan={pesan} setIsShow={setIsShow} isShow={isShow} />
       </Row>
     </>
   );

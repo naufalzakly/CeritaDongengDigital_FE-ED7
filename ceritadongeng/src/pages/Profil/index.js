@@ -2,8 +2,6 @@ import TentangAkun from '../../components/Akun/TentangAkun';
 import WelcomeText from '../../components/Akun/WelcomeText';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './index.css';
-import Footer from '../../components/Footer';
-import NavbarHome from '../../components/Navbar';
 import { Link } from 'react-router-dom';
 
 const Profil = () => {
@@ -17,7 +15,6 @@ const Profil = () => {
           <Col md="8">
             <WelcomeText />
             <div className="edit-akun">
-              <hr />
               <Link to="/daftar-bacaan">
                 <Button variant="link">Disukai oleh Anda</Button>
               </Link>
