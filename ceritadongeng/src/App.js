@@ -15,7 +15,7 @@ import Team from './pages/Team';
 import Faq from './pages/Faq';
 import FormUlasan from './pages/FormUlasan';
 import Legal from './pages/Legal';
-import BacaCerita from './pages/BacaCeritaKu';
+import BacaCerita from './pages/BacaCerita';
 import NavbarHome from './components/Navbar';
 import Footer from './components/Footer';
 
