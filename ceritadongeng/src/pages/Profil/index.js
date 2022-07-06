@@ -1,4 +1,4 @@
-import TentangAkun from '../../components/Akun/TentanggAkun';
+import TentangAkun from '../../components/Akun/TentangAkun';
 import WelcomeText from '../../components/Akun/WelcomeText';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './index.css';
