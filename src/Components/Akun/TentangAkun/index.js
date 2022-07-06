@@ -1,15 +1,24 @@
 import './index.css';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import { MdDone } from 'react-icons/md';
-import { useUserAuth } from '../../../context';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot, setDoc, doc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../../Firestore';
 import { IoPersonCircle } from 'react-icons/io5';
 
 const tentangAkun = () => {
   const [Users, setUser] = useState([]);
-  const { user } = useUserAuth();
+
+  const UpdateUserProfil_Email = async (id) => {
+    const index = 1;
+    const email = prompt('Masukan Email baru Anda: ');
+    const nama = prompt('Masukan Nama baru Anda: ');
+    const phoneNumber = prompt('Masukan Nomer Hp baru Anda: ');
+    const Profildoc = doc(db, 'user', id);
+    const userPlayload = { index, email, nama, phoneNumber };
+    setDoc(Profildoc, userPlayload);
+  };
+
   useEffect(
     () =>
       onSnapshot(collection(db, 'user'), (snapshot) =>
@@ -36,42 +45,30 @@ const tentangAkun = () => {
         </div>
         <div className="terhubung">
           <h5>Terhubung</h5>
-
-          {user.email ? (
-            <>
-              <div>
-                <MdDone />
-                {user.email}
+          {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+            return (
+              <div key={id}>
+                <MdDone /> {userss.email}
               </div>
-            </>
-          ) : (
-            <div>
-              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
-                return (
-                  <div key={id}>
-                    <MdDone /> {userss.email}
-                  </div>
-                );
-              })}
-            </div>
-          )}
-
-          {user.phoneNumber ? (
-            <div>
-              <MdDone /> {user.phoneNumber}
-            </div>
-          ) : (
-            <div>
-              {Users.filter((userss) => userss.index === 1).map((userss, id) => {
-                return (
-                  <div key={id}>
-                    <MdDone /> {userss.PhoneNumber}
-                  </div>
-                );
-              })}
-            </div>
-          )}
+            );
+          })}
+          {Users.filter((userss) => userss.index === 1).map((userss, id) => {
+            return (
+              <div key={id}>
+                <MdDone /> {userss.phoneNumber}
+              </div>
+            );
+          })}
         </div>
+        {Users.map((userss) => {
+          return (
+            <div key={userss.id}>
+              <Button onClick={() => UpdateUserProfil_Email(userss.id)} className="div-Button">
+                Edit
+              </Button>
+            </div>
+          );
+        })}
       </Container>
     </div>
   );

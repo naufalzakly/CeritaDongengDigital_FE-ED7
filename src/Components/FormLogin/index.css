@@ -1,6 +1,7 @@
 .login-page {
     width: 500px;
-    margin-top: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .btn-login {
@@ -16,6 +17,7 @@
     background-color: #BFEEC5;
 }
 
-.btn-close-login {
-    margin-left: 400px;
+.garis-atau {
+    display: flex;
+    justify-content: space-around;
 }

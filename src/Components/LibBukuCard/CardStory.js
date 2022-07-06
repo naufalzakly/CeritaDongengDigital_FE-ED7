@@ -1,19 +1,35 @@
 import { Carousel, Card, Button } from 'react-bootstrap';
 import { BsHeart } from 'react-icons/bs';
 import './index.css';
-import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
+import { collection, onSnapshot, query, where, orderBy, addDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../Firestore';
 import { Link } from 'react-router-dom';
 import { object } from 'prop-types';
+import { useUserAuth } from '../../context';
+import ModalComponent from '../ModalComponent';
+import { COLLECTION_DONGENG } from '../../constants';
 
 const CardStory = ({ item }) => {
-  const { id, title, writer, link, dbaseId } = item;
+  const { id, title, writer, link, dbaseId, idIcon } = item;
   const [cardBebek, setCardBebek] = useState([]);
+  const [isShow, setIsShow] = useState(false);
+
+  const { user } = useUserAuth();
+  const Alert_login = () => {
+    alert('Anda Belum Login');
+  };
+
+  const selectedNumber_4 = async () => {
+    const IconCollection = collection(db, 'whislist');
+    const payload = { IdIcons: idIcon, Judul: title };
+    await addDoc(IconCollection, payload);
+    setIsShow(true);
+  };
 
   useEffect(() => {
     const q = query(
-      collection(db, 'thumb_lib_dongeng'),
+      collection(db, COLLECTION_DONGENG),
       where('cerita', '==', dbaseId),
       orderBy('index')
     );
@@ -30,7 +46,7 @@ const CardStory = ({ item }) => {
             {cardBebek.map((thumb, idx) => {
               return (
                 <Carousel.Item key={idx}>
-                  <Link to="/BacaCerita/BebekBurukRupa">
+                  <Link to={link}>
                     <img className="d-block" src={thumb.img} width="100%" alt="" />
                   </Link>
                 </Carousel.Item>
@@ -41,7 +57,7 @@ const CardStory = ({ item }) => {
         <Card.Body>
           <Card.Title>
             {title}
-            <button className="btn-heart">
+            <button onClick={user ? selectedNumber_4 : Alert_login} className="btn-heart-kura">
               <BsHeart size="1.5em" color="red" />
             </button>
           </Card.Title>
@@ -53,6 +69,8 @@ const CardStory = ({ item }) => {
           </Link>
         </Card.Footer>
       </Card>
+
+      <ModalComponent isShow={isShow} setIsShow={setIsShow} />
     </div>
   );
 };

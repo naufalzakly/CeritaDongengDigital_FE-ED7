@@ -3,7 +3,7 @@ import { BsList, BsFillPersonFill } from 'react-icons/bs';
 import './index.css';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useUserAuth } from '../../../context/index';
+import { useUserAuth } from '../../../context';
 
 const ButtonMenuProfil = () => {
   const { logOut, user } = useUserAuth();

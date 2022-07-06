@@ -8,28 +8,24 @@ import { Link } from 'react-router-dom';
 
 const Profil = () => {
   return (
-    <>
-      <NavbarHome />
-      <div className="profil-section">
-        <Container>
-          <Row>
-            <Col md="4">
-              <TentangAkun />
-            </Col>
-            <Col md="8">
-              <WelcomeText />
-              <div className="edit-akun">
-                <hr />
-                <Link to="/daftar-bacaan">
-                  <Button variant="link">Disukai oleh Anda</Button>
-                </Link>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <Footer />
-    </>
+    <div className="profil-section">
+      <Container>
+        <Row>
+          <Col md="4">
+            <TentangAkun />
+          </Col>
+          <Col md="8">
+            <WelcomeText />
+            <div className="edit-akun">
+              <hr />
+              <Link to="/daftar-bacaan">
+                <Button variant="link">Disukai oleh Anda</Button>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
