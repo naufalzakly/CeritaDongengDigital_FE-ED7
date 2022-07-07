@@ -1,3 +1,4 @@
+import React from 'react';
 import { Carousel, Card, Button } from 'react-bootstrap';
 import { BsHeart } from 'react-icons/bs';
 import './index.css';
@@ -11,7 +12,7 @@ import ModalComponent from '../ModalComponent';
 import { COLLECTION_DONGENG, COLLECTION_WISHLIST, CERITA, INDEX } from '../../constants';
 
 const CardStory = ({ item }) => {
-  const { id, title, writer, dbaseId, idIcon, img, dbCollection } = item;
+  const { title, writer, dbaseId, idIcon, img, dbCollection } = item;
   const [cardStory, setCardStory] = useState([]);
   const [isShow, setIsShow] = useState(false);
   const [pesan, setPesan] = useState('');

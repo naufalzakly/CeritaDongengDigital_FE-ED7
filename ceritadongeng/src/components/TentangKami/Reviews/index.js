@@ -3,14 +3,14 @@ import { Card, Row, CardGroup } from 'react-bootstrap';
 import SectionTitle from '../../SectionTitle';
 import db from '../../../firestore';
 import { collection, onSnapshot, query, where } from 'firebase/firestore';
-import { COLLECTION_ULASAN, RELEVAN, YA } from '../../../constants';
+import { COLLECTION_ULASAN, RELEVAN, RELEVAN_VALUE } from '../../../constants';
 import { useState, useEffect } from 'react';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, COLLECTION_ULASAN), where(RELEVAN, '==', YA));
+    const q = query(collection(db, COLLECTION_ULASAN), where(RELEVAN, '==', RELEVAN_VALUE));
     onSnapshot(q, (snapshot) => {
       setReviews(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });

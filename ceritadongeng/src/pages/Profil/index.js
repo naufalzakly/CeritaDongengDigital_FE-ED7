@@ -1,3 +1,4 @@
+import React from 'react';
 import TentangAkun from '../../components/Akun/TentangAkun';
 import WelcomeText from '../../components/Akun/WelcomeText';
 import { Container, Row, Col, Button } from 'react-bootstrap';

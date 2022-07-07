@@ -14,11 +14,11 @@ const PageHome = () => {
         <div className="Content">
           <HomeSlider />
 
-          <CardCeritaRilis title={'Baru Rilis'} />
+          <CardCeritaRilis />
 
-          <CardCeritaPopuler title={'Cerita Terpopuler'} />
+          <CardCeritaPopuler />
 
-          <CardCeritaSegera title={'Segera Rilis'} />
+          <CardCeritaSegera />
         </div>
         <Feedback />
         <AboutPlatform />
