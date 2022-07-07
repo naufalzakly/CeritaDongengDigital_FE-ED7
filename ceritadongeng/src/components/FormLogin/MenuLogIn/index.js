@@ -30,38 +30,33 @@ const ButtonMenuProfil = () => {
             <BsList color="white" size="1.5em" /> <BsFillPersonFill color="white" size="1.5em" />
           </Dropdown.Toggle>
           <Dropdown.Menu className="dropdown-menu">
-            <ul className="dropdown-list">
-              <li className="dropdown-item">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/library-buku">Pustakaan </Link>
-              </li>
-              {user ? (
-                <li className="dropdown-item">
-                  <Link to="/daftar-bacaan">Daftar Bacaan</Link>
-                </li>
-              ) : null}
+            <Link to="/" className="dropdown-item">
+              Home
+            </Link>
+            <Link to="/library-buku" className="dropdown-item">
+              Pustakaan
+            </Link>
 
-              {user ? (
-                <li className="dropdown-item">
-                  <Link to="/profil">Profil</Link>
-                </li>
-              ) : (
-                <li className="dropdown-item">
-                  <Button variant="primary" onClick={handleLogIn}>
-                    Masuk
-                  </Button>
-                </li>
-              )}
-              {user ? (
-                <li className="dropdown-item">
-                  <Button variant="danger" onClick={handleLogout}>
-                    Keluar
-                  </Button>
-                </li>
-              ) : null}
-            </ul>
+            {user ? (
+              <Link to="/daftar-bacaan" className="dropdown-item">
+                Daftar Bacaan
+              </Link>
+            ) : null}
+
+            {user ? (
+              <Link to="/profil" className="dropdown-item">
+                Profil
+              </Link>
+            ) : (
+              <Button variant="primary" onClick={handleLogIn} className="mx-3 mt-2 mb-2">
+                Masuk
+              </Button>
+            )}
+            {user ? (
+              <Button variant="danger" onClick={handleLogout} className="mx-3 mt-2 mb-2">
+                Keluar
+              </Button>
+            ) : null}
           </Dropdown.Menu>
         </Dropdown>
       </Nav.Item>

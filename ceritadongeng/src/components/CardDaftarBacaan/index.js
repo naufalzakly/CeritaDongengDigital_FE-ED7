@@ -1,94 +1,63 @@
-import { Carousel, Card, Button } from 'react-bootstrap';
-import { BsHeart } from 'react-icons/bs';
-import './index.css';
-import {
-  addDoc,
-  collection,
-  onSnapshot,
-  query,
-  where,
-  orderBy,
-  deleteDoc,
-  doc
-} from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { Card, CardGroup, Col, Row, Button } from 'react-bootstrap';
 import db from '../../firestore';
+import { deleteDoc, collection, onSnapshot, doc, orderBy, query } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useUserAuth } from '../../context';
+import ModalComponent from '../ModalComponent';
+import './index.css';
+import { COLLECTION_WISHLIST, TANGGAL, DESC } from '../../constants';
 
-const CardBebek = () => {
-  const [cardBebek, setCardBebek] = useState([]);
-  const [Whislist, setWhislist] = useState([]);
+const CardBacaaan = () => {
+  const [wishlist, setWishlist] = useState([]);
+  const [isShow, setIsShow] = useState(false);
+  const [pesan, setPesan] = useState('');
 
-  const { user } = useUserAuth();
-  const Alert_login = () => {
-    alert('Anda Belum Login');
-  };
-  const selectedNumber_3 = async () => {
-    const IconCollection = collection(db, 'whislist');
-    const payload = { IdIcons: 3, Judul: 'Bebek Buruk Rupa' };
-    await addDoc(IconCollection, payload);
-    alert('Berhasil ditambahkan');
-  };
   const deleteCard = async (id) => {
-    const IconDoc = doc(db, 'whislist', id);
-
+    const IconDoc = doc(db, COLLECTION_WISHLIST, id);
     await deleteDoc(IconDoc);
-    alert('Berhasil dihapus');
+    setPesan('Cerita berhasil dihapus');
+    setIsShow(true);
   };
 
   useEffect(() => {
-    const q = query(
-      collection(db, 'thumb_lib_dongeng'),
-      where('cerita', '==', 'Bebek Buruk Rupa'),
-      orderBy('index')
-    );
+    const q = query(collection(db, COLLECTION_WISHLIST), orderBy(TANGGAL, DESC));
     onSnapshot(q, (snapshot) => {
-      setCardBebek(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setWishlist(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 
-  useEffect(
-    () =>
-      onSnapshot(collection(db, 'whislist'), (snapshot) =>
-        setWhislist(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-      ),
-
-    []
-  );
   return (
-    <div className="lib-buku-card mx-2 mb-4">
-      {Whislist.map((whislistt) => (
-        <Card key={whislistt.id} className="no-outline">
-          <div className="card-img d-flex">
-            <Carousel className="carousel-size" data-interval="false">
-              {cardBebek.map((thumb, idx) => {
-                return (
-                  <Carousel.Item key={idx}>
-                    <Link to="/baca-cerita/bebek-buruk-rupa">
-                      <img className="d-block" src={thumb.img} width="100%" alt="" />
-                    </Link>
-                  </Carousel.Item>
-                );
-              })}
-            </Carousel>
-          </div>
-          <Card.Body>
-            <Card.Title>
-              Bebek Buruk Rupa
-              <button onClick={user ? selectedNumber_3 : Alert_login} className="btn-heart">
-                <BsHeart size="1.5em" color="red" />
-              </button>
-            </Card.Title>
-            <Card.Text className="text-muted">Pengarang: Hans Christian Andersen</Card.Text>
-          </Card.Body>
-          <Button onClick={() => deleteCard(whislistt.id)} variant="danger">
-            Hapus
-          </Button>
-        </Card>
-      ))}
-    </div>
+    <>
+      <Row>
+        <CardGroup>
+          {wishlist.map((wishlist) => (
+            <Col key={wishlist.id} className="wishlist-thumb">
+              <Card className="mx-2 mb-4">
+                <Link to={`/baca-cerita/${wishlist.dbCollection}`}>
+                  <img src={wishlist.img} alt="pict" />
+                </Link>
+                <Card.Body>
+                  <Card.Title>{wishlist.Judul}</Card.Title>
+                  <Card.Text className="text-muted">Pengarang: {wishlist.pengarang}</Card.Text>
+                  <Card.Text className="text-muted">Ditambahkan pada {wishlist.tanggal}</Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <Link to={`/baca-cerita/${wishlist.dbCollection}`}>
+                    <Button variant="success">Baca</Button>
+                  </Link>
+                  <Button className="mx-3" onClick={() => deleteCard(wishlist.id)} variant="danger">
+                    Hapus
+                  </Button>
+                </Card.Footer>
+              </Card>
+            </Col>
+          ))}
+        </CardGroup>
+        <ModalComponent pesan={pesan} setIsShow={setIsShow} isShow={isShow} />
+      </Row>
+    </>
   );
 };
 
-export default CardBebek;
+export default CardBacaaan;

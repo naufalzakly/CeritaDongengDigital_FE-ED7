@@ -5,14 +5,19 @@ import { RiCloseCircleFill } from 'react-icons/ri';
 import { IoArrowUndoCircleSharp, IoArrowRedoCircleSharp } from 'react-icons/io5';
 import db from '../../firestore';
 import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
+import { INDEX } from '../../constants';
 
-const KancilHarimau = () => {
+const BacaCerita = () => {
   const [current, setCurrent] = useState(0);
   const [cerita, setCerita] = useState([]);
   const length = cerita.length;
 
+  const params = useParams();
+  const dbName = params.judul;
+
   useEffect(() => {
-    const q = query(collection(db, 'kancil_harimau'), orderBy('index'));
+    const q = query(collection(db, dbName), orderBy(INDEX));
     onSnapshot(q, (snapshot) => {
       setCerita(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
@@ -58,4 +63,4 @@ const KancilHarimau = () => {
   );
 };
 
-export default KancilHarimau;
+export default BacaCerita;

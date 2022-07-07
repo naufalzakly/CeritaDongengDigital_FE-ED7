@@ -4,15 +4,16 @@ import './index.css';
 import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../firestore';
+import { COLLECTION_DONGENG, KATEGORI, KATEGORI_SEGERA, RILIS, INDEX } from '../../constants';
 
 const CardSegeraRilis = () => {
   const [cardSegeraRilis, setCardSegeraRilis] = useState([]);
 
   useEffect(() => {
     const q = query(
-      collection(db, 'thumb_lib_dongeng'),
-      where('rilis', '==', 'segera'),
-      orderBy('index')
+      collection(db, COLLECTION_DONGENG),
+      where(RILIS, '==', KATEGORI_SEGERA),
+      orderBy(INDEX)
     );
     onSnapshot(q, (snapshot) => {
       setCardSegeraRilis(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));

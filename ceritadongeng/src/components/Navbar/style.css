@@ -1,11 +1,12 @@
 .header {
-    position: fixed;
+    position: static;
     height: 100px;
     width: 100%; 
     background-color: #FFF;
     z-index: 999;
     top: 0;
 }
+
 
 .button{
     margin-top: 5px;
