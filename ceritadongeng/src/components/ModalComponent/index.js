@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { string } from 'prop-types';
+import { string, bool, func } from 'prop-types';
 
 function ModalComponent({ isShow, setIsShow, pesan }) {
   return (
@@ -22,8 +22,8 @@ function ModalComponent({ isShow, setIsShow, pesan }) {
 }
 
 ModalComponent.propTypes = {
-  isShow: string,
-  setIsShow: string,
+  isShow: bool,
+  setIsShow: func,
   pesan: string
 };
 

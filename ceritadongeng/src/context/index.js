@@ -10,7 +10,7 @@ import {
   signInWithPhoneNumber
 } from 'firebase/auth';
 import { auth } from '../firestore';
-import { string } from 'prop-types';
+import { array } from 'prop-types';
 
 const userAuthContext = createContext();
 
@@ -64,7 +64,7 @@ export function UserAuthContextProvider({ children }) {
 }
 
 UserAuthContextProvider.propTypes = {
-  children: string
+  children: array
 };
 
 export function useUserAuth() {
