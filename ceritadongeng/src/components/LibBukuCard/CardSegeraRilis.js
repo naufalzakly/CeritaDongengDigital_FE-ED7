@@ -4,7 +4,7 @@ import './index.css';
 import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import db from '../../firestore';
-import { COLLECTION_DONGENG, KATEGORI, KATEGORI_SEGERA, RILIS, INDEX } from '../../constants';
+import { COLLECTION_DONGENG, KATEGORI_SEGERA, RILIS, INDEX } from '../../constants';
 
 const CardSegeraRilis = () => {
   const [cardSegeraRilis, setCardSegeraRilis] = useState([]);

@@ -1,9 +1,10 @@
 import './index.css';
+import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { MdDone } from 'react-icons/md';
 import { collection, onSnapshot, setDoc, doc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import db from '../../../Firestore';
+import db from '../../../firestore';
 import { COLLECTION_USER } from '../../../constants';
 import { IoPersonCircle } from 'react-icons/io5';
 
@@ -65,7 +66,7 @@ const tentangAkun = () => {
         </div>
         {Users.map((userss) => {
           return (
-            <div key={userss.id} className="d-grid gap-2">
+            <div key={userss.id} className="d-grid gap-2 mt-3">
               <Button onClick={() => UpdateUserProfil_Email(userss.id)} className="div-Button">
                 Edit
               </Button>

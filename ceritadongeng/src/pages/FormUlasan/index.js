@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Row, Col, Container, Modal } from 'react-bootstrap';
+import { Form, Button, Row, Col, Container } from 'react-bootstrap';
 import { BsFillXCircleFill } from 'react-icons/bs';
 import db from '../../firestore';
 import { collection, addDoc } from 'firebase/firestore';

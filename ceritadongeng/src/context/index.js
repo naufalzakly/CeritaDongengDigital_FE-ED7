@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, React } from 'react';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -10,6 +10,7 @@ import {
   signInWithPhoneNumber
 } from 'firebase/auth';
 import { auth } from '../firestore';
+import { string } from 'prop-types';
 
 const userAuthContext = createContext();
 
@@ -61,6 +62,10 @@ export function UserAuthContextProvider({ children }) {
     </userAuthContext.Provider>
   );
 }
+
+UserAuthContextProvider.propTypes = {
+  children: string
+};
 
 export function useUserAuth() {
   return useContext(userAuthContext);

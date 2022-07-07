@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import './index.css';
 import { sectionTitleTypes } from './dataSectionTitle';
+import { string } from 'prop-types';
 
 const SectionTitle: React.FC<sectionTitleTypes> = ({ title }) => {
   return (
@@ -13,6 +14,10 @@ const SectionTitle: React.FC<sectionTitleTypes> = ({ title }) => {
       </Container>
     </div>
   );
+};
+
+SectionTitle.propTypes = {
+  title: string
 };
 
 export default SectionTitle;

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import SectionTitle from '../../SectionTitle';
 import { COLLECTION_THUMB_HOMEPAGE, KATEGORI, KATEGORI_SEGERA } from '../../../constants';
 
-const Card_cerita_Segera = ({ title }) => {
+const Card_cerita_Segera = () => {
   const [Thumbnail, setThumbnail] = useState([]);
   useEffect(() => {
     const q = query(
@@ -21,7 +21,7 @@ const Card_cerita_Segera = ({ title }) => {
 
   return (
     <Container className="cerita-thumb">
-      <SectionTitle title={title} />
+      <SectionTitle title="Segera Rilis" />
       <Row className="Container_Card">
         <CardGroup>
           {Thumbnail.map((thumb, idx) => {

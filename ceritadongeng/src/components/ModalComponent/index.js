@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { string } from 'prop-types';
 
-function Example({ isShow, setIsShow, pesan }) {
+function ModalComponent({ isShow, setIsShow, pesan }) {
   return (
     <>
       <Modal show={isShow} onHide={() => setIsShow(false)}>
@@ -20,4 +21,10 @@ function Example({ isShow, setIsShow, pesan }) {
   );
 }
 
-export default Example;
+ModalComponent.propTypes = {
+  isShow: string,
+  setIsShow: string,
+  pesan: string
+};
+
+export default ModalComponent;

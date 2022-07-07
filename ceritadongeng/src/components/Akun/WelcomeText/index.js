@@ -1,7 +1,8 @@
 import './index.css';
+import React from 'react';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import db from '../../../Firestore';
+import db from '../../../firestore';
 import { COLLECTION_USER } from '../../../constants';
 const WelcomeText = () => {
   const [Users, setUser] = useState([]);
