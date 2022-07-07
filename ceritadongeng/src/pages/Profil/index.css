@@ -1,9 +1,12 @@
 .profil-section {
-    margin-top: 150px;
+    margin-top: 100px;
     height: 700px;
 }
 
 .edit-akun, .edit-akun p {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
 }
 

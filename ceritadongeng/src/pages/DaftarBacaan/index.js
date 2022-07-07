@@ -1,25 +1,17 @@
 import './index.css';
-import { Container, CardGroup, Col } from 'react-bootstrap';
-import Footer from '../../components/Footer';
+import { Container } from 'react-bootstrap';
 import SectionTitle from '../../components/SectionTitle';
-import CardBacaaan from '../../components/CardDaftarBacaan/DaftarBacaan';
-import NavbarHome from '../../components/Navbar';
+import CardBacaaan from '../../components/CardDaftarBacaan';
 
 const DaftarBacaan = () => {
   return (
     <>
-      <NavbarHome />
       <div className="daftar-bacaan">
         <Container>
           <SectionTitle title={'Daftar Bacaan'} />
-          <CardGroup>
-            <Col>
-              <CardBacaaan />
-            </Col>
-          </CardGroup>
+          <CardBacaaan />
         </Container>
       </div>
-      <Footer />
     </>
   );
 };

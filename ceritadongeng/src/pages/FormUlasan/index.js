@@ -1,20 +1,23 @@
 import React from 'react';
-import { Form, Button, Row, Col, Container } from 'react-bootstrap';
+import { Form, Button, Row, Col, Container, Modal } from 'react-bootstrap';
 import { BsFillXCircleFill } from 'react-icons/bs';
 import db from '../../firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUlasan } from '../../redux/hooks/ulasanSlice';
 import { Link } from 'react-router-dom';
-import NavbarHome from '../../components/Navbar';
 import SectionTitle from '../../components/SectionTitle';
-import Footer from '../../components/Footer';
+import ModalComponent from '../../components/ModalComponent';
+import { useState } from 'react';
 import './index.css';
+import { COLLECTION_ULASAN } from '../../constants';
 
 const FormUlasan = () => {
   const ulasan = useSelector((state) => state.ulasan.value);
+  const [isShow, setIsShow] = useState(false);
+  const [pesan, setPesan] = useState('');
   const dispatch = useDispatch();
-  const ulasanCollectionRef = collection(db, 'ulasan');
+  const ulasanCollectionRef = collection(db, COLLECTION_ULASAN);
 
   const addUlasan = async (e) => {
     e.preventDefault();
@@ -24,12 +27,12 @@ const FormUlasan = () => {
       saran: ulasan.saran,
       relevan: ''
     });
-    alert('Terima kasih atas ulasan anda!');
+    setPesan('Terima kasih atas ulasan anda!');
+    setIsShow(true);
   };
 
   return (
     <>
-      <NavbarHome />
       <Container className="form-ulasan">
         <SectionTitle title="Masukan Ulasan Anda" />
         <Row>
@@ -75,8 +78,8 @@ const FormUlasan = () => {
             </Form>
           </Col>
         </Row>
+        <ModalComponent isShow={isShow} setIsShow={setIsShow} pesan={pesan} />
       </Container>
-      <Footer />
     </>
   );
 };
