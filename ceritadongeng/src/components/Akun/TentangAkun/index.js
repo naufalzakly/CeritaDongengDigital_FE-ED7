@@ -67,7 +67,10 @@ const tentangAkun = () => {
         {Users.map((userss) => {
           return (
             <div key={userss.id} className="d-grid gap-2 mt-3">
-              <Button onClick={() => UpdateUserProfil_Email(userss.id)} className="div-Button">
+              <Button
+                onClick={() => UpdateUserProfil_Email(userss.id)}
+                className="div-Button"
+                variant="success">
                 Edit
               </Button>
             </div>
