@@ -20,4 +20,4 @@ export const THUMB_CERITA_BEBEK = 'Bebek Buruk Rupa';
 export const TANGGAL = 'tanggal';
 export const DESC = 'desc';
 export const RELEVAN = 'relevan';
-export const YA = 'ya';
+export const RELEVAN_VALUE = 'ya';
