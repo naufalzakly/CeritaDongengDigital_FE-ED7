@@ -8,7 +8,6 @@ import { useUserAuth } from '../../../context';
 const ButtonMenuProfil = () => {
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
-  // const [login , setLogIn] = useState(true);
 
   const handleLogIn = () => {
     navigate('/login');
