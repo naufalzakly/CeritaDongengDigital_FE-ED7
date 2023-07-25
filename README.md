@@ -49,7 +49,7 @@ Pengguna dapat memasukan ulasan untuk pengembangan platform website dongeng ceri
 - Jalankan website dengan command npm start
 
 ### How to run
-- Setelah website terbuka di localhost
+- Setelah website terbuka di localhost dan online melalui vercel
 - User dapat mengecek cerita dongeng lewat fitur yang mengurutkan konten dari yang terbaru hingga terpopuler. User juga dapat melihat cerita apa saja yang akan rilis ke depannya.
 - User menekan fitur menu selection berupa library cerita untuk memilih dongeng mana yang ingin dibaca. Pada fitur library, disediakan deretan cerita-cerita yang tersedia secara keseluruhan.
 - User membaca cerita bergambar dengan menggeser layar secara horizontal.
